@@ -1,0 +1,7 @@
+Bool    (a)         := a!=0
+Clock   (a)         := a%12+183
+Diff    (a,b)       := a-b
+Div     (a,b)       := a/((b==0)+b) 
+Tetris  (a,b,c,d,e) := ((a%4)==b)|((a%4)==c)|((a%4)==d)|((a%4)==e)
+PercentRemaining (a,b) := 100 - a*100.0 / ((b==0)+b) 
+PercentInt (a,b)       := a*100.0 / ((b==0)+b)

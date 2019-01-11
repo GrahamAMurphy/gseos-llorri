@@ -1,0 +1,504 @@
+/* ************************************************************************* */
+/* * This New Horizons command menu was automatically created with the     * */
+/* * GSEOS New Horizons TeleCommand Loader. DO NOT MODIFY!                 * */
+/* *                                                                       * */
+/* * To change the command menu please modify the Excel source             * */
+/* * file: i_LLORRI\CMD_n_TLM\LOR_CMD.config                                    * */
+/* * This file was generated with TC_TLM_Load Version: 5.1.254.059              * */
+/* * on Mon Dec 17 07:55:57 2012                                           * */
+/* ************************************************************************* */
+
+Menu &LLORRI
+{
+  Menuitem &CMD NULL,  LOR_CMD_NULL()
+  Popup &Boot Commands
+  {
+    Menuitem &ROM BOOT,  LOR_ROM_BOOT()
+    Menuitem &ROM GO...,  LOR_ROM_GO($'Enter a numeric value for Program_Header_Address. Range: [0..1048575]')
+  }
+
+  Popup &Macro Commands
+  {
+    Menuitem &MAC CHECK...,  LOR_MAC_CHECK($'Enter a numeric value for ID_of_first_macro_to_check. Range: [0..255]',$'Enter a numeric value for ID_of_last_macro_to_check. Range: [0..255]')
+    Menuitem &MAC DEF...,  LOR_MAC_DEF($'Enter a numeric value for Macro_ID. Range: [0..255]')
+    Menuitem &MAC DELAY...,  LOR_MAC_DELAY($'Enter a numeric value for Delay_in_seconds. Range: [0..65535]')
+    Menuitem &MAC END,  LOR_MAC_END()
+    Menuitem &MAC ENDDEF,  LOR_MAC_ENDDEF()
+    Menuitem &MAC HALT...,  LOR_MAC_HALT($'Enter a numeric value for Macro_Id. Range: [0..255]')
+    Menuitem &MAC LOOP BEGIN...,  LOR_MAC_LOOP_BEGIN($'Enter a numeric value for Loop_Iterations. Range: [0..65535]')
+    Menuitem &MAC LOOP END,  LOR_MAC_LOOP_END()
+    Menuitem &MAC NEST...,  LOR_MAC_NEST($'Enter a numeric value for Macro_Id. Range: [0..255]')
+    Menuitem &MAC PAUSE...,  LOR_MAC_PAUSE($'Enter a numeric value for MET__Mission_Elapsed_Time_. Range: [0..4294967295]')
+    Menuitem &MAC READ...,  LOR_MAC_READ($'Enter a numeric value for ID_of_first_macro_to_read. Range: [0..255]',$'Enter a numeric value for ID_of_last_macro_to_read. Range: [0..255]')
+    Menuitem &MAC RESTORE,  LOR_MAC_RESTORE()
+    Menuitem &MAC RUN...,  LOR_MAC_RUN($'Enter a numeric value for Macro_Id. Range: [0..255]')
+    Menuitem &MAC RUN SILENT...,  LOR_MAC_RUN_SILENT($'Enter a numeric value for Macro_Id. Range: [0..255]')
+    Menuitem &MAC SAVE,  LOR_MAC_SAVE()
+  }
+
+  Popup &Memory Commands
+  {
+    Menuitem &MEM CHECK...,  LOR_MEM_CHECK($'Enter a numeric value for Source_Address. Range: [0..1048575]',$'Enter a numeric value for Number_of_16_bit_words_to_chk. Range: [0..65535]')
+    Menuitem &MEM COPY...,  LOR_MEM_COPY($'Enter a numeric value for Source. Range: [0..1048575]',$'Enter a numeric value for Destination. Range: [0..1048575]',$'Enter a numeric value for Byte_Count. Range: [0..65535]')
+    Menuitem &MEM LOAD 1...,  LOR_MEM_LOAD_1($'Enter a numeric value for Address. Range: [0..1048575]',$'Enter a numeric value for Data. Range: [0..255]')
+    Menuitem &MEM LOAD 2...,  LOR_MEM_LOAD_2($'Enter a numeric value for Address. Range: [0..1048575]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]')
+    Menuitem &MEM LOAD 3...,  LOR_MEM_LOAD_3($'Enter a numeric value for Address. Range: [0..1048575]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]')
+    Menuitem &MEM LOAD 4...,  LOR_MEM_LOAD_4($'Enter a numeric value for Address. Range: [0..1048575]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]',$'Enter a numeric value for Data_Byte_4. Range: [0..255]')
+    Menuitem &MEM READ...,  LOR_MEM_READ($'Enter a numeric value for Source. Range: [0..1048575]',$'Enter a numeric value for Byte_Count. Range: [0..65535]')
+    Menuitem &MEM READ ABRT,  LOR_MEM_READ_ABRT()
+    Menuitem &MEM RUN...,  LOR_MEM_RUN($'Enter a numeric value for Address. Range: [0..1048575]')
+    Popup &LOR_MEM_STR_LOAD
+    {
+
+      Popup &MEM STR LOAD 1
+      {
+          Menuitem &MON LIMS...,  LOR_MEM_STR_LOAD_1("MON_LIMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data. Range: [0..255]')
+          Menuitem &PARAMS...,  LOR_MEM_STR_LOAD_1("PARAMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data. Range: [0..255]')
+      }
+
+      Popup &MEM STR LOAD 2
+      {
+          Menuitem &MON LIMS...,  LOR_MEM_STR_LOAD_2("MON_LIMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]')
+          Menuitem &PARAMS...,  LOR_MEM_STR_LOAD_2("PARAMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]')
+      }
+
+      Popup &MEM STR LOAD 16BIT
+      {
+          Menuitem &MON LIMS...,  LOR_MEM_STR_LOAD_16BIT("MON_LIMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data. Range: [0..65535]')
+          Menuitem &PARAMS...,  LOR_MEM_STR_LOAD_16BIT("PARAMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data. Range: [0..65535]')
+      }
+
+      Popup &MEM STR LOAD 3
+      {
+          Menuitem &MON LIMS...,  LOR_MEM_STR_LOAD_3("MON_LIMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]')
+          Menuitem &PARAMS...,  LOR_MEM_STR_LOAD_3("PARAMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]')
+      }
+
+      Popup &MEM STR LOAD 4
+      {
+          Menuitem &MON LIMS...,  LOR_MEM_STR_LOAD_4("MON_LIMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]',$'Enter a numeric value for Data_Byte_4. Range: [0..255]')
+          Menuitem &PARAMS...,  LOR_MEM_STR_LOAD_4("PARAMS",$'Enter a numeric value for Offset. Range: [0..65535]',$'Enter a numeric value for Data_Byte_1. Range: [0..255]',$'Enter a numeric value for Data_Byte_2. Range: [0..255]',$'Enter a numeric value for Data_Byte_3. Range: [0..255]',$'Enter a numeric value for Data_Byte_4. Range: [0..255]')
+      }
+      Popup &Monitor Limits
+      {
+        Popup &Voltage and Current
+        {
+          Menuitem &EPU_P5_VOLT_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',0,$'Enter the EPU_P5_VOLT_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &EPU_P5_VOLT_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',1,$'Enter the EPU_P5_VOLT_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &EPU_P5_CURR_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',2,$'Enter the EPU_P5_CURR_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &EPU_P5_CURR_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',3,$'Enter the EPU_P5_CURR_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P15_VOLT_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',4,$'Enter the FPU_P15_VOLT_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P15_VOLT_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',5,$'Enter the FPU_P15_VOLT_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P15_CURR_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',6,$'Enter the FPU_P15_CURR_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P15_CURR_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',7,$'Enter the FPU_P15_CURR_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P6_VOLT_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',8,$'Enter the FPU_P6_VOLT_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P6_VOLT_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',9,$'Enter the FPU_P6_VOLT_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P6_CURR_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',10,$'Enter the FPU_P6_CURR_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_P6_CURR_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',11,$'Enter the FPU_P6_CURR_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_HTR_CURR_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',12,$'Enter the FPU_HTR_CURR_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_HTR_CURR_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',13,$'Enter the FPU_HTR_CURR_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &EPU_P25_VOLT_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',14,$'Enter the EPU_P25_VOLT_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &EPU_P25_VOLT_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',15,$'Enter the EPU_P25_VOLT_HI Alarm Limit.  Range:[0..255]')
+        }
+
+        Popup &Temperature
+        {
+          Menuitem &INTER_RING_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',16,$'Enter the INTER_RING_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &INTER_RING_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',17,$'Enter the INTER_RING_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &MNT_FOOT_TOP_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',18,$'Enter the MNT_FOOT_TOP_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &MNT_FOOT_TOP_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',19,$'Enter the MNT_FOOT_TOP_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &M2_MIR_MNT_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',20,$'Enter the M2_MIR_MNT_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &M2_MIR_MNT_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',21,$'Enter the M2_MIR_MNT_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &RDTR_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',22,$'Enter the RDTR_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &RDTR_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',23,$'Enter the RDTR_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &BAFF_AFT_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',24,$'Enter the BAFF_AFT_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &BAFF_AFT_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',25,$'Enter the BAFF_AFT_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &BAFF_FORE_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',26,$'Enter the BAFF_FORE_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &BAFF_FORE_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',27,$'Enter the BAFF_FORE_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_MIRROR_SUPP_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',28,$'Enter the M1_MIRROR_SUPP_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_MIRROR_SUPP_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',29,$'Enter the M1_MIRROR_SUPP_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_MIRROR_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',30,$'Enter the M1_MIRROR_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_MIRROR_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',31,$'Enter the M1_MIRROR_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &CCD_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',32,$'Enter the CCD_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &CCD_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',33,$'Enter the CCD_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_VF_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',34,$'Enter the M1_VF_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &M1_VF_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',35,$'Enter the M1_VF_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &M2_VF_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',36,$'Enter the M2_VF_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &M2_VF_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',37,$'Enter the M2_VF_TEMP_HI Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_BRD_VF_TEMP_LO...,  LOR_MEM_STR_LOAD_1('MON_LIMS',38,$'Enter the FPU_BRD_VF_TEMP_LO Alarm Limit.  Range:[0..255]')
+          Menuitem &FPU_BRD_VF_TEMP_HI...,  LOR_MEM_STR_LOAD_1('MON_LIMS',39,$'Enter the FPU_BRD_VF_TEMP_HI Alarm Limit.  Range:[0..255]')
+        }
+
+      }
+
+      Popup &Parameters
+      {
+        Menuitem &CAL_ON_TIME...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',0,$'Enter the CAL_ON_TIME.  Range:[0..65535]')
+        Menuitem &CAL_OFF_TIME...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',2,$'Enter the CAL_OFF_TIME.  Range:[0..65535]')
+        Menuitem &MAX_CAL_LAMPS...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',4,$'Enter the MAX_CAL_LAMPS.  Range:[0..65535]')
+        Menuitem &MAX_HTR...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',6,$'Enter the MAX_HTR.  Range:[0..65535]')
+        Menuitem &SAT_BRIGHTNESS...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',8,$'Enter the SAT_BRIGHTNESS.  Range:[0..65535]')
+        Menuitem &SAT_THRESH...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',10,$'Enter the SAT_THRESH.  Range:[0..65535]')
+        Menuitem &FALLBACK...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',12,$'Enter the FALLBACK.  Range:[0..65535]')
+        Menuitem &BACK_BRIGHT...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',14,$'Enter the BACK_BRIGHT.  Range:[0..65535]')
+        Menuitem &MAX_EXP...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',16,$'Enter the MAX_EXP.  Range:[0..65535]')
+        Menuitem &MIN_EXP...,  LOR_MEM_STR_LOAD_16BIT('PARAMS',18,$'Enter the MIN_EXP.  Range:[0..65535]')
+      }
+
+    }
+
+
+    Popup &MEM STR READ
+    {
+        Menuitem &MON LIMS,  LOR_MEM_STR_READ(LIMITS)
+        Menuitem &PARAMS,  LOR_MEM_STR_READ(PARAMS)
+    }
+
+    Popup &MEM WR EN
+    {
+        Menuitem &DIS,  LOR_MEM_WR_EN(Disable)
+        Menuitem &ENA,  LOR_MEM_WR_EN(Enable)
+    }
+
+    Popup &MEM NV EN
+    {
+        Menuitem &Sleep,  LOR_MEM_NV_EN(Sleep/Reset)
+        Menuitem &Enable,  LOR_MEM_NV_EN(Enable)
+    }
+  }
+
+  Popup &Status Commands
+  {
+
+    Popup &STAT CLR
+    {
+        Menuitem &CMD EXE,  LOR_STAT_CLR(CmdExec)
+        Menuitem &CMD REJ,  LOR_STAT_CLR(CmdRej)
+        Menuitem &MAC EXE,  LOR_STAT_CLR(MacCmdExec)
+        Menuitem &MAC REJ,  LOR_STAT_CLR(MacCmdRej)
+        Menuitem &TLM VOL,  LOR_STAT_CLR(TlmVol)
+        Menuitem &Alarms,   LOR_STAT_CLR(Alarms)
+        Menuitem &ALL,      LOR_STAT_CLR(All)
+    }
+    Menuitem &STAT INT...,  LOR_STAT_INT($'Enter a numeric value for Interval_for_status_generation__. Range: [0..65535]')
+    Menuitem &STAT MEM...,  LOR_STAT_MEM($'Enter a numeric value for Address. Range: [0..1048575]')
+  }
+
+  Separator
+  Popup &Imager Commands
+  {
+    Menuitem &IMG EXP AUTO...,  LOR_IMG_EXP_AUTO($'Enter a numeric value for Target_Brightness. Range: [0..4095]')
+    Menuitem &IMG EXP MAN...,  LOR_IMG_EXP_MAN($'Enter a numeric value for Exposure_time__msec_. Range: [0..29967]')
+
+    Popup &IMG FORMAT
+    {
+        Menuitem &1X1,  LOR_IMG_FORMAT("1X1")
+        Menuitem &4X4,  LOR_IMG_FORMAT("4X4")
+    }
+    Menuitem &IMG IMAGE...,  LOR_IMG_IMAGE($'Enter a numeric value for Time_in_which_to_collect_images_. Range: [0..65535]',$'Enter a numeric value for Interval_between_images_in_secon. Range: [1..65535]')
+
+    Popup &IMG PWR
+    {
+        Menuitem &OFF,  LOR_IMG_PWR(0)
+        Menuitem &ON,  LOR_IMG_PWR(1)
+    }
+
+    Popup &IMG TMP
+    {
+        Menuitem &DIS,  LOR_IMG_TMP(Disable)
+        Menuitem &ENA,  LOR_IMG_TMP(Enable)
+    }
+    Menuitem &IMG SNAP,  LOR_IMG_SNAP()
+
+    Popup &IMG SOURCE
+    {
+        Menuitem &CCD,  LOR_IMG_SOURCE("CCD")
+        Menuitem &FPU TEST PAT 1,  LOR_IMG_SOURCE("FPU_TEST_PAT_1")
+        Menuitem &FPU TEST PAT 2,  LOR_IMG_SOURCE("FPU_TEST_PAT_2")
+        Menuitem &DPU TEST PAT 1,  LOR_IMG_SOURCE("DPU_TEST_PAT_1")
+        Menuitem &DPU TEST PAT 2,  LOR_IMG_SOURCE("DPU_TEST_PAT_2")
+    }
+    Menuitem &IMG EXP STEP...,  LOR_IMG_EXP_STEP($'Enter a numeric value for Exposure_time__1_ms_. Range: [-32768..32767]')
+
+    Popup &IMG DESC
+    {
+        Menuitem &DIS,  LOR_IMG_DESC(Disable)
+        Menuitem &ENA,  LOR_IMG_DESC(Enable)
+    }
+    Menuitem &IMG TRIG...,  LOR_IMG_TRIG($'Enter a numeric value for Low_Limit. Range: [0..4095]',$'Enter a numeric value for High_Limit. Range: [0..4095]',$'Enter a numeric value for Threshold. Range: [0..65535]',"$'Please enter one of the following mnemonics for the argument Mode: [SINGLE,DOUBLE] or enter a numeric value in the range [0..1]'",$'Enter a numeric value for Macro_ID. Range: [0..255]')
+    Menuitem &IMG TRIG ABT,  LOR_IMG_TRIG_ABT()
+  }
+
+  Popup &Heater Commands
+  {
+
+    Popup &HTR HEATER
+    {
+
+        Popup &DIS
+        {
+          Menuitem &HEATER 1,  LOR_HTR_HEATER(Disable,HEATER1)
+          Menuitem &HEATER 2,  LOR_HTR_HEATER(Disable,HEATER2)
+          Menuitem &HEATER 3,  LOR_HTR_HEATER(Disable,HEATER3)
+          Menuitem &HEATER 4,  LOR_HTR_HEATER(Disable,HEATER4)
+        }
+
+        Popup &ENA
+        {
+          Menuitem &HEATER 1,  LOR_HTR_HEATER(Enable,HEATER1)
+          Menuitem &HEATER 2,  LOR_HTR_HEATER(Enable,HEATER2)
+          Menuitem &HEATER 3,  LOR_HTR_HEATER(Enable,HEATER3)
+          Menuitem &HEATER 4,  LOR_HTR_HEATER(Enable,HEATER4)
+        }
+    }
+
+    Popup &HTR MODE
+    {
+        Menuitem &OFF,  LOR_HTR_MODE(Heater_Off)
+        Menuitem &ON,  LOR_HTR_MODE(Heater_On)
+        Menuitem &SOFTWARE,  LOR_HTR_MODE(Heater_SW)
+    }
+    Menuitem &HTR SENSOR 0 ...,  LOR_HTR_SENSOR($'Enter a numeric value for Temperature_Set_Point__A_D_Units. Range: [0..65535]',$'Enter a numeric value for Hysteresis__A_D_Units_. Range: [0..255]', Sensor_0)
+    Menuitem &HTR SENSOR 1 ...,  LOR_HTR_SENSOR($'Enter a numeric value for Temperature_Set_Point__A_D_Units. Range: [0..65535]',$'Enter a numeric value for Hysteresis__A_D_Units_. Range: [0..255]', Sensor_1)
+    Menuitem &HTR SENSOR 2 ...,  LOR_HTR_SENSOR($'Enter a numeric value for Temperature_Set_Point__A_D_Units. Range: [0..65535]',$'Enter a numeric value for Hysteresis__A_D_Units_. Range: [0..255]', Sensor_2)
+    Menuitem &HTR SENSOR 3 ...,  LOR_HTR_SENSOR($'Enter a numeric value for Temperature_Set_Point__A_D_Units. Range: [0..65535]',$'Enter a numeric value for Hysteresis__A_D_Units_. Range: [0..255]', Sensor_3)
+  }
+
+  Popup &Calibrate Commands
+  {
+    Menuitem &CAL LEVEL...,  LOR_CAL_LEVEL($'Enter a numeric value for Lamp_Brightness_Level. Range: [0..255]',"$'Please enter one of the following mnemonics for the argument Lamp_ID: [LAMP_1,LAMP_2] or enter a numeric value in the range [0..1]'")
+
+    Popup &CAL PWR
+    {
+
+        Popup &OFF
+        {
+          Menuitem &LAMP 1,  LOR_CAL_PWR(0,0)
+          Menuitem &LAMP 2,  LOR_CAL_PWR(0,1)
+        }
+
+        Popup &ON
+        {
+          Menuitem &LAMP 1,  LOR_CAL_PWR(1,0)
+          Menuitem &LAMP 2,  LOR_CAL_PWR(1,1)
+        }
+    }
+  }
+
+  Separator
+  Popup &Wrap Commands
+  {
+    Menuitem &CMD WRAP 0...,  LOR_CMD_WRAP_0($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]')
+    Menuitem &CMD WRAP 1...,  LOR_CMD_WRAP_1($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]',$'Enter a numeric value for arg_1. Range: [0..255]')
+    Menuitem &CMD WRAP 2...,  LOR_CMD_WRAP_2($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]',$'Enter a numeric value for arg_1. Range: [0..255]',$'Enter a numeric value for arg_2. Range: [0..255]')
+    Menuitem &CMD WRAP 3...,  LOR_CMD_WRAP_3($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]',$'Enter a numeric value for arg_1. Range: [0..255]',$'Enter a numeric value for arg_2. Range: [0..255]',$'Enter a numeric value for arg_3. Range: [0..255]')
+    Menuitem &CMD WRAP 4...,  LOR_CMD_WRAP_4($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]',$'Enter a numeric value for arg_1. Range: [0..255]',$'Enter a numeric value for arg_2. Range: [0..255]',$'Enter a numeric value for arg_3. Range: [0..255]',$'Enter a numeric value for arg_4. Range: [0..255]')
+    Menuitem &CMD WRAP 8...,  LOR_CMD_WRAP_8($'Enter a numeric value for __bit_Opcode_of_command_being_wr. Range: [0..65535]',$'Enter a numeric value for arg_1. Range: [0..255]',$'Enter a numeric value for arg_2. Range: [0..255]',$'Enter a numeric value for arg_3. Range: [0..255]',$'Enter a numeric value for arg_4. Range: [0..255]',$'Enter a numeric value for arg_5. Range: [0..255]',$'Enter a numeric value for arg_6. Range: [0..255]',$'Enter a numeric value for arg_7. Range: [0..255]',$'Enter a numeric value for arg_8. Range: [0..255]')
+  }
+
+
+  Popup &MON CNTRL
+  {
+      Menuitem &DIS,  LOR_MON_CNTRL(Disable)
+      Menuitem &ENA,  LOR_MON_CNTRL(Enable)
+  }
+  Menuitem &Request Off,  LOR_SAF_OFF()
+  Menuitem &Reset,  LOR_SAF_RESET()
+  Separator
+  Popup &SC Commands
+  {
+    Popup &LOR_LVPS_POWER
+    {
+      Popup &CDA
+      {
+        Menuitem &ON,  LOR_LVPS_POWER()
+        Menuitem &OFF,  LOR_LVPS_POWER()
+      }
+
+      Popup &CDB
+      {
+        Menuitem &ON,  LOR_LVPS_POWER()
+        Menuitem &OFF,  LOR_LVPS_POWER()
+      }
+
+      Popup &CDBOTH
+      {
+        Menuitem &ON,  LOR_LVPS_POWER()
+        Menuitem &OFF,  LOR_LVPS_POWER()
+      }
+
+    }
+
+    Popup &LOR_DEC_HTR_POWER
+    {
+      Popup &A_CDA
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+      Popup &A_CDB
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+      Popup &A_CDBOTH
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+      Popup &B_CDA
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+      Popup &B_CDB
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+      Popup &B_CDBOTH
+      {
+        Menuitem &ON,  LOR_DEC_HTR_POWER()
+        Menuitem &OFF,  LOR_DEC_HTR_POWER()
+      }
+
+    }
+
+    Popup &LOR_ACT_PRI_POWER
+    {
+      Popup &A_CDA
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+      Popup &A_CDB
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+      Popup &A_CDBOTH
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+      Popup &B_CDA
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+      Popup &B_CDB
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+      Popup &B_CDBOTH
+      {
+        Menuitem &ON,  LOR_ACT_PRI_POWER()
+        Menuitem &OFF,  LOR_ACT_PRI_POWER()
+      }
+
+    }
+
+    Popup &LOR_ACT_RED_POWER
+    {
+      Popup &CDA
+      {
+        Menuitem &ON,  LOR_ACT_RED_POWER()
+        Menuitem &OFF,  LOR_ACT_RED_POWER()
+      }
+
+      Popup &CDB
+      {
+        Menuitem &ON,  LOR_ACT_RED_POWER()
+        Menuitem &OFF,  LOR_ACT_RED_POWER()
+      }
+
+      Popup &CDBOTH
+      {
+        Menuitem &ON,  LOR_ACT_RED_POWER()
+        Menuitem &OFF,  LOR_ACT_RED_POWER()
+      }
+
+    }
+
+    Popup &1PPS
+    {
+      Menuitem &On,  CDH_INST_CMD_IF_SEL()
+      Menuitem &Off,  CDH_INST_CMD_IF_SEL()
+    }
+
+  }
+
+  Separator
+  Popup &LOGs
+  {
+    Popup &EMBOX Log
+    {
+      Menuitem &Enable, Common.sceAPI.fEnableEmbox_Log()
+      Menuitem &Disable, Common.sceAPI.fDisableEmbox_Log()
+      Menuitem &Comment, Common.sceAPI.fEmbox_Log_comment('$'Enter EMBOX Cmd LOG comment:' ')
+    }
+
+    Popup &STOL Log
+    {
+      Menuitem &Enable, Common.sceAPI.fEnableSTOL_Log()
+      Menuitem &Disable, Common.sceAPI.fDisableSTOL_Log()
+      Menuitem &Comment, Common.sceAPI.fSTOL_Log_comment('$'Enter STOL LOG comment:' ')
+    }
+
+    Popup &ITF Log
+    {
+      Menuitem &Enable, Common.sceAPI.fEnableITF_Log()
+      Menuitem &Disable, Common.sceAPI.fDisableITF_Log()
+      Menuitem &Comment, Common.sceAPI.fITF_Log_comment('$'Enter ITF LOG comment:' ')
+    }
+
+    Popup &Time Msg Log
+    {
+      Menuitem &Enable, Common.sceAPI.fEnableTimeMsg_Log()
+      Menuitem &Disable, Common.sceAPI.fDisableTimeMsg_Log()
+      Menuitem &Comment, Common.sceAPI.fTimeMsg_Log_comment('$'Enter Time Message LOG comment:' ')
+    }
+
+    Popup &CMD ECHO Log
+    {
+      Menuitem &Enable, Common.config_lp.fEnableCmdEcho_Log() 
+      Menuitem &Disable, Common.config_lp.fDisableCmdEcho_Log() 
+      Menuitem &Comment, Common.config_lp.fCmdEcho_Log_comment('$'Enter CMD ECHO LOG comment:' ')
+    }
+
+  }
+
+  Popup &Alarm Log
+  {
+    Menuitem &Enable, Common.config_lp.fEnableAlarm_Log()
+    Menuitem &Disable, Common.config_lp.fDisableAlarm_Log()
+    Menuitem &Comment, Common.config_lp.fAlarm_Log_comment('$'Enter CMD ECHO LOG comment:' ')
+  }
+
+  Popup &All Logs
+  {
+    Menuitem &Enable, Common.config_lp.fEnableAllLogs_LP()
+    Menuitem &Disable, Common.config_lp.fDisableAllLogs_LP()
+    Menuitem &Comment, Common.config_lp.fCommentAllLogs_LP('$'Enter comment for all Logs:' ')
+  }
+
+  Separator
+  Popup &Self-Test
+  {
+    Menuitem &LLORRI CMD Test, i_LLORRI.LOR_SelfTest.test_LOR_cmds()
+    Menuitem &LLORRI TLM Test, i_LLORRI.LOR_SelfTest.test_LOR_tlm()
+  }
+
+}
+

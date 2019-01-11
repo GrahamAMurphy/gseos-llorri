@@ -1,0 +1,37 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="510, 2, 879, 538" Title="TLM_LS_IDP" >
+    <PICTURE>
+      <BDMNUMBER Digits="5" Rows="1" Face="Courier New" Radix="10" Fontsize="960" Columns="1" Rect="72, 7, 112, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IDP.CIP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Length:" Face="Courier New" Fontsize="960" Rect="6, 7, 62, 24" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Radix="10" Fontsize="960" Columns="1" Rect="194, 6, 218, 23" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IDP.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="26" Face="Courier New" HexPrefix="1" Fontsize="960" Columns="4" Rect="3, 52, 347, 494" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IDP.CIP_Data[0:473]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMCAST Rows="1" TextMap="CIP_Type" Face="Courier New" Fontsize="960" Columns="1" Rect="242, 6, 346, 23" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IDP.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Type:" Face="Courier New" Fontsize="960" Rect="151, 6, 191, 23" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

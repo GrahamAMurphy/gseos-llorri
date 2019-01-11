@@ -1,0 +1,293 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="254, 0, 755, 384" Title="FTF Decoder Status" >
+    <PICTURE>
+      <RECTANGLE Backcolor="16" Rect="5, 6, 239, 171" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="FTF TLM Decoder" Face="Verdana" Fontsize="768" Backcolor="16" Rect="67, 12, 178, 26" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="155, 81, 225, 95" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.SyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 81, 88, 95" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="155, 31, 225, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="FTF_IN_TLM Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 31, 108, 45" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="155, 46, 225, 60" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.SrcByteCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Source Byte Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 46, 110, 60" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="155, 63, 225, 77" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_TLM Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 63, 113, 77" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Version Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 97, 115, 111" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="155, 97, 225, 111" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.VersionErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="155, 112, 225, 126" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.TypeErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Type Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 112, 88, 126" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Seq No Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 132, 113, 146" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="155, 132, 225, 146" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.SeqNoErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 148, 110, 162" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="155, 148, 225, 162" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <RECTANGLE Backcolor="16" Rect="247, 6, 481, 340" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="FTF STATUS Decoder" Face="Verdana" Fontsize="768" Backcolor="16" Rect="296, 12, 432, 26" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 176, 467, 190" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.SyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 176, 330, 190" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 31, 467, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="FTF_IN_STATUS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 31, 372, 45" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 46, 467, 60" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.SrcByteCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Source Byte Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 46, 352, 60" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 63, 467, 77" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestStatusBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_STATUS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 63, 377, 77" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Version Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 192, 357, 206" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 192, 467, 206" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.VersionErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 207, 467, 221" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.TypeErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Type Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 207, 330, 221" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Seq No Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 223, 355, 237" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 223, 467, 237" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.SeqNoErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Status Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 239, 374, 253" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 239, 467, 253" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.StatusLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 78, 467, 92" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestAnalogBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_ANALOG Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 78, 381, 92" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 92, 467, 106" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestDebugBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_DEBUG Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 92, 374, 106" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 107, 467, 121" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestMessageBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_MESSAGE Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 107, 389, 121" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Analog Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 255, 377, 269" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 255, 467, 269" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.AnalogLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Debug Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 270, 375, 284" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 270, 467, 284" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DebugLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Message Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 286, 387, 300" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 286, 467, 300" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.MessageLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Settings Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 302, 384, 316" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 302, 467, 316" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.SettingsLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Errors Len Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 318, 373, 332" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="397, 318, 467, 332" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.ErrorsLenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 123, 467, 137" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestSettingsBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_SETTINGS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 123, 392, 137" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="397, 138, 467, 152" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_STATUS.DestErrorsBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_ERRORS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="252, 138, 381, 152" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="16" Rect="6, 175, 240, 340" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="FTF TLM HS Decoder" Face="Verdana" Fontsize="768" Backcolor="16" Rect="68, 181, 201, 195" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="156, 250, 226, 264" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.SyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 250, 89, 264" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="156, 200, 226, 214" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="FTF_IN_TLM_HS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 200, 132, 214" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="156, 215, 226, 229" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.SrcByteCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Source Byte Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 215, 111, 229" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleTimeout="5" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="156, 232, 226, 246" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_TLM_HS Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 232, 137, 246" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Version Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 266, 116, 280" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="156, 266, 226, 280" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.VersionErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="156, 281, 226, 295" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.TypeErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Type Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 281, 89, 295" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Seq No Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 301, 114, 315" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="156, 301, 226, 315" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.SeqNoErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 317, 111, 331" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="156, 317, 226, 331" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_TLM_HS.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

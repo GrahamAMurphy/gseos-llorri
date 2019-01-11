@@ -1,0 +1,169 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="962, 6, 1450, 234" Title="SCE SETTINGS" >
+    <PICTURE>
+      <RECTANGLE Backcolor="16" Rect="252, 2, 466, 148" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="5, 2, 248, 115" >
+      </RECTANGLE>
+      <FIXTEXT Text="Minor Frame Cnt:" Face="Verdana" Fontsize="768" Rect="10, 27, 111, 41" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="SCE Settings" Face="Verdana" Fontsize="768" Backcolor="16" Rect="69, 5, 150, 19" >
+      </FIXTEXT>
+      <FIXTEXT Text="Minor Frame Length:" Face="Verdana" Fontsize="768" Rect="10, 43, 129, 57" >
+      </FIXTEXT>
+      <FIXTEXT Text="Instr. Voltage Limit Low:" Face="Verdana" Fontsize="768" Rect="256, 25, 396, 39" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="4" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="192, 25, 220, 39" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.MinorFrameCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="5" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="185, 42, 220, 56" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.MinorFrameTime" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="ms" Face="Verdana" Fontsize="768" Rect="222, 42, 240, 56" >
+      </FIXTEXT>
+      <FIXTEXT Text="V" Face="Verdana" Fontsize="768" Rect="452, 25, 461, 39" >
+      </FIXTEXT>
+      <FIXTEXT Text="1PPS Non Gated:" Face="Verdana" Fontsize="768" Rect="10, 59, 109, 73" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="Enabled" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="188, 59, 237, 73" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.PPSNonGatedEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="TLM UART Baudrate:" Face="Verdana" Fontsize="768" Rect="11, 76, 130, 90" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="178, 76, 220, 90" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.TlmUartBaudrate" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 25, 448, 39" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_SETTINGS.InstrVoltLimitLow" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Instr. Voltage Limit High:" Face="Verdana" Fontsize="768" Rect="256, 40, 399, 54" >
+      </FIXTEXT>
+      <FIXTEXT Text="V" Face="Verdana" Fontsize="768" Rect="452, 40, 461, 54" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 40, 448, 54" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_SETTINGS.InstrVoltLimitHigh" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Instr. Current Limit Low:" Face="Verdana" Fontsize="768" Rect="256, 55, 398, 69" >
+      </FIXTEXT>
+      <FIXTEXT Text="A" Face="Verdana" Fontsize="768" Rect="452, 55, 461, 69" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 55, 448, 69" >
+        <BDMFORMULA Formula="InstrCurr" >
+          <DATAITEM Item="SCE_IN_SETTINGS.InstrCurrLimitLow" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Instr. Current Limit High:" Face="Verdana" Fontsize="768" Rect="256, 70, 401, 84" >
+      </FIXTEXT>
+      <FIXTEXT Text="A" Face="Verdana" Fontsize="768" Rect="452, 70, 461, 84" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 70, 448, 84" >
+        <BDMFORMULA Formula="InstrCurr" >
+          <DATAITEM Item="SCE_IN_SETTINGS.InstrCurrLimitHigh" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Aux. Voltage Limit Low:" Face="Verdana" Fontsize="768" Rect="256, 86, 391, 100" >
+      </FIXTEXT>
+      <FIXTEXT Text="V" Face="Verdana" Fontsize="768" Rect="452, 86, 461, 100" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 86, 448, 100" >
+        <BDMFORMULA Formula="AuxVolts" >
+          <DATAITEM Item="SCE_IN_SETTINGS.AuxVoltLimitLow" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Aux. Voltage Limit High:" Face="Verdana" Fontsize="768" Rect="256, 101, 394, 115" >
+      </FIXTEXT>
+      <FIXTEXT Text="V" Face="Verdana" Fontsize="768" Rect="452, 101, 461, 115" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 101, 448, 115" >
+        <BDMFORMULA Formula="AuxVolts" >
+          <DATAITEM Item="SCE_IN_SETTINGS.AuxVoltLimitHigh" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Aux. Current Limit Low:" Face="Verdana" Fontsize="768" Rect="256, 116, 393, 130" >
+      </FIXTEXT>
+      <FIXTEXT Text="A" Face="Verdana" Fontsize="768" Rect="452, 116, 461, 130" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 116, 448, 130" >
+        <BDMFORMULA Formula="AuxCurr" >
+          <DATAITEM Item="SCE_IN_SETTINGS.AuxCurrLimitLow" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Aux. Current Limit High:" Face="Verdana" Fontsize="768" Rect="256, 131, 396, 145" >
+      </FIXTEXT>
+      <FIXTEXT Text="A" Face="Verdana" Fontsize="768" Rect="452, 131, 461, 145" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="6" Rows="1" StaleControl="Local" Face="Verdana" Columns="1" Format="%25.3f" Fontsize="768" StaleEnabled="No" Rect="394, 131, 448, 145" >
+        <BDMFORMULA Formula="AuxCurr" >
+          <DATAITEM Item="SCE_IN_SETTINGS.AuxCurrLimitHigh" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <RECTANGLE Backcolor="16" Rect="5, 118, 248, 185" >
+      </RECTANGLE>
+      <FIXTEXT Text="Mode:" Face="Verdana" Fontsize="768" Rect="9, 137, 45, 151" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="UartErrorInjectionMode" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="132, 135, 238, 149" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.UartErrorInjectionMode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="Limits" Face="Verdana" Fontsize="768" Backcolor="16" Rect="339, 8, 378, 22" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Error Injection" Face="Verdana" Fontsize="768" Backcolor="16" Rect="65, 121, 162, 135" >
+      </FIXTEXT>
+      <FIXTEXT Text="Bit Position:" Face="Verdana" Fontsize="768" Rect="9, 151, 78, 165" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="121, 150, 163, 164" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.UartErrorInjectionBitPos" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Byte Position:" Face="Verdana" Fontsize="768" Rect="9, 165, 89, 179" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="121, 164, 163, 178" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.UartErrorInjectionBytePos" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="UART Inter WORD Gap:" Face="Verdana" Fontsize="768" Rect="11, 92, 148, 106" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="178, 93, 220, 107" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.CmdUartInterWordGap" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="us" Face="Verdana" Fontsize="768" Rect="222, 93, 236, 107" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

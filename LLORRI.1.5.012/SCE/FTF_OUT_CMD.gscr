@@ -1,0 +1,203 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="967, 11, 1428, 623" Title="FTF_OUT_CMD" >
+    <PICTURE>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="86, 47, 166, 64" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.DataLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="DataLen:" Face="Courier New" Fontsize="960" Rect="4, 47, 68, 64" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="3" Face="Courier New" Columns="6" Fontsize="960" Rect="4, 67, 428, 118" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.Data32[0:512]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="303, 7, 327, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.Version" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Version:" Face="Courier New" Fontsize="960" Rect="229, 7, 293, 24" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="FTF_Type" Face="Courier New" Columns="1" Fontsize="960" Rect="104, 7, 168, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Type:" Face="Courier New" Fontsize="960" Rect="4, 7, 44, 24" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="86, 27, 166, 44" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.SeqNo" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Seq No.:" Face="Courier New" Fontsize="960" Rect="4, 27, 68, 44" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="285, 27, 325, 44" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.MajorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Major:" Face="Courier New" Fontsize="960" Rect="229, 27, 277, 44" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="285, 47, 325, 64" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.MinorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Minor:" Face="Courier New" Fontsize="960" Rect="229, 47, 277, 64" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="IP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="109, 146, 123, 160" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="196, 163, 212, 180" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_Version" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Version:%0AHeader Len:%0ATOS:%0ALength:%0AID:%0AFlags:%0AFrag Offset:%0ATTL:%0AProtocol:%0AChecksum:%0ASrc Addr:%0ADest Addr:" Face="Courier New" Fontsize="960" Rect="38, 163, 134, 367" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="196, 181, 212, 198" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_HeaderLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="188, 197, 212, 214" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_TOS" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="172, 214, 212, 231" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="172, 231, 212, 248" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_ID" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="204, 249, 212, 266" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_Flags" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="180, 265, 212, 282" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_FragOffset" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="188, 282, 212, 299" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_TTL" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="188, 300, 212, 317" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_Protocol" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="164, 318, 212, 335" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_Checksum" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="132, 334, 212, 351" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_SrcAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="132, 351, 212, 368" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.IP_DestAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="UDP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="298, 146, 324, 160" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="332, 163, 372, 180" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.UDP_SrcPort" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Src Port:%0ADest Port:%0ALength:%0AChecksum:" Face="Courier New" Fontsize="960" Rect="250, 163, 330, 231" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="332, 181, 372, 198" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.UDP_DestPort" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="332, 197, 372, 214" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.UDP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="324, 214, 372, 231" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.UDP_Checksum" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="CIP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="299, 248, 321, 262" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="316, 266, 396, 283" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.CIP_Marker" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Marker:%0ALength:%0AType:" Face="Courier New" Fontsize="960" Rect="251, 265, 307, 316" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="334, 297, 358, 314" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Radix="10" Fontsize="960" Rect="318, 281, 358, 298" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.CIP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="CIP Data" Face="Verdana" Fontsize="768" Backcolor="16" Rect="194, 376, 250, 390" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="CIP_Type" Face="Courier New" Columns="1" Fontsize="960" Rect="368, 295, 472, 312" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Rows="10" Face="Courier New" HexPrefix="1" Columns="5" Fontsize="960" Rect="5, 395, 437, 565" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.CIP_Data[0:473]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

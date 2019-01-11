@@ -1,0 +1,19 @@
+LOR_NVRAM {
+    Id                      , , , 16 ;
+    Length                  , , , 16 ;
+    TimeTag                 , , , 32 ;
+  ( Data[512]               , , , 8 ; )
+  ( DataW[256]              , , , 16 ; )
+  ( DataQ[128]              , , , 32 ; )
+
+    TimeStamp               , , , 32 ;
+    TotalImageCount         , , , 32 ;
+
+    FlashBlockCount         , , , 16 ;
+    FlashBlockStart         , , , 16 ;
+    FlashBlocksUsed         , , , 16 ;
+    FlashCurrentBlock       , , , 16 ;
+    FlashCurrentPage        , , , 16 ;
+    FlashImageCount         , , , 16 ;
+    BootMET                 , , , 32 ;
+}

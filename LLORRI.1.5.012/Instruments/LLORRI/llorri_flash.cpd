@@ -1,0 +1,94 @@
+<GSEOS Version="366">
+
+<Cmd Mnemonic="LOR_FLASH_ARM_WRITE" Opcode="0xb0" NumBits="8"
+    Description="Allow or disallow writing to flash memory">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BLOCK_RANGE" Opcode="0xb1" NumBits="8"
+    Description="Set the starting block and count for access">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="16" Description="Arg2_2B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BLOCK_CURRENT" Opcode="0xb2" NumBits="8"
+    Description="Set the current block and page">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="8" Description="Arg2_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_ERASE_ENABLE" Opcode="0xb3" NumBits="8"
+    Description="Enables or disables the ability to erase blocks">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_ERASE_BLOCKS" Opcode="0xb4" NumBits="8"
+    Description="Specify starting block and number of blocks to erase">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="16" Description="Arg2_2B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BADBLOCK_ENABLE" Opcode="0xb5" NumBits="8"
+    Description="Enables or disables the ability to set bad blocks">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BADBLOCK_SET" Opcode="0xb6" NumBits="8"
+    Description="Specify that a block should be designated as bad">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="8" Description="Arg2_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_POWER" Opcode="0xb7" NumBits="8"
+    Description="Power or unpower flash device">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_IMAGE_COUNT" Opcode="0xb8" NumBits="8"
+    Description="Set the number of images that have been written to flash">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BLOCK_TABLE_CLEAR" Opcode="0xb9" NumBits="8"
+    Description="Clears block utilization">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="16" Description="Arg2_2B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_READOUT_IMAGES" Opcode="0xba" NumBits="8"
+    Description="Read images from flash and transmit to Spacewire">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="16" Description="Arg2_2B"/>
+    <Arg NumBits="8" Description="Arg3_1B"/>
+    <Arg NumBits="8" Description="Arg4_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_CATALOGUE_INIT" Opcode="0xbb" NumBits="8"
+    Description="Initialize the image catalogue">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_BLOCK_TABLE_INIT" Opcode="0xbc" NumBits="8"
+    Description="Initialize the block table">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_READOUT_BLOCKS" Opcode="0xbd" NumBits="8"
+    Description="Copy flash blocks to Spacewire">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <Arg NumBits="16" Description="Arg2_2B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_RESET" Opcode="0xbe" NumBits="8"
+    Description="Reset a flash target">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_FULL_SET" Opcode="0xbf" NumBits="8"
+    Description="Set or clear the status of the flash capacity">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Arg1_1B"/>
+</Cmd>
+<Cmd Mnemonic="LOR_FLASH_NOTWRITE_STOP" Opcode="0xc0" NumBits="8"
+    Description="Stop a Not Write operation that is in progress">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+</GSEOS>

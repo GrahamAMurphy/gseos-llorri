@@ -1,0 +1,31 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="-2, 0, 301, 645" Title="OKBios Wire Status" >
+    <PICTURE>
+      <BDMNUMBER Rows="32" Face="Courier New" HexPrefix="1" Fontsize="960" Columns="1" Rect="70, 54, 118, 598" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_WireOuts.WireOut[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="XEM1" Face="Verdana" Fontsize="1536" Rect="112, 0, 178, 26" >
+      </FIXTEXT>
+      <FIXTEXT Text="WireOuts" Face="Courier New" Fontsize="960" Rect="39, 30, 103, 47" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="32" Face="Courier New" HexPrefix="1" Fontsize="960" Columns="1" Rect="226, 54, 274, 598" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_WireIns.WireIn[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="WireIns" Face="Courier New" Fontsize="960" Rect="183, 30, 239, 47" >
+      </FIXTEXT>
+      <FIXTEXT Text="0x20:%0A0x21:%0A0x22:%0A0x23:%0A0x24:%0A0x25:%0A0x26:%0A0x27:%0A0x28:%0A0x29:%0A0x2A:%0A0x2B:%0A0x2C:%0A0x2D:%0A0x2E:%0A0x2F:%0A0x30:%0A0x31:%0A0x32:%0A0x33:%0A0x34:%0A0x35:%0A0x36:%0A0x37:%0A0x38:%0A0x39:%0A0x3A:%0A0x3B:%0A0x3C:%0A0x3D:%0A0x3E:%0A0x3F:" Face="Courier New" Fontsize="960" Rect="16, 53, 56, 597" >
+      </FIXTEXT>
+      <FIXTEXT Text="0x00:%0A0x01:%0A0x02:%0A0x03:%0A0x04:%0A0x05:%0A0x06:%0A0x07:%0A0x08:%0A0x09:%0A0x0A:%0A0x0B:%0A0x0C:%0A0x0D:%0A0x0E:%0A0x0F:%0A0x10:%0A0x11:%0A0x12:%0A0x13:%0A0x14:%0A0x15:%0A0x16:%0A0x17:%0A0x18:%0A0x19:%0A0x1A:%0A0x1B:%0A0x1C:%0A0x1D:%0A0x1E:%0A0x1F:" Face="Courier New" Fontsize="960" Rect="162, 54, 202, 598" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

@@ -1,0 +1,29 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="2, 536, 741, 642" Title="SCE_IN_MESSAGE" >
+    <PICTURE>
+      <BDMTEXT Rows="1" Rect="5, 28, 716, 45" Columns="80" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_MESSAGE.Message[0:80]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Rect="5, 48, 716, 65" Columns="80" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_MESSAGE.Message[80:160]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <FIXTEXT Text="Level:" Rect="5, 6, 59, 23" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="MESSAGE_Level" Columns="1" Rect="63, 7, 108, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_MESSAGE.Level" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

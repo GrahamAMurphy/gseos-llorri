@@ -1,0 +1,81 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="2, 6, 296, 275" Title="FTF OUT Decoder Status" >
+    <PICTURE>
+      <RECTANGLE Rect="3, 5, 279, 113" Backcolor="16" >
+      </RECTANGLE>
+      <FIXTEXT Text="DestBlkCnt (FIFO_OUT_CMD):" Face="Verdana" Fontsize="768" Rect="10, 68, 184, 82" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 30, 269, 44" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CMD.SeqNo" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="199, 87, 269, 101" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CMD.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SeqNo:" Face="Verdana" Fontsize="768" Rect="10, 30, 52, 44" >
+      </FIXTEXT>
+      <FIXTEXT Text="SrcBlkCnt (FTF_OUT_CMD):" Face="Verdana" Fontsize="768" Rect="10, 49, 170, 63" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 49, 269, 63" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CMD.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 87, 110, 101" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 68, 269, 82" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CMD.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="FTF CMD Decoder" Face="Verdana" Fontsize="768" Backcolor="16" Rect="82, 11, 195, 25" >
+      </FIXTEXT>
+      <RECTANGLE Rect="3, 118, 279, 226" Backcolor="16" >
+      </RECTANGLE>
+      <FIXTEXT Text="DestBlkCnt (FIFO_OUT_CTRL):" Face="Verdana" Fontsize="768" Rect="10, 181, 187, 195" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 143, 269, 157" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CTRL.SeqNo" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="199, 200, 269, 214" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CTRL.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SeqNo:" Face="Verdana" Fontsize="768" Rect="10, 143, 52, 157" >
+      </FIXTEXT>
+      <FIXTEXT Text="SrcBlkCnt (FTF_OUT_CTRL):" Face="Verdana" Fontsize="768" Rect="10, 162, 173, 176" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 162, 269, 176" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CTRL.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 200, 110, 214" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="199, 181, 269, 195" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_FTF_CTRL.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="FTF CTRL Decoder" Face="Verdana" Fontsize="768" Backcolor="16" Rect="82, 124, 199, 138" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

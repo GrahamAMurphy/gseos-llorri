@@ -1,0 +1,5 @@
+#!/bin/csh -fv
+/bin/cp /dev/null LLORRI.con
+/bin/cp /dev/null LLORRI.msg
+/bin/rm -rf Log/*
+/bin/rm -rf Logs/*

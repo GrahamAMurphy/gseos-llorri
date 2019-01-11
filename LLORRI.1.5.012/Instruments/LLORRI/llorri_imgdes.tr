@@ -1,0 +1,50 @@
+# ************************************************************************** #
+# * This New Horizons text reference file was automatically created with   * #
+# * the GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                * #
+# *                                                                        * #
+# * To change the text references please modify the Excel source           * #
+# * file: i_LORRI\CMD_n_TLM\611_TLM_20050418_02.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Mon Apr 18 17:28:56 2005                                            * #
+# ************************************************************************** #
+
+
+LOR_IMG_DES_TEMP_CONV_ENA_ST
+{
+  0, "DISABLE", Black on LightGray;
+  1, "ENABLE", Black on LightGray
+}
+
+LOR_IMG_DES_CAL_LAMP_2_ENA_ST
+{
+  0, "OFF", Black on LightGray;
+  1, "ON", Black on LightGray
+}
+
+LOR_IMG_DES_CAL_LAMP_1_ENA_ST
+{
+  0, "OFF", Black on LightGray;
+  1, "ON", Black on LightGray
+}
+
+LOR_IMG_DES_SOURCE_ST
+{
+  0, "CCD", Black on LightGray;
+  1, "FPU_TEST_PAT_1", Black on LightGray;
+  2, "FPU_TEST_PAT_2", Black on LightGray;
+  3, "DPU_TEST_PAT_1", Black on LightGray;
+  4, "DPU_TEST_PAT_2", Black on LightGray
+}
+
+LOR_IMG_DES_BIN_MODE_ST
+{
+  0, "1X1", Black on LightGray;
+  1, "4X4", Black on LightGray
+}
+
+LOR_IMG_DES_EXP_MODE_ST
+{
+  0, "MANUAL", Black on LightGray;
+  1, "AUTOMATIC", Black on LightGray
+}
+

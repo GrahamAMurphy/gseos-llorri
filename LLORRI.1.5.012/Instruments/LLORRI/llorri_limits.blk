@@ -1,0 +1,67 @@
+# ************************************************************************** #
+# * This New Horizons block definition file was automatically created with * #
+# * the GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                * #
+# *                                                                        * #
+# * To change the block definition please modify the Excel source          * #
+# * file: i_LORRI\CMD_n_TLM\606_TLM_20040729_01.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Thu Feb 10 12:49:41 2005                                            * #
+# ************************************************************************** #
+
+
+#
+# LOR_LIMITS
+#
+LOR_LIMITS
+{
+
+    Id                      , , , 16;
+    Length                  , , , 16;
+    TimeTag                 , , , 32;
+  ( Data[1024]               , , ,  8; ) 
+
+    EPU_P5_VOLT_LO,                  ,    7,    8;
+    EPU_P5_VOLT_HI,                  ,    7,    8;
+    EPU_P5_CURR_LO,                  ,    7,    8;
+    EPU_P5_CURR_HI,                  ,    7,    8;
+    FPU_P15_VOLT_LO,                 ,    7,    8;
+    FPU_P15_VOLT_HI,                 ,    7,    8;
+    FPU_P15_CURR_LO,                 ,    7,    8;
+    FPU_P15_CURR_HI,                 ,    7,    8;
+    FPU_P6_VOLT_LO,                  ,    7,    8;
+    FPU_P6_VOLT_HI,                  ,    7,    8;
+    FPU_P6_CURR_LO,                  ,    7,    8;
+    FPU_P6_CURR_HI,                  ,    7,    8;
+    FPU_HTR_CURR_LO,                 ,    7,    8;
+    FPU_HTR_CURR_HI,                 ,    7,    8;
+    EPU_P25_VOLT_LO,                 ,    7,    8;
+    EPU_P25_VOLT_HI,                 ,    7,    8;
+    INTER_RING_TEMP_LO,              ,    7,    8;
+    INTER_RING_TEMP_HI,              ,    7,    8;
+    MNT_FOOT_TOP_TEMP_LO,            ,    7,    8;
+    MNT_FOOT_TOP_TEMP_HI,            ,    7,    8;
+    M2_MIR_MNT_TEMP_LO,              ,    7,    8;
+    M2_MIR_MNT_TEMP_HI,              ,    7,    8;
+    RDTR_TEMP_LO,                    ,    7,    8;
+    RDTR_TEMP_HI,                    ,    7,    8;
+    BAFF_AFT_TEMP_LO,                ,    7,    8;
+    BAFF_AFT_TEMP_HI,                ,    7,    8;
+    BAFF_FORE_TEMP_LO,               ,    7,    8;
+    BAFF_FORE_TEMP_HI,               ,    7,    8;
+    M1_MIRROR_SUPP_TEMP_LO,          ,    7,    8;
+    M1_MIRROR_SUPP_TEMP_HI,          ,    7,    8;
+    M1_MIRROR_TEMP_LO,               ,    7,    8;
+    M1_MIRROR_TEMP_HI,               ,    7,    8;
+    CCD_TEMP_LO,                     ,    7,    8;
+    CCD_TEMP_HI,                     ,    7,    8;
+    M1_VF_TEMP_LO,                   ,    7,    8;
+    M1_VF_TEMP_HI,                   ,    7,    8;
+    M2_VF_TEMP_LO,                   ,    7,    8;
+    M2_VF_TEMP_HI,                   ,    7,    8;
+    FPU_BRD_VF_TEMP_LO,              ,    7,    8;
+    FPU_BRD_VF_TEMP_HI,              ,    7,    8;
+    CCD_1X1_TEMP_LO,                 ,    7,    8;
+    CCD_1X1_TEMP_HI,                 ,    7,    8;
+    CCD_4X4_TEMP_LO,                 ,    7,    8;
+    CCD_4X4_TEMP_HI,                 ,    7,    8;
+}

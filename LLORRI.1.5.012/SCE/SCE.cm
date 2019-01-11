@@ -1,0 +1,232 @@
+# *************************************************************************** #
+# * SCE Command menu.                                                       * #
+# * Copyright (C) 1998-2018, GSE Software, Inc.                             * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Mar-18-2018 th R002: Initial version.                                   * #
+# *************************************************************************** #
+
+Menu &SCE Cmds
+{
+  Menuitem Set Analog &Update Time..., SCE_CTRL_SET_ANALOG_UPDATE_TIME()
+
+  Popup &Switch Side...
+  {
+    Menuitem Side &A,    SCE_CTRL_SWITCH_SIDE(A)
+    Menuitem Side &B,    SCE_CTRL_SWITCH_SIDE(B)
+    Menuitem Side &None, SCE_CTRL_SWITCH_SIDE(None)
+  }
+
+
+  Popup &1PPS...
+  {
+    Popup &Enable 1PPS (non gated)...
+    {
+      Menuitem &Enable,  SCE_CTRL_ENABLE_1PPS_NON_GATED(ENABLE)
+      Menuitem &Disable, SCE_CTRL_ENABLE_1PPS_NON_GATED(DISABLE)
+    }
+
+    Menuitem &Arm 1PPS Gated 1...,  SCE_CTRL_ARM_1PPS_GATED1($'Please enter delay from 1PPS in usec.', $'Please enter pulse width in usec.')
+    Menuitem &Arm 1PPS Gated 2...,  SCE_CTRL_ARM_1PPS_GATED2($'Please enter delay from 1PPS in usec.', $'Please enter pulse width in usec.')
+
+  }
+
+  Popup &UART
+  {
+    Menuitem &No Error,                 SCE_CTRL_INJECT_UART_ERROR(NO_ERROR)
+    Menuitem &Set Inter Word Gap...,    SCE_CTRL_SET_UART_INTER_WORD_GAP($'Set the CMD UART inter WORD gap in usec.')
+
+    Popup Inject &Parity Error
+    {
+      Menuitem &Continuous...,             SCE_CTRL_INJECT_UART_ERROR(PARITY_ERROR, INJECT_CONT, 0, 0)
+      Menuitem &Once at Position...,       SCE_CTRL_INJECT_UART_ERROR(PARITY_ERROR, INJECT_ONCE_AT_POS, 0, $'Please enter the byte position')
+      Menuitem &Continuous at Position..., SCE_CTRL_INJECT_UART_ERROR(PARITY_ERROR, INJECT_CONT_AT_POS, 0, $'Please enter the byte position')
+    }
+
+    Popup Inject &Frame Error
+    {
+      Menuitem &Continuous...,             SCE_CTRL_INJECT_UART_ERROR(FRAME_ERROR, INJECT_CONT, 0, 0)
+      Menuitem &Once at Position...,       SCE_CTRL_INJECT_UART_ERROR(FRAME_ERROR, INJECT_ONCE_AT_POS, 0, $'Please enter the byte position')
+      Menuitem &Continuous at Position..., SCE_CTRL_INJECT_UART_ERROR(FRAME_ERROR, INJECT_CONT_AT_POS, 0, $'Please enter the byte position')
+    }
+
+    Popup Inject &Data Bit Error
+    {
+      Menuitem &Continuous...,             SCE_CTRL_INJECT_UART_ERROR(DATA_BIT_ERROR, INJECT_CONT,        $'Please enter the bit position', 0)
+      Menuitem &Once at Position...,       SCE_CTRL_INJECT_UART_ERROR(DATA_BIT_ERROR, INJECT_ONCE_AT_POS, $'Please enter the bit position', $'Please enter the byte position')
+      Menuitem &Continuous at Position..., SCE_CTRL_INJECT_UART_ERROR(DATA_BIT_ERROR, INJECT_CONT_AT_POS, $'Please enter the bit position', $'Please enter the byte position')
+    }
+
+    Menuitem &Configure Error, SCE_CTRL_INJECT_UART_ERROR()
+  }
+
+  Popup &Errors
+  {
+    Menuitem Reset &Frontpanel Error, SCE_CTRL_RESET_FRONTPANEL_ERROR()
+    Menuitem Reset Error &Counters,   SCE_CTRL_RESET_ERROR_COUNTERS()
+    Menuitem Reset &Peak Values,      SCE_CTRL_RESET_PEAK_VALUES()
+    Menuitem Request Error &Update,   SCE_CTRL_REQUEST_ERRORS()
+    Separator
+    Menuitem Reset GSEOS &Decoder Errors, LLORRI_Bios.ResetErrorCounters()
+  }
+
+  Popup &Power Switches
+  {
+    Popup &Instrument
+    {
+      Popup &A
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_INSTR_A_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_INSTR_A_POWER()
+      }
+
+      Popup &B
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_INSTR_B_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_INSTR_B_POWER()
+      }
+    }
+
+    Popup &Aux
+    {
+      Popup &0
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_0_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_0_POWER()
+      }
+
+      Popup &1
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_1_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_1_POWER()
+      }
+
+      Popup &2
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_2_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_2_POWER()
+      }
+
+      Popup &3
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_3_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_3_POWER()
+      }
+
+      Popup &4
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_4_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_4_POWER()
+      }
+
+      Popup &5
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_5_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_5_POWER()
+      }
+
+      Popup &6
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_6_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_6_POWER()
+      }
+
+      Popup &7
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_AUX_7_POWER()
+        Menuitem &Disable, SCE_CTRL_DISABLE_AUX_7_POWER()
+      }
+    }
+  }
+
+  Popup &Voltage/Current Limits
+  {
+    Popup &Instrument
+    {
+      Popup &Voltage
+      {
+        Menuitem &Low,  SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, LOW,  $'Please enter the low voltage limit in V (max. resolution 10mV).')
+        Menuitem &High, SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, HIGH, $'Please enter the high voltage limit in V (max. resolution 10mV).')
+      }
+
+      Popup &Current
+      {
+        Menuitem &Low,  SCE_CTRL_SET_CURRENT_LIMIT(INSTR, LOW,  $'Please enter the low current limit in A (max. resolution 1mA).')
+        Menuitem &High, SCE_CTRL_SET_CURRENT_LIMIT(INSTR, HIGH, $'Please enter the high current limit in A (max. resolution 1mA).')
+      }
+    }
+
+    Popup &Aux
+    {
+      Popup &Voltage
+      {
+        Menuitem &Low,  SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, LOW,  $'Please enter the low voltage limit in V (max. resolution 10mV).')
+        Menuitem &High, SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, HIGH, $'Please enter the high voltage limit in V (max. resolution 10mV).')
+      }
+
+      Popup &Current
+      {
+        Menuitem &Low,  SCE_CTRL_SET_CURRENT_LIMIT(AUX, LOW,  $'Please enter the low current limit in A (max. resolution 1mA).')
+        Menuitem &High, SCE_CTRL_SET_CURRENT_LIMIT(AUX, HIGH, $'Please enter the high current limit in A (max. resolution 1mA).')
+      }
+    }
+  }
+
+  Popup &MET
+  {
+    Menuitem Set &Time...,             GSEOS_CMD_SET_TIME($'Please enter the seconds part of the time.', $'Please enter the sub-seconds part of the time.')
+    Menuitem Set Time &Increment...,   GSEOS_CMD_SET_TIME_INCREMENT($'Please enter the time increment in seconds (can be a floating point value).')
+
+    Menuitem &Enable Time Message,     LLORRI_Bios.EnableTimeMsg(True)
+    Menuitem &Disable Time Message,    LLORRI_Bios.EnableTimeMsg(False)
+  }
+
+  Separator
+
+  Menuitem Issue &Cmd...,     GseosCmd.SendBinCmd(LLORRI_Bios.CMD_CHANNEL_INSTR_CMD,     $'Please enter the sequence of command bytes separated by commas.')
+
+  Separator
+
+  Popup &Request Status
+  {
+    Menuitem &Settings, SCE_CTRL_REQUEST_SETTINGS()
+    Menuitem &Errors,   SCE_CTRL_REQUEST_ERRORS()
+  }
+
+  Popup &Tests
+  {
+    Popup Enable &Loopback
+    {
+      Menuitem &Enable,  SCE_CTRL_ENABLE_LOOPBACK(ENABLE)
+      Menuitem &Disable, SCE_CTRL_ENABLE_LOOPBACK(DISABLE)
+    }
+
+    Popup &Verbose Debug
+    {
+      Menuitem &Enable,  SCE_CTRL_ENABLE_VERBOSE_DEBUG(ENABLE)
+      Menuitem &Disable, SCE_CTRL_ENABLE_VERBOSE_DEBUG(DISABLE)
+    }
+
+    Popup &Test Data
+    {
+      Popup &Low Speed
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_TEST_DATA_LS(ENABLE)
+        Menuitem &Disable, SCE_CTRL_ENABLE_TEST_DATA_LS(DISABLE)
+        Menuitem Set Data &Rate...,  SCE_CTRL_SET_TEST_DATA_RATE_LS()
+        Menuitem Set Data &Size...,  SCE_CTRL_SET_TEST_DATA_SIZE_LS($'Please enter the data size in bytes.')
+      }
+
+      Popup &High Speed
+      {
+        Menuitem &Enable,  SCE_CTRL_ENABLE_TEST_DATA_HS(ENABLE)
+        Menuitem &Disable, SCE_CTRL_ENABLE_TEST_DATA_HS(DISABLE)
+        Menuitem Set Data &Rate...,  SCE_CTRL_SET_TEST_DATA_RATE_HS()
+      }
+    }
+
+    Menuitem Run SCE Self &Test,             SCE_CTRL_SELF_TEST()
+    Menuitem Run &LLORRI_Bios Self Tests..., LLORRI_Bios.RunSelfTests()
+  }
+}

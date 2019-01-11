@@ -1,0 +1,515 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="785, 5, 1235, 706" Title="SCE STATUS" >
+    <PICTURE>
+      <RECTANGLE Backcolor="16" Rect="6, 414, 216, 510" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="7, 514, 217, 556" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="6, 337, 216, 410" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="7, 561, 431, 658" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="5, 1, 429, 27" >
+      </RECTANGLE>
+      <RECTANGLE Backcolor="16" Rect="5, 30, 215, 164" >
+      </RECTANGLE>
+      <BDMCAST Rows="1" TextMap="Synchronized" StaleControl="Local" Face="Arial" Columns="1" Fontsize="768" StaleEnabled="No" Rect="10, 53, 96, 68" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoCmdSync" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="FIFO CMD" Face="Verdana" Fontsize="768" Backcolor="16" Rect="79, 35, 141, 49" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 89, 208, 103" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdSyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 89, 89, 103" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 103, 111, 117" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 103, 208, 117" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdLengthErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="138, 71, 208, 85" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoCmdFrameCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Frame Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 71, 76, 85" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Version Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 117, 116, 131" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 117, 208, 131" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdVersionErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Type Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="12, 131, 102, 145" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 131, 208, 145" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdTypeErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Seq No Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 146, 114, 160" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 145, 208, 159" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdSeqErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <RECTANGLE Backcolor="16" Rect="220, 226, 429, 425" >
+      </RECTANGLE>
+      <FIXTEXT Text="Instr. A:" Face="Verdana" Fontsize="768" Rect="247, 248, 296, 262" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Power Switches" Face="Verdana" Fontsize="768" Backcolor="16" Rect="276, 231, 377, 245" >
+      </FIXTEXT>
+      <FIXTEXT Text="Instr. B:" Face="Verdana" Fontsize="768" Rect="247, 263, 296, 277" >
+      </FIXTEXT>
+      <FIXTEXT Text="FP Instr. Pwr:" Face="Verdana" Fontsize="768" Rect="247, 278, 326, 292" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="16" Rect="6, 228, 216, 333" >
+      </RECTANGLE>
+      <FIXTEXT Text="Current Major:" Face="Verdana" Fontsize="768" Rect="10, 248, 96, 262" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Major Frame Status" Face="Verdana" Fontsize="768" Backcolor="16" Rect="49, 232, 177, 246" >
+      </FIXTEXT>
+      <FIXTEXT Text="Delay:" Face="Verdana" Fontsize="768" Rect="11, 280, 50, 294" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="136, 248, 206, 262" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.MajorFrameCurr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="145, 279, 187, 293" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.MajorFrameDelay" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="ms" Face="Verdana" Fontsize="768" Rect="189, 279, 207, 293" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Underflow Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 296, 130, 310" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="8" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="151, 296, 207, 310" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCmdUnderflowErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Skip Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 313, 98, 327" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="137, 313, 207, 327" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.MajorFrameSkipErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Reason Code:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="15, 7, 102, 21" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="STATUS_ReasonCode" StaleControl="Local" Face="Verdana" FontStyle="1" Columns="1" Fontsize="768" StaleEnabled="No" Rect="114, 7, 194, 21" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.ReasonCode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <YT SampleTime="2.000000" StaleControl="Local" Range="5000, 0, 300, 0" StaleEnabled="No" Color="1, 1, 1, 1, 1" SampleMode="Block-Arrival" DisplayMode="Sample" Dir="R1" Grid="1" Rect="48, 568, 425, 647" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.MajorFrameDelay" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </YT>
+      <SCALE Text="" Face="Arial" Range="5, 0, 1, 0" Fontsize="768" Rect="9, 568, 33, 647" Dir="R1" >
+      </SCALE>
+      <FIXTEXT Text="1PPS:" Face="Verdana" Fontsize="768" Rect="10, 351, 45, 365" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="Enabled" StaleControl="Local" Face="Verdana" Columns="1" Color="13" Fontsize="768" StaleEnabled="No" Rect="147, 350, 196, 364" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_SETTINGS.PPSNonGatedEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <RECTANGLE Backcolor="16" Rect="219, 30, 429, 164" >
+      </RECTANGLE>
+      <BDMCAST Rows="1" TextMap="Synchronized" StaleControl="Local" Face="Arial" Columns="1" Fontsize="768" StaleEnabled="No" Rect="224, 53, 310, 68" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoCtrlSync" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="FIFO CONTROL" Face="Verdana" Fontsize="768" Backcolor="16" Rect="274, 35, 367, 49" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 89, 422, 103" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCtrlSyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="225, 89, 303, 103" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="225, 103, 325, 117" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 103, 422, 117" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCtrlLengthErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="352, 71, 422, 85" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoCtrlFrameCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Frame Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="224, 71, 290, 85" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Version Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="225, 117, 330, 131" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 117, 422, 131" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCtrlVersionErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Type Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="226, 131, 316, 145" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 131, 422, 145" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCtrlTypeErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Seq No Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="225, 146, 328, 160" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 145, 422, 159" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoCtrlSeqErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <RECTANGLE Backcolor="16" Rect="5, 167, 215, 224" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="FIFO TLM" Face="Verdana" Fontsize="768" Backcolor="16" Rect="79, 172, 139, 186" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="138, 204, 208, 218" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoTlmOverrunErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Overrun Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="11, 204, 108, 218" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="138, 188, 208, 202" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoTlmFrameCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Frame Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="10, 188, 76, 202" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="16" Rect="219, 167, 429, 224" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="FIFO STATUS" Face="Verdana" Fontsize="768" Backcolor="16" Rect="287, 172, 372, 186" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="352, 204, 422, 218" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.FifoStatusOverrunErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Overrun Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="225, 204, 322, 218" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="352, 188, 422, 202" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FifoStatusFrameCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Frame Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="224, 188, 290, 202" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 0:" Face="Verdana" Fontsize="768" Rect="250, 308, 289, 322" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Parity Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="9, 461, 105, 475" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="8" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="146, 461, 202, 475" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.TlmUartParityErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Max Poll Time:" Face="Verdana" Fontsize="768" Rect="13, 519, 98, 533" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="9" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="128, 517, 191, 531" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.MaxPollTime" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="us" Face="Verdana" Fontsize="768" Rect="201, 516, 215, 530" >
+      </FIXTEXT>
+      <FIXTEXT Text="TLM Buffer Free:" Face="Verdana" Fontsize="768" Rect="13, 536, 109, 550" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="9" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Fontsize="768" StaleEnabled="No" Rect="128, 534, 191, 548" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.TlmBufferFree" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Loopback:" Face="Verdana" Fontsize="768" Rect="10, 364, 70, 378" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="Enabled" StaleControl="Local" Face="Verdana" Columns="1" Color="13" Fontsize="768" StaleEnabled="No" Rect="147, 363, 196, 377" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.LoopbackEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="FP Aux Pwr:" Face="Verdana" Fontsize="768" Rect="247, 293, 317, 307" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Frame Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="9, 476, 108, 490" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="8" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="146, 476, 202, 490" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.TlmUartFrameErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Overrun Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="9, 492, 119, 506" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" StaleControl="Local" Columns="1" Radix="10" Color="13" Fontsize="768" StaleEnabled="No" Rect="160, 492, 202, 506" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ERRORS.TlmUartOverrunErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 308, 339, 319" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_0" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 323, 339, 334" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 337, 339, 348" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 350, 339, 361" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_3" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 364, 339, 375" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_4" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 379, 339, 390" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_5" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 393, 339, 404" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_6" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 406, 339, 417" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AuxPwrEnable_7" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 251, 339, 262" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.InstrPwrEnableA" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 264, 339, 275" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.InstrPwrEnableB" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 279, 339, 290" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FrontPanelPwrEnable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="328, 294, 339, 305" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FrontPanelAuxPwrEnable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <RECTANGLE Backcolor="16" Rect="220, 428, 430, 557" >
+      </RECTANGLE>
+      <FIXTEXT Text="Global:" Face="Verdana" Fontsize="768" Rect="227, 451, 269, 465" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Fault Flags" Face="Verdana" Fontsize="768" Backcolor="16" Rect="292, 431, 364, 445" >
+      </FIXTEXT>
+      <FIXTEXT Text="FTF Tx:" Face="Verdana" Fontsize="768" Rect="227, 479, 270, 493" >
+      </FIXTEXT>
+      <FIXTEXT Text="Volt/Curr:" Face="Verdana" Fontsize="768" Rect="227, 492, 285, 506" >
+      </FIXTEXT>
+      <FIXTEXT Text="TLM Timing:" Face="Verdana" Fontsize="768" Rect="227, 524, 297, 538" >
+      </FIXTEXT>
+      <FIXTEXT Text="CMD Timing:" Face="Verdana" Fontsize="768" Rect="227, 539, 302, 553" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 452, 365, 466" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.AlarmGlobal" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 479, 365, 493" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.FtfTxErr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 492, 365, 506" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.VoltCurrErr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 524, 365, 538" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.TlmTimingErr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 540, 365, 554" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.CmdTimingErr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BUTTON Command="SCE_CTRL_ENABLE_INSTR_A_POWER()" Rect="348, 250, 363, 263" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_INSTR_A_POWER()" Rect="365, 250, 380, 263" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_INSTR_B_POWER()" Rect="348, 264, 363, 277" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_INSTR_B_POWER()" Rect="365, 263, 380, 277" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_0_POWER()" Rect="348, 307, 363, 320" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_1_POWER()" Rect="348, 321, 363, 334" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_2_POWER()" Rect="348, 335, 363, 348" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_3_POWER()" Rect="348, 348, 363, 361" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_4_POWER()" Rect="348, 362, 363, 375" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_5_POWER()" Rect="348, 377, 363, 390" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_6_POWER()" Rect="348, 391, 363, 404" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_ENABLE_AUX_7_POWER()" Rect="348, 404, 363, 417" Label="1" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_7_POWER()" Rect="365, 404, 380, 417" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_6_POWER()" Rect="365, 392, 380, 405" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_5_POWER()" Rect="365, 378, 380, 391" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_4_POWER()" Rect="365, 363, 380, 376" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_3_POWER()" Rect="365, 348, 380, 361" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_2_POWER()" Rect="365, 335, 380, 348" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_1_POWER()" Rect="365, 321, 380, 334" Label="0" >
+      </BUTTON>
+      <BUTTON Command="SCE_CTRL_DISABLE_AUX_0_POWER()" Rect="365, 307, 380, 320" Label="0" >
+      </BUTTON>
+      <FIXTEXT Text="Aux 1:" Face="Verdana" Fontsize="768" Rect="250, 321, 289, 335" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 2:" Face="Verdana" Fontsize="768" Rect="250, 335, 289, 349" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 3:" Face="Verdana" Fontsize="768" Rect="250, 349, 289, 363" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 4:" Face="Verdana" Fontsize="768" Rect="250, 362, 289, 376" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 5:" Face="Verdana" Fontsize="768" Rect="250, 376, 289, 390" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 6:" Face="Verdana" Fontsize="768" Rect="250, 390, 289, 404" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux 7:" Face="Verdana" Fontsize="768" Rect="250, 404, 289, 418" >
+      </FIXTEXT>
+      <FIXTEXT Text="Error This Frame:" Face="Verdana" Fontsize="768" Rect="227, 465, 329, 479" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 465, 365, 479" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.ErrThisFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="TLM UART" Face="Verdana" Fontsize="768" Backcolor="16" Rect="78, 418, 142, 432" >
+      </FIXTEXT>
+      <BDMCAST Digits="3" Rows="1" TextMap="Side" StaleControl="Local" Face="Verdana" Columns="1" Color="13" Fontsize="768" StaleEnabled="No" Rect="179, 436, 208, 450" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.ActiveSide" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="UART Side" Face="Vrinda" Fontsize="864" Rect="9, 437, 65, 451" >
+      </FIXTEXT>
+      <FIXTEXT Text="TLM UART:" Face="Verdana" Fontsize="768" Rect="227, 508, 290, 522" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="FaultStatus" StaleControl="Local" Face="Verdana" Columns="1" Fontsize="768" StaleEnabled="No" Rect="338, 508, 365, 522" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.TlmUartErr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Test Data Gen. (LS):" Face="Verdana" Fontsize="768" Rect="11, 379, 130, 393" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="Enabled" StaleControl="Local" Face="Verdana" Columns="1" Color="13" Fontsize="768" StaleEnabled="No" Rect="148, 379, 197, 393" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.TestDataGeneratorEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Test Data Gen. (HS):" Face="Verdana" Fontsize="768" Rect="11, 394, 132, 408" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="Enabled" StaleControl="Local" Face="Verdana" Columns="1" Color="13" Fontsize="768" StaleEnabled="No" Rect="148, 394, 197, 408" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_STATUS.HSTestDataGeneratorEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="Test Data" Face="Verdana" Fontsize="768" Backcolor="16" Rect="76, 341, 139, 355" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

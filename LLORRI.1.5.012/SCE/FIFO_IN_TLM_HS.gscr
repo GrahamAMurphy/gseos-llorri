@@ -1,0 +1,21 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="826, 340, 1330, 672" Title="FIFO_IN_TLM_HS" >
+    <PICTURE>
+      <BDMNUMBER Rows="15" Face="Courier New" Fontsize="960" Columns="20" Rect="10, 34, 482, 289" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FIFO_IN_TLM_HS.Data8[0:8192]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Radix="10" Fontsize="960" Columns="1" Rect="12, 17, 92, 34" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FIFO_IN_TLM_HS.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

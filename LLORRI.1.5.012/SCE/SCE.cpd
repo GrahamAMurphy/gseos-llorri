@@ -1,0 +1,720 @@
+<!--
+# *************************************************************************** #
+# * LLORRI SCE Control Command Definition File                              * #
+# *                                                                         * #
+# * This file defines the SCE CTRL commands that are directed to the SCE.   * #
+# *                                                                         * #
+# * Copyright (C) 1997-2018, GSE Software, Inc.                             * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Mar-18-2018 th R002: Branched from EUROPA R005.                         * #
+# *************************************************************************** #
+-->
+<GSEOS Version="366">
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CONFIG_UART                                                       * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CONFIG_UART" Opcode="0x00" NumBits="32" Channel="0x100"
+       Description="Set UART configuration">
+    <Arg NumBits="32" Description="Baudrate"></Arg>
+
+    <Const Value="0" NumBits="27"/>
+
+    <Arg NumBits="1" Description="Parity">
+      <Enum Name="o"  Value="0"/>
+      <Enum Name="e"  Value="1"/>
+    </Arg>
+
+    <Arg NumBits="4" Description="Stop Bits"></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CONFIG_MINOR_FRAME_CNT                                            * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CONFIG_MINOR_FRAME_CNT" Opcode="0x02" NumBits="32" Channel="0x100"
+       Description="Sets the number of minor frames per major frame.">
+
+    <Arg NumBits="32" Type="UNSIGNED" Description="Number of minor frames per major frame"
+         DataRangeLow="1" DataRangeHigh="1000"></Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CONFIG_MINOR_FRAME_TIME                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CONFIG_MINOR_FRAME_TIME" Opcode="0x03" NumBits="32" Channel="0x100"
+       Description="Sets the length of a minor frame in ms.">
+
+    <Arg NumBits="32" Type="UNSIGNED" Description="Length of a minor frame in ms"
+         DataRangeLow="1" DataRangeHigh="1000"></Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CONFIG_START_ACQUISITION                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CONFIG_START_ACQUISITION" Opcode="0x06" NumBits="32" Channel="0x100"
+       Description="Start the acquisition of TLM UART traffic.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_TRISTATE_DRIVERS                                      * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_TRISTATE_DRIVERS" Opcode="0x0F" NumBits="32" Channel="0x100"
+       Description="Enable/disable UART drivers tristate.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_POWER_SWITCHES                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_POWER_SWITCHES" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Set power switches.">
+
+    <Arg NumBits="32" Description="Power bits"></Arg>
+    <Arg NumBits="32" Description="Mask"></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_INSTR_A_POWER                                         * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_INSTR_A_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable instrument A power.">
+
+    <Const Value = "0x000000800" NumBits="32"/>
+    <Const Value = "0x000000800" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_INSTR_A_POWER                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_INSTR_A_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable instrument A power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000800" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_INSTR_B_POWER                                         * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_INSTR_B_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable instrument B power.">
+
+    <Const Value = "0x00000400" NumBits="32"/>
+    <Const Value = "0x00000400" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_INSTR_B_POWER                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_INSTR_B_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable instrument B power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000400" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_0_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_0_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 0 power.">
+
+    <Const Value = "0x00000100" NumBits="32"/>
+    <Const Value = "0x00000100" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_0_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_0_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 0 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000100" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_1_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_1_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 1 power.">
+
+    <Const Value = "0x00000080" NumBits="32"/>
+    <Const Value = "0x00000080" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_1_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_1_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 1 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000080" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_2_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_2_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 2 power.">
+
+    <Const Value = "0x00000040" NumBits="32"/>
+    <Const Value = "0x00000040" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_2_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_2_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 2 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000040" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_3_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_3_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 3 power.">
+
+    <Const Value = "0x00000020" NumBits="32"/>
+    <Const Value = "0x00000020" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_3_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_3_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 3 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000020" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_4_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_4_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 4 power.">
+
+    <Const Value = "0x00000010" NumBits="32"/>
+    <Const Value = "0x00000010" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_4_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_4_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 4 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000010" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_5_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_5_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 5 power.">
+
+    <Const Value = "0x00000008" NumBits="32"/>
+    <Const Value = "0x00000008" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_5_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_5_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 5 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000008" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_6_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_6_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 6 power.">
+
+    <Const Value = "0x00000004" NumBits="32"/>
+    <Const Value = "0x00000004" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_6_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_6_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 6 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000004" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_AUX_7_POWER                                           * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_AUX_7_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Enable aux. 7 power.">
+
+    <Const Value = "0x00000002" NumBits="32"/>
+    <Const Value = "0x00000002" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_DISABLE_AUX_7_POWER                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_DISABLE_AUX_7_POWER" Opcode="0x10" NumBits="32" Channel="0x100"
+       Description="Disable aux. 7 power.">
+
+    <Const Value = "0x00000000" NumBits="32"/>
+    <Const Value = "0x00000002" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_ANALOG_UPDATE_TIME                                       * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_ANALOG_UPDATE_TIME" Opcode="0x11" NumBits="32" Channel="0x100"
+       Description="Sets the rate (in ms) at which the SCE will send analog data to GSEOS.">
+
+    <Arg NumBits="32" Description="Update time in ms"></Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SELF_TEST                                                    * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SELF_TEST" Opcode="0x12" NumBits="32" Channel="0x100"
+       Description="Initiate SCE self test.">
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_VERBOSE_DEBUG                                         * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_VERBOSE_DEBUG" Opcode="0x13" NumBits="32" Channel="0x100"
+       Description="Enable/disable verbose debug output.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SWITCH_SIDE                                                  * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SWITCH_SIDE" Opcode="0x14" NumBits="32" Channel="0x100"
+       Description="Switch to side A, B, or None.">
+
+    <Arg NumBits="32" Description="Side">
+      <Enum Name="A"     Value="0"/>
+      <Enum Name="B"     Value="1"/>
+      <Enum Name="None"  Value="2"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_UART_INTER_WORD_GAP                                      * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_UART_INTER_WORD_GAP" Opcode="0x16" NumBits="32" Channel="0x100"
+       Description="Sets the CMD UART inter WORD gap in usec.">
+
+    <Arg NumBits="32" Description="Set the CMD UART inter WORD gap in usec."></Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_INJECT_UART_ERROR                                            * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_INJECT_UART_ERROR" Opcode="0x17" NumBits="32" Channel="0x100"
+       Description="Inject error into the CMD UART.">
+    <Arg NumBits="3" StartBit="61" Keyword="ErrorType" Description="Error Type">
+      <Enum Name="NO_ERROR"                Value="0"/>
+      <Enum Name="PARITY_ERROR"            Value="1"/>
+      <Enum Name="FRAME_ERROR"             Value="2"/>
+      <Enum Name="DATA_BIT_ERROR"          Value="4"/>
+    </Arg>
+
+    <Const Value="0"   NumBits="5" StartBit="56"/>
+
+    <Const Value="0"   NumBits="2" StartBit="50"/>
+
+    <Arg NumBits="2" StartBit="48" Keyword="BitErrorMode" Default="INJECT_CONT" Description="Bit Error Mode">
+      <Enum Name="INJECT_CONT"          Value="0"/>
+      <Enum Name="INJECT_ONCE_AT_POS"   Value="1"/>
+      <Enum Name="INJECT_CONT_AT_POS"   Value="2"/>
+    </Arg>
+
+    <Arg   Default="0" NumBits="4" StartBit="52" Keyword="BitPosition" ></Arg>
+
+    <Const Value="0" NumBits="16" StartBit="32" />
+    <Const Value="0" NumBits="16" StartBit="64" />
+    <Arg NumBits="16" Keyword="BytePosition" Default="0" Description="Byte position to inject error."/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_LOOPBACK                                              * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_LOOPBACK" Opcode="0x18" NumBits="32" Channel="0x100"
+       Description="Enable/disable CMD to TLM loopback mode.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_RESET_FRONTPANEL_ERROR                                       * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_RESET_FRONTPANEL_ERROR" Opcode="0x20" NumBits="32" Channel="0x100"
+       Description="Reset the frontpanel error LED.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_RESET_ERROR_COUNTERS                                         * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_RESET_ERROR_COUNTERS" Opcode="0x21" NumBits="32" Channel="0x100"
+       Description="Reset the SCE error counters.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_RESET_PEAK_VALUES                                            * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_RESET_PEAK_VALUES" Opcode="0x22" NumBits="32" Channel="0x100"
+       Description="Reset the SCE peak value counters.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_REQUEST_SETTINGS                                             * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_REQUEST_SETTINGS" Opcode="0x23" NumBits="32" Channel="0x100"
+       Description="Request the SETTINGS message.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_REQUEST_ERRORS                                               * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_REQUEST_ERRORS" Opcode="0x24" NumBits="32" Channel="0x100"
+       Description="Request the ERRORS message.">
+
+    <Const Value="0" NumBits="32"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_VOLTAGE_LIMIT                                            * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_VOLTAGE_LIMIT" Opcode="0x25" NumBits="32" Channel="0x100"
+       Description="Sets the voltage limit.">
+
+    <Const Value="0" NumBits="30"/>
+    <Arg NumBits="1" Description="Select INSTR or AUX">
+      <Enum Name="INSTR" Value="0"/>
+      <Enum Name="AUX"   Value="1"/>
+    </Arg>
+
+    <Arg NumBits="1" Description="Select HIGH or LOW">
+      <Enum Name="HIGH" Value="1"/>
+      <Enum Name="LOW"  Value="0"/>
+    </Arg>
+
+    <Arg NumBits="32" Description="Set the voltage limit in V (max. resolution 10mV)"
+         DataRangeLow="0" DataRangeHigh="40" ScaleFactor="100"></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_CURRENT_LIMIT                                            * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_CURRENT_LIMIT" Opcode="0x26" NumBits="32" Channel="0x100"
+       Description="Sets the current limit.">
+
+    <Const Value="0" NumBits="30"/>
+    <Arg NumBits="1" Description="Select INSTR or AUX">
+      <Enum Name="INSTR" Value="0"/>
+      <Enum Name="AUX"   Value="1"/>
+    </Arg>
+
+    <Arg NumBits="1" Description="Select HIGH or LOW">
+      <Enum Name="HIGH" Value="1"/>
+      <Enum Name="LOW"  Value="0"/>
+    </Arg>
+
+    <Arg NumBits="32" Description="Set the current limit in A (max. resolution 1mA)"
+         DataRangeLow="0" DataRangeHigh="3" ScaleFactor="1000"></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_1PPS_NON_GATED                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_1PPS_NON_GATED" Opcode="0x30" NumBits="32" Channel="0x100"
+       Description="Enable/disable the non-gated 1PPS pulse.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ARM_1PPS_GATED1                                              * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ARM_1PPS_GATED1" Opcode="0x31" NumBits="32" Channel="0x100"
+       Description="Arm the gated 1PPS pulse (1).">
+    <Arg NumBits="32" DataRangeHigh="1000000" Description="Delay from 1PPS in usec."></Arg>
+    <Arg NumBits="32" DataRangeHigh="1000000" Description="Pulse width in usec."></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ARM_1PPS_GATED2                                              * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ARM_1PPS_GATED2" Opcode="0x32" NumBits="32" Channel="0x100"
+       Description="Arm the gated 1PPS pulse (2).">
+    <Arg NumBits="32" DataRangeHigh="1000000" Description="Delay from 1PPS in usec."></Arg>
+    <Arg NumBits="32" DataRangeHigh="1000000" Description="Pulse width in usec."></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_INJECT_SPW_ERROR                                             * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_INJECT_SPW_ERROR" Opcode="0x33" NumBits="32" Channel="0x100"
+       Description="Inject Spacewire error.">
+
+    <Arg NumBits="6" StartBit="58" Keyword="ErrorType" Description="Error Type">
+      <Enum Name="DATA_LEN_WRITE_ERROR"       Value="1"/>
+      <Enum Name="DATA_LEN_READ_ERROR"        Value="2"/>
+      <Enum Name="INVALID_ADDR_READ"          Value="4"/>
+      <Enum Name="INVALID_ADDR_WRITE"         Value="8"/>
+      <Enum Name="READ_TRANSMISSION_REQUEST"  Value="16"/>
+      <Enum Name="TRANSMIT_PARITY_ERROR"      Value="32"/>
+    </Arg>
+
+    <Const Value="0"   NumBits="2" StartBit="56"/>
+
+    <Arg NumBits="2" StartBit="48" Keyword="BitErrorMode" Default="INJECT_SINGLE_SHOT" Description="Bit Error Mode">
+      <Enum Name="INJECT_CONT"          Value="0"/>
+      <Enum Name="INJECT_SINGLE_SHOT"   Value="1"/>
+      <Enum Name="INJECT_ONCE_PER_PPS"  Value="2"/>
+    </Arg>
+
+    <Const Value="0"   NumBits="1" StartBit="50"/>
+
+    <Arg NumBits="5" StartBit="51" Keyword="Options" Default="0" Description="Options depending on error type."/>
+
+    <Const Value="0" NumBits="16" StartBit="32" />
+
+    <Arg NumBits="32" Type="SIGNED" Keyword="Address" Default="0" Description="Data address for some error types."/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_TEST_DATA_LS                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_TEST_DATA_LS" Opcode="0x40" NumBits="32" Channel="0x100"
+       Description="Enable/disable test data TLM low speed generation.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_TEST_DATA_RATE_LS                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_TEST_DATA_RATE_LS" Opcode="0x41" NumBits="32" Channel="0x100"
+       Description="Set TLM low speed test data rate and pattern.">
+    <Arg NumBits="32" Type="UNSIGNED" Description="Rate in bytes/sec"/>
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="STATIC" Value="0"/>
+      <Enum Name="RAMP"   Value="1"/>
+      <Enum Name="RANDOM" Value="2"/>
+    </Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_TEST_DATA_SIZE_LS                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_TEST_DATA_SIZE_LS" Opcode="0x42" NumBits="32" Channel="0x100"
+       Description="Set TLM low speed test data size in bytes.">
+    <Arg NumBits="32" Type="UNSIGNED" Description="Test data size in bytes"/>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_ENABLE_TEST_DATA_HS                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_ENABLE_TEST_DATA_HS" Opcode="0x48" NumBits="32" Channel="0x100"
+       Description="Enable/disable test data TLM high speed generation.">
+    <Arg NumBits="32" Description="Enable">
+      <Enum Name="DISABLE" Value="0"/>
+      <Enum Name="ENABLE"  Value="1"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+
+  <!--
+  # ************************************************************************* #
+  # * SCE_CTRL_SET_TEST_DATA_RATE_HS                                        * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="SCE_CTRL_SET_TEST_DATA_RATE_HS" Opcode="0x49" NumBits="32" Channel="0x100"
+       Description="Set TLM high speed test data by mode.">
+    <Arg NumBits="32" Description="Mode">
+      <Enum Name="100Mbps" Value="0"/>
+      <Enum Name="160Mbps" Value="1"/>
+      <Enum Name="200Mbps" Value="2"/>
+      <Enum Name="266Mbps" Value="3"/>
+    </Arg>
+    <Const Value="0" NumBits="32"/>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * GSEOS_CMD_SET_TIME                                                    * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="GSEOS_CMD_SET_TIME" Opcode="0x00" NumBits="8" Channel="0x101"
+       Description="Sets the current spacecraft time.">
+
+    <Arg NumBits="32" Description="Seconds of spacecraft time"></Arg>
+    <Arg NumBits="16" Description="Sub-seconds of spacecraft time"></Arg>
+  </Cmd>
+
+  <!--
+  # ************************************************************************* #
+  # * GSEOS_CMD_SET_TIME_INCREMENT                                          * #
+  # ************************************************************************* #
+  -->
+  <Cmd Mnemonic="GSEOS_CMD_SET_TIME_INCREMENT" Opcode="0x01" NumBits="8" Channel="0x101"
+       Description="Sets the time increment per TIME TONE pulse.">
+
+    <Arg NumBits="32" Type="FLOAT32_IEEE" Description="Time increment in seconds"></Arg>
+  </Cmd>
+
+</GSEOS>

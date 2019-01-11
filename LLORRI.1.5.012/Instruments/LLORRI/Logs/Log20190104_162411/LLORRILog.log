@@ -1,0 +1,214 @@
+2019/01/04 16:24:11.125	Info	LLORRI_Bios         Starting up session for LUCY L'LORRI, Version: 1.5.012
+2019/01/04 16:24:11.125	Info	LLORRI_Bios         ******************************************************
+2019/01/04 16:24:11.125	Info	LLORRI_Bios         Loading L'LORRI SCE interface.
+2019/01/04 16:24:11.125	Info	LLORRI_Bios         Configuring for SCE mode.
+2019/01/04 16:24:11.125	Info	Message             Setting Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2019/01/04 16:24:11.125	Info	OKBios              Initializing device: XEM1
+2019/01/04 16:24:11.125	Info	OKBios              Entering device service thread for device: XEM1.
+2019/01/04 16:24:12.673	Info	OKBios              Device board model: XEM7310-A200.
+2019/01/04 16:24:12.673	Info	OKBios              Setting transfer size to: 16 bytes.
+2019/01/04 16:24:12.673	Info	OKBios              Device: XEM1 (Opal Kelly XEM7310) configured. No bit file loaded.
+2019/01/04 16:24:17.280	Info	LLORRI_Bios         SCE detected to be not running. Reset SCE.
+2019/01/04 16:24:17.296	Info	LLORRI_Bios         Resetting FPGA with bitfile: Instruments/LLORRI/top_level_mini.bit...
+2019/01/04 16:24:17.296	Info	LLORRI_Bios         Resetting SCE FPGA.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring UART: (115200, o, 1).
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring minor frame count: 50.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring minor frame time: 20 ms.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring analog update time: 1000 ms.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring instrument voltage limits: 0.00 .. 33.00 V.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring instrument current limits: 0.000 .. 2.000 A.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring aux voltage limits: 0.00 .. 33.00 V.
+2019/01/04 16:24:17.374	Info	LLORRI_Bios             Configuring aux current limits: 0.000 .. 2.000 A.
+2019/01/04 16:24:17.405	Info	LLORRI_Bios         SCE configuration completed.
+2019/01/04 16:24:17.451	Info	LLORRI_Bios         Starting TLM data acquisition.
+2019/01/04 16:24:17.451	Info	Message             Removing Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2019/01/04 16:24:17.451	Info	Version             
+2019/01/04 16:24:17.451	Info	Version             Version Control Information
+2019/01/04 16:24:17.451	Info	Version             ----------------------------------------------------------------------
+2019/01/04 16:24:17.451	Info	Version             GSEOS:         7.1.1150
+2019/01/04 16:24:17.451	Info	Version             Python:        2.7.12 (default, Sep  8 2016, 19:20:19) [MSC v.1500 32 bit (Intel)]
+2019/01/04 16:24:17.451	Info	Version             ExcelLoad:     3.0.086
+2019/01/04 16:24:17.451	Info	Version             LUCY L'LORRI:  1.5.012
+2019/01/04 16:24:17.451	Info	Version             
+2019/01/04 16:24:17.451	Info	Version             Spreadsheet Version Information
+2019/01/04 16:24:17.451	Info	Version             ----------------------------------------------------------------------
+2019/01/04 16:24:17.451	Info	Version             ----------------------------------------------------------------------
+2019/01/04 16:24:17.467	Info	Version             
+2019/01/04 16:24:17.467	Info	OKBios              Device: XEM1 (Opal Kelly XEM7310) configured using bit file: Instruments/LLORRI/top_level_mini.bit.
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CONFIG_UART(115200, o, 1)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CONFIG_MINOR_FRAME_CNT(50)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CONFIG_MINOR_FRAME_TIME(20)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_ANALOG_UPDATE_TIME(1000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, HIGH, 33.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, LOW, 0.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(INSTR, HIGH, 2.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(INSTR, LOW, 0.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, HIGH, 33.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, LOW, 0.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(AUX, HIGH, 2.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(AUX, LOW, 0.000000)
+2019/01/04 16:24:17.467	Info	LLORRI Command      Command issued: SCE_CONFIG_START_ACQUISITION()
+2019/01/04 16:24:17.467	Info	SCE                 Bitfile version number 004
+2019/01/04 16:24:17.671	Info	SCE                 cmd baud=115200 par=O stop=1
+2019/01/04 16:24:18.421	Info	SCE                 Minor Frame Time set to 20 ms
+2019/01/04 16:24:18.562	Info	SCE                 Acquisition started
+2019/01/04 16:24:19.546	Error	LLORRI Command      Major Frame skip detected. Expected major frame: 0. Current major frame: 1. Resetting expected major frame to 1.
+2019/01/04 16:26:06.302	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:06.302	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:07.316	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Error	IP Decoder          IP sync error at position: 206. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Error	IP Decoder          IP sync error at position: 478. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:22.313	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.313	Error	IP Decoder          IP sync error at position: 614. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:22.328	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.328	Error	IP Decoder          IP sync error at position: 818. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:22.328	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:22.328	Error	IP Decoder          IP sync error at position: 954. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Error	IP Decoder          IP sync error at position: 70. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Error	IP Decoder          IP sync error at position: 342. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.325	Error	IP Decoder          IP sync error at position: 818. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:38.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:38.341	Error	IP Decoder          IP sync error at position: 954. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:38.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:39.371	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:54.336	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.336	Error	IP Decoder          IP sync error at position: 546. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:54.336	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.336	Error	IP Decoder          IP sync error at position: 682. Expected: 0x45, received: 0x00.
+2019/01/04 16:26:54.336	Error	CIP Decoder         UDP checksum error. Expected: 0x32FF, received: 0x3218.
+2019/01/04 16:26:54.336	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.336	Error	IP Decoder          IP sync error at position: 817. Expected: 0x45, received: 0x60.
+2019/01/04 16:26:54.352	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.352	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.352	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:54.352	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:26:55.368	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:10.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:10.334	Error	IP Decoder          IP sync error at position: 274. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:10.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:10.334	Error	IP Decoder          IP sync error at position: 410. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:10.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:10.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:10.334	Error	IP Decoder          IP sync error at position: 614. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:10.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:10.348	Error	IP Decoder          IP sync error at position: 954. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:10.348	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:11.365	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:26.329	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.329	Error	IP Decoder          IP sync error at position: 478. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:26.329	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.329	Error	IP Decoder          IP sync error at position: 614. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:26.329	Error	CIP Decoder         UDP checksum error. Expected: 0x32DF, received: 0x31F8.
+2019/01/04 16:27:26.329	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.345	Error	IP Decoder          IP sync error at position: 749. Expected: 0x45, received: 0x60.
+2019/01/04 16:27:26.345	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.345	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.345	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.345	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:26.345	Error	IP Decoder          IP sync error at position: 1022. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:42.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.325	Error	IP Decoder          IP sync error at position: 206. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:42.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.325	Error	IP Decoder          IP sync error at position: 342. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:42.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.325	Error	IP Decoder          IP sync error at position: 546. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:42.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.342	Error	IP Decoder          IP sync error at position: 886. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:42.342	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:42.342	Error	IP Decoder          IP sync error at position: 1022. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Error	IP Decoder          IP sync error at position: 410. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Error	IP Decoder          IP sync error at position: 546. Expected: 0x45, received: 0x00.
+2019/01/04 16:27:58.354	Error	CIP Decoder         UDP checksum error. Expected: 0x32BF, received: 0x31D8.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Error	IP Decoder          IP sync error at position: 681. Expected: 0x45, received: 0x60.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:27:58.354	Error	IP Decoder          IP sync error at position: 954. Expected: 0x45, received: 0x00.
+2019/01/04 16:28:14.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.334	Error	IP Decoder          IP sync error at position: 138. Expected: 0x45, received: 0x00.
+2019/01/04 16:28:14.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.334	Error	IP Decoder          IP sync error at position: 274. Expected: 0x45, received: 0x00.
+2019/01/04 16:28:14.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.334	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.334	Error	IP Decoder          IP sync error at position: 478. Expected: 0x45, received: 0x00.
+2019/01/04 16:28:14.349	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.349	Error	IP Decoder          IP sync error at position: 818. Expected: 0x45, received: 0x00.
+2019/01/04 16:28:14.349	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/04 16:28:14.349	Error	IP Decoder          IP sync error at position: 954. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:57.573	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Error	IP Decoder          IP sync error at position: 342. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Error	IP Decoder          IP sync error at position: 478. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.121	Error	CIP Decoder         UDP checksum error. Expected: 0x329F, received: 0x31B8.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Error	IP Decoder          IP sync error at position: 613. Expected: 0x45, received: 0x60.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.121	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.137	Error	IP Decoder          IP sync error at position: 886. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.153	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.168	Error	IP Decoder          IP sync error at position: 70. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.168	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.168	Error	IP Decoder          IP sync error at position: 206. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.168	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.168	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.168	Error	IP Decoder          IP sync error at position: 410. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.168	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.184	Error	IP Decoder          IP sync error at position: 750. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.184	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.184	Error	IP Decoder          IP sync error at position: 886. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.293	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.293	Error	IP Decoder          IP sync error at position: 274. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.293	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.309	Error	IP Decoder          IP sync error at position: 410. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.309	Error	CIP Decoder         UDP checksum error. Expected: 0x327F, received: 0x3198.
+2019/01/07 07:14:58.309	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.309	Error	IP Decoder          IP sync error at position: 545. Expected: 0x45, received: 0x60.
+2019/01/07 07:14:58.325	Error	CIP Decoder         UDP checksum error. Expected: 0x35E0, received: 0x327E.
+2019/01/07 07:14:58.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.325	Error	IP Decoder          IP sync error at position: 614. Expected: 0x45, received: 0x00.
+2019/01/07 07:14:58.325	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.341	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:14:58.357	Error	LLORRI Command      Major Frame skip detected. Expected major frame: 296. Current major frame: 33751040. Resetting expected major frame to 33751040.
+2019/01/07 07:14:59.608	Error	LLORRI Command      Major Frame skip detected. Expected major frame: 3. Current major frame: 29626. Resetting expected major frame to 29626.
+2019/01/07 07:15:05.463	Error	CIP Decoder         UDP checksum error. Expected: 0xBFEE, received: 0xB8E5.
+2019/01/07 07:15:05.463	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:06.479	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:15.476	Info	IP Decoder          Received IP packet. Data Length: 68 bytes.
+2019/01/07 07:15:16.492	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.

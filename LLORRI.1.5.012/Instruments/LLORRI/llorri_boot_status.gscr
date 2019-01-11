@@ -1,0 +1,187 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="498, 108, 981, 467" Title="Boot Status" >
+    <PICTURE>
+      <RECTANGLE Color="8" Backcolor="8" Rect="0, 0, 467, 321" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="Version" Rect="9, 12, 79, 29" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="91, 12, 115, 29" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.SWVersion" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Uplink Executed" Rect="62, 76, 212, 93" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="230, 76, 254, 93" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.CmdExec" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Uplink Rejected" Rect="269, 76, 419, 93" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="433, 76, 457, 93" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.CmdReject" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Commands" Rect="9, 54, 89, 71" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Status Interval" Rect="62, 118, 212, 135" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="226, 118, 266, 135" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.StatusInt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Telemetry" Rect="9, 96, 99, 113" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Volume (KB)" Rect="291, 118, 401, 135" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="420, 118, 460, 135" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.TlmVolume" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Count" Rect="62, 160, 112, 177" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="141, 160, 165, 177" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.AlarmCount" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Alarms" Rect="9, 138, 69, 155" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="Alarm" Columns="1" Rect="62, 181, 334, 198" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.AlarmId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="AlarmType" Columns="1" Rect="265, 160, 353, 177" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.AlarmType" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="Type" Rect="208, 160, 248, 177" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Watch" Rect="62, 224, 112, 241" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="119, 224, 135, 241" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.WatchMemId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Memory" Rect="9, 200, 69, 217" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="146, 224, 178, 241" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.WatchAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="2" Rect="251, 224, 291, 241" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.WatchData[0:2]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Data" Rect="204, 224, 244, 241" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Write" Rect="323, 224, 373, 241" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="DisabledEnabled" Columns="1" Rect="383, 224, 447, 241" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.MemWrite" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="ResetCause" Columns="1" Rect="133, 33, 197, 50" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.Cause" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="Reset Cause" Rect="11, 33, 121, 50" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Code RAM" Rect="211, 33, 291, 50" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="299, 33, 307, 50" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.CodeRAM" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BUTTON Command="LOR_MEM_WR_EN(Enable)" Rect="387, 168, 454, 217" Label="Write%0AEnable" >
+      </BUTTON>
+      <FIXTEXT FontStyle="1" Text="Time" Rect="326, 13, 366, 30" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="371, 13, 451, 30" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BUTTON Command="LOR_ROM_BOOT()" Rect="378, 138, 451, 163" Label="Boot" >
+      </BUTTON>
+      <FIXTEXT FontStyle="1" Text="NVMem_Enb:" Rect="15, 250, 96, 267" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="171, 250, 179, 267" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.NVMem_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="DPU_ID:" Rect="205, 250, 262, 267" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="361, 250, 369, 267" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.DPU_ID" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="141, 291, 149, 308" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.SCCFG_RX_Side" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="336, 270, 344, 287" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.SCCFG_TX_B_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="141, 272, 149, 289" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.SCCFG_Uart_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="336, 289, 344, 306" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.SCCFG_TX_A_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="SCCFG_Uart_Enb:" Rect="15, 272, 136, 289" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="SCCFG_TX_A_Enb:" Rect="210, 289, 331, 306" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="SCCFG_TX_B_Enb:" Rect="210, 270, 331, 287" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="SCCFG_RX_Side:" Rect="15, 291, 128, 308" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

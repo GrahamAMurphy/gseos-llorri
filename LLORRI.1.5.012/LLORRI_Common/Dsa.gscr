@@ -1,0 +1,147 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="31, 638, 631, 969" Title="DSA Ctrl" >
+    <PICTURE>
+      <RECTANGLE Rect="5, 5, 160, 204" >
+      </RECTANGLE>
+      <FIXTEXT Text="Total:" Face="Verdana" Fontsize="768" Rect="8, 10, 42, 24" >
+      </FIXTEXT>
+      <FIXTEXT Text="Total Free:" Face="Verdana" Fontsize="768" Rect="8, 26, 69, 40" >
+      </FIXTEXT>
+      <FIXTEXT Text="Free Blocks:" Face="Verdana" Fontsize="768" Rect="7, 42, 75, 56" >
+      </FIXTEXT>
+      <FIXTEXT Text="Iterations:" Face="Verdana" Fontsize="768" Rect="7, 58, 65, 72" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="113, 61, 148, 76" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.wIterations" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="113, 44, 148, 59" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.wFreeCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="78, 27, 148, 42" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwTotalFree" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Used [%25]:" Face="Verdana" Fontsize="768" Rect="7, 74, 62, 88" >
+      </FIXTEXT>
+      <FIXTEXT Text="Alloc Calls:" Face="Verdana" Fontsize="768" Rect="7, 110, 69, 124" >
+      </FIXTEXT>
+      <FIXTEXT Text="Free Calls:" Face="Verdana" Fontsize="768" Rect="7, 126, 67, 140" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="78, 113, 148, 128" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwAllocCalls" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="78, 129, 148, 144" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwFreeCalls" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Diff Calls:" Face="Verdana" Fontsize="768" Rect="7, 142, 62, 156" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="7" Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="99, 146, 148, 161" >
+        <BDMFORMULA Formula="Diff" >
+          <DATAITEM Item="DSACtrl.dwAllocCalls" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="DSACtrl.dwFreeCalls" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Alloc Fails:" Face="Verdana" Fontsize="768" Backcolor="16" Rect="7, 179, 68, 193" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="78, 180, 148, 195" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwFailCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BARGRAPH Color="2" BarWidth="50" Face="Verdana" Range="100, 0, 1, 0" Fontsize="768" Rect="9, 95, 147, 107" Backcolor="8" Dir="L4" >
+        <BDMFORMULA Formula="PercentRemaining" >
+          <DATAITEM Item="DSACtrl.dwTotalFree" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="DSACtrl.dwTotal" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BARGRAPH>
+      <FIXTEXT Text="System Load:" Face="Verdana" Fontsize="768" Rect="7, 160, 84, 174" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="113, 161, 148, 176" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.wSystemLoad" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="11" Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="71, 77, 148, 92" >
+        <BDMFORMULA Formula="PercentRemaining" >
+          <DATAITEM Item="DSACtrl.dwTotalFree" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="DSACtrl.dwTotal" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Radix="10" Fontsize="768" Columns="1" Rect="78, 12, 148, 27" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwTotal" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <YT SampleTime="1.0" Range="103000000, 90000000, 60, 0" Backcolor="2" Color="13, 1, 1, 1, 1" Dir="R1" Grid="0" Rect="180, 20, 571, 61" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.dwTotalFree" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </YT>
+      <FIXTEXT Text="Total Free:" Face="Verdana" Fontsize="768" Rect="180, 5, 241, 19" >
+      </FIXTEXT>
+      <YT SampleTime="1.0" Range="5, 0, 60, 0" Backcolor="2" Color="15, 1, 1, 1, 1" Dir="R1" Grid="0" Rect="180, 140, 571, 181" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.wSystemLoad" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </YT>
+      <FIXTEXT Text="System Load:" Face="Verdana" Fontsize="768" Rect="180, 125, 257, 139" >
+      </FIXTEXT>
+      <YT SampleTime="1.0" Range="100, 0, 60, 0" Backcolor="2" Color="14, 1, 1, 1, 1" Dir="R1" Grid="0" Rect="180, 80, 571, 121" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DSACtrl.wFreeCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </YT>
+      <FIXTEXT Text="Free Blocks:" Face="Verdana" Fontsize="768" Rect="180, 65, 248, 79" >
+      </FIXTEXT>
+      <FIXTEXT Text="Used [%25]:" Face="Verdana" Fontsize="768" Rect="180, 185, 235, 199" >
+      </FIXTEXT>
+      <YT SampleTime="1.0" Range="400, 150, 60, 0" Backcolor="2" Color="16, 1, 1, 1, 1" Dir="R1" Grid="0" Rect="180, 260, 571, 301" >
+        <BDMFORMULA Formula="Diff" >
+          <DATAITEM Item="DSACtrl.dwAllocCalls" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="DSACtrl.dwFreeCalls" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </YT>
+      <FIXTEXT Text="Diff Calls:" Face="Verdana" Fontsize="768" Rect="180, 245, 235, 259" >
+      </FIXTEXT>
+      <YT SampleTime="1.0" Range="5, 0, 60, 0" Backcolor="2" Color="11, 1, 1, 1, 1" Dir="R1" Grid="0" Rect="180, 200, 571, 241" >
+        <BDMFORMULA Formula="PercentRemaining" >
+          <DATAITEM Item="DSACtrl.dwTotalFree" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="DSACtrl.dwTotal" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </YT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

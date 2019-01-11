@@ -1,0 +1,9 @@
+LSB (a) := (a % 0x100)
+And(a,b) := (a & b)
+Mode(a,b,c) := (a & 0xF) + b * ( 0x10 + c * 0x10 )
+Signed16(a) := signed16(a)
+Multiply(a,b) := a * b
+
+WIMTemp1(Raw)       := WIMTemp(WIMR1(WIMV(Raw)))
+WIMTemp2(Raw)       := WIMTemp(WIMR2(WIMV(Raw)))
+

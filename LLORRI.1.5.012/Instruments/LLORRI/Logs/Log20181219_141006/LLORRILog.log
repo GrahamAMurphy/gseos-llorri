@@ -1,0 +1,23 @@
+2018/12/19 14:10:06.055	Info	LLORRI_Bios         Starting up session for LUCY L'LORRI, Version: 1.5.012
+2018/12/19 14:10:06.055	Info	LLORRI_Bios         ******************************************************
+2018/12/19 14:10:06.071	Info	LLORRI_Bios         Loading L'LORRI SCE interface.
+2018/12/19 14:10:06.071	Info	LLORRI_Bios         Configuring for SCE mode.
+2018/12/19 14:10:06.071	Info	Message             Setting Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2018/12/19 14:10:06.071	Info	OKBios              Initializing device: XEM1
+2018/12/19 14:10:06.071	Info	OKBios              Entering device service thread for device: XEM1.
+2018/12/19 14:10:07.243	Error	OKBios              Error loading OKBios: Error initializing device: XEM1: No Opal Kelly FrontPanel devices found.
+2018/12/19 14:10:07.243	Error	LLORRI_Bios         Error importing module OKBios: Error initializing device: XEM1: No Opal Kelly FrontPanel devices found..
+2018/12/19 14:10:07.243	Info	Message             Removing Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2018/12/19 14:10:07.243	Info	Version             
+2018/12/19 14:10:07.243	Info	Version             Version Control Information
+2018/12/19 14:10:07.243	Info	Version             ----------------------------------------------------------------------
+2018/12/19 14:10:07.243	Info	Version             GSEOS:         7.1.1150
+2018/12/19 14:10:07.243	Info	Version             Python:        2.7.12 (default, Sep  8 2016, 19:20:19) [MSC v.1500 32 bit (Intel)]
+2018/12/19 14:10:07.243	Info	Version             ExcelLoad:     3.0.086
+2018/12/19 14:10:07.243	Info	Version             LUCY L'LORRI:  1.5.012
+2018/12/19 14:10:07.243	Info	Version             
+2018/12/19 14:10:07.243	Info	Version             Spreadsheet Version Information
+2018/12/19 14:10:07.243	Info	Version             ----------------------------------------------------------------------
+2018/12/19 14:10:07.243	Info	Version             ----------------------------------------------------------------------
+2018/12/19 14:10:07.243	Info	Version             
+2018/12/19 14:10:07.257	Info	OKBios              Device service thread for device: XEM1 terminated.

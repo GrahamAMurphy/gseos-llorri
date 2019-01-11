@@ -1,0 +1,9 @@
+================================================================
+Mon Dec 03 12:37:29 2018, at 597130693 seconds
+Macro 1
+	LOR_IMG_PWR Control Imager Power
+		49: 00 
+	LOR_HTR_MODE Set Heater Control Mode
+		43: 00 
+	LOR_MAC_END      Terminate macro execution
+		06: 

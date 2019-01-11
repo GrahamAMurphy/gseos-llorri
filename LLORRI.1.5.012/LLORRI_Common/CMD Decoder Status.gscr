@@ -1,0 +1,161 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="347, 9, 851, 308" Title="CMD Decoder Status" >
+    <PICTURE>
+      <RECTANGLE Backcolor="15" Rect="252, 6, 482, 109" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="TIME TONE" Face="Verdana" Fontsize="768" Backcolor="15" Rect="329, 12, 399, 26" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="15" Rect="5, 3, 246, 121" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="169, 66, 239, 80" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.QueuedCmdCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Queued Commands:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 66, 129, 80" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="BinCmd Decoder Status" Face="Verdana" Fontsize="768" Backcolor="15" Rect="47, 9, 198, 23" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="169, 49, 239, 63" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.TotalCmdCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Total Command Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 49, 130, 63" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="169, 83, 239, 97" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.BIN_CMD_IDP_LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="BIN_CMD_IDP Len Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 83, 167, 97" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="15" Rect="5, 125, 246, 255" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="169, 164, 239, 178" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MajorFrameLast" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Last Major Frame:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 164, 115, 178" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Cmd Tx Decoder Status" Face="Verdana" Fontsize="768" Backcolor="15" Rect="47, 131, 198, 145" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="169, 149, 239, 163" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MajorFrameCurr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Current Major Frame:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 149, 136, 163" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="169, 219, 239, 233" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MajorSkipErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Major Skip Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 219, 121, 233" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="5" Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="204, 234, 239, 248" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.FTF_OUT_CMD_OverrunErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="FTF_OUT_CMD Overrun Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 234, 196, 248" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="169, 196, 239, 210" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CmdTxCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Cmd Transaction Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 196, 136, 210" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="403, 28, 473, 42" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.TimeToneCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Pulse Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="257, 28, 317, 42" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="402, 43, 472, 57" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CurrentTimeSecs" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Next Time (Seconds):" Face="Verdana" Fontsize="768" Backcolor="15" Rect="257, 44, 383, 58" >
+      </FIXTEXT>
+      <BDMSTATUSIMAGE ImageMap="PowerStatus" Rect="463, 11, 474, 22" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.TimeToneActive" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMSTATUSIMAGE>
+      <BDMFLOAT Rows="1" Face="Verdana" Backcolor="15" Columns="1" Format="%254.3f" Fontsize="768" Rect="382, 79, 472, 93" >
+        <BDMFORMULA Formula="TimeToneRate" >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.TimeIncrement" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="Time Increment:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="257, 80, 354, 94" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="10" Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Fontsize="768" Rect="402, 61, 472, 75" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CurrentTimeSubSecs" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Next Time (Subseconds):" Face="Verdana" Fontsize="768" Backcolor="15" Rect="257, 62, 403, 76" >
+      </FIXTEXT>
+      <RECTANGLE Backcolor="15" Rect="252, 114, 481, 204" >
+      </RECTANGLE>
+      <FIXTEXT FontStyle="1" Text="Cmd Message Control" Face="Verdana" Fontsize="768" Backcolor="15" Rect="304, 120, 443, 134" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="Enabled" Face="Verdana" Backcolor="15" Columns="1" Fontsize="768" Rect="360, 146, 409, 160" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MsgTimeEnabled" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Time Update:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="280, 146, 358, 160" >
+      </FIXTEXT>
+      <BUTTON Face="Verdana" Command="LLORRI_Bios.EnableTimeMsg(True)" Rect="281, 162, 313, 181" Fontsize="768" Label="On" >
+      </BUTTON>
+      <BUTTON Face="Verdana" Command="LLORRI_Bios.EnableTimeMsg(False)" Rect="316, 162, 348, 181" Fontsize="768" Label="Off" >
+      </BUTTON>
+      <BDMCAST Rows="1" TextMap="MsgReqPending" Face="Verdana" Backcolor="15" Columns="1" Fontsize="768" Rect="361, 165, 452, 179" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MsgTimeReqPending" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Columns="1" Radix="10" Color="13" Fontsize="768" Rect="169, 100, 239, 114" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.MaxTxLenExceededErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Max Tx Len Exceeded:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 100, 139, 114" >
+      </FIXTEXT>
+      <FIXTEXT Text="Command Mode:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="10, 32, 109, 46" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="CmdMode" Face="Verdana" Backcolor="15" Columns="1" Fontsize="768" Rect="197, 31, 238, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.RawCmdMode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

@@ -1,0 +1,33 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="0" Rect="0, 305, 962, 912" >
+    <PICTURE>
+      <BDMNUMBER Rows="12" Columns="14" Rect="13, 13, 341, 217" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LM_OUT_CMD.Block[0:256]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="15" Columns="14" Rect="10, 244, 338, 499" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.Block[0:256]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="10" Columns="13" Rect="420, 35, 724, 205" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.Block[0:32768]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="7" Columns="12" Rect="440, 255, 720, 374" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CMD.Data[0:32748]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

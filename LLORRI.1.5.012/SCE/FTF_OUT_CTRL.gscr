@@ -1,0 +1,87 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="0, 349, 375, 549" Title="FTF_OUT_CTRL" >
+    <PICTURE>
+      <FIXTEXT Text="Sync:" Face="Courier New" Fontsize="960" Rect="4, 3, 44, 20" >
+      </FIXTEXT>
+      <FIXTEXT Text="Version:" Face="Courier New" Fontsize="960" Rect="4, 22, 68, 39" >
+      </FIXTEXT>
+      <FIXTEXT Text="Type:" Face="Courier New" Fontsize="960" Rect="4, 41, 44, 58" >
+      </FIXTEXT>
+      <FIXTEXT Text="MajorFrame:" Face="Courier New" Fontsize="960" Rect="190, 24, 278, 41" >
+      </FIXTEXT>
+      <FIXTEXT Text="MinorFrame:" Face="Courier New" Fontsize="960" Rect="190, 43, 278, 60" >
+      </FIXTEXT>
+      <FIXTEXT Text="SeqNo:" Face="Courier New" Fontsize="960" Rect="3, 61, 51, 78" >
+      </FIXTEXT>
+      <FIXTEXT Text="DataLen:" Face="Courier New" Fontsize="960" Rect="3, 80, 67, 97" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="75, 61, 155, 78" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.SeqNo" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="75, 80, 155, 97" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.DataLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="5" Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="80, 22, 120, 39" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Version" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="293, 24, 333, 41" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.MajorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="293, 43, 333, 60" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.MinorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="107, 3, 187, 20" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Sync" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMCAST Rows="1" TextMap="FTF_Type" Face="Courier New" Columns="1" Fontsize="960" Rect="118, 41, 182, 58" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Digits="2" Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="125, 99, 157, 116" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Opcode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Opcode:" Face="Courier New" Fontsize="960" Rect="3, 98, 59, 115" >
+      </FIXTEXT>
+      <BDMCAST Rows="1" TextMap="SCE_Opcode" Face="Courier New" Columns="1" Fontsize="960" Rect="181, 98, 405, 115" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Opcode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Digits="4" Rows="2" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="125, 121, 173, 155" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_OUT_CTRL.Args[0:2]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Arg1:%0AArg2:" Face="Courier New" Fontsize="960" Rect="5, 121, 45, 155" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

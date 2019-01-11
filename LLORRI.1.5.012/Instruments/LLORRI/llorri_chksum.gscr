@@ -1,0 +1,41 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="975, 5, 1395, 100" Title="Memory Checksum" >
+    <PICTURE>
+      <RECTANGLE Color="8" Backcolor="8" Rect="0, 0, 289, 58" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="20, 28, 92, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_MemChecksum.Address" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="115, 28, 151, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_MemChecksum.MemLength" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Rect="210, 28, 246, 45" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_MemChecksum.CRC_Value" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Address" Backcolor="8" Rect="9, 8, 79, 25" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Length" Backcolor="8" Rect="104, 8, 164, 25" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Checksum" Backcolor="8" Rect="190, 8, 270, 25" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Rect="305, 30, 377, 47" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_MemChecksum.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

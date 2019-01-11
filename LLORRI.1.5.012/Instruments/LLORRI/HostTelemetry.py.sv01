@@ -1,0 +1,201 @@
+# Imports from Python, GSEOS, and local
+
+from time import asctime, localtime, time
+from struct import pack
+from Gseos import Message, MSG_ERROR
+from GseosDecoder import TDecoder
+from Gseos import LookupStatusText, Log
+from GseosMonitor import TMonitor
+from GseosBlocks import Blocks
+from HostConstants import instr
+from HostConstants import CMDECHOLOG, EVENTLOG, MACRODUMPLOG, LOGSEP
+
+# ------------------------------------------------------------------------
+# Decode packets
+
+from HostConstants import APID_INSTR, APID_INSTR_MAX
+from HostConstants import dIdToBlk
+
+strDecoderName = "Packet Decoder"
+
+def fDecPacket(blk):
+  len = blk.CIP_Length
+
+  ## Length of 8 bytes implies CIP with no IDP. Punt!
+  if( len <= 8 ):
+    return
+
+  len = len - 8
+  apid = blk.CIP_Data8[1]
+
+  """
+  ### print "apid = %08x" % apid
+  oblk = dIdToBlk[apid]
+  oblk.Id = apid
+  len = blk.Length 
+  oblk.Length = len
+  oblk.TimeTag = blk.TimeTag 
+  oblk.Data[:len] = blk.Data[0:len]
+  oblk.SendBlock(0)
+  """
+
+  if APID_INSTR <= apid <= APID_INSTR_MAX: # ignore other packets
+    try:
+      # print "apid = %08x" % apid
+      dataid = apid - APID_INSTR
+      oblk = dIdToBlk[dataid]
+      oblk.Id = dataid
+      len = blk.Length
+      oblk.Length = len
+      oblk.TimeTag = blk.TimeTag 
+      oblk.Data[:len] = blk.Data[0:len]
+      oblk.SendBlock(0)
+
+    except KeyError:
+      Message('Telemetry error: unknown APID: 0x%03x' % apid, MSG_ERROR, strDecoderName)
+
+Blocks['TLM_LS_IDP'].Decoders.append(
+  TDecoder(strDecoderName, fDecPacket, dIdToBlk.values()))
+
+# ------------------------------------------------------------------------
+# Command echo log
+
+# Command echo enable/disable flag
+cmdechoenb = 1
+# Function to set flag
+def fSetCmdEchoLogEnb(f):
+  global cmdechoenb
+  origenb = cmdechoenb
+  cmdechoenb = f
+  return origenb
+  
+# Define command logging function; called by Monitor
+def fLogCmdEcho(bEcho):
+  if cmdechoenb:
+    line1 = asctime(localtime(time())) + ", at %d seconds\n" % \
+		bEcho.TimeTag				# local and s/c time
+    if(bEcho.Macro == 1):				# command source
+      macro = "Macro: "
+    else:
+      macro = "Uplink: "
+    try:
+      desc = LookupStatusText("Cmds", bEcho.Opcode)# command description
+    except:
+      desc = "Unknown opcode"
+    line2 = macro + desc + '\n'
+    numargs = min(max(bEcho.Length - 2, 0), len(bEcho.Args))
+    line3 = reduce((lambda x,y: x + "%02x " % y), \
+		bEcho.Args[:numargs], "Echo: %02x: " % bEcho.Opcode) + "\n"
+    try:
+      result = LookupStatusText("Cmd_Results", bEcho.Result)
+    except:
+      result = "Unknown result"
+    line4 = "Result: " + result
+    Log(CMDECHOLOG, LOGSEP + line1 + line2 + line3 + line4)
+
+# Register this function as a monitor for the CmdEcho block 
+Blocks[instr + '_CmdEcho'].Monitors.append(
+  TMonitor('Command Echo Monitor', fLogCmdEcho))
+
+# Define text logging function; called by Monitor
+def fLogCmdText(bCmdText):
+  line1 = asctime(localtime(time())) + ", at %d seconds\n" % \
+		bCmdText.TimeTag			# local and s/c time
+  line2 = "Text:\n"
+  l = bCmdText.TextLength
+  line3 = pack('%dB' % l, *bCmdText.Text[:l])
+  Log(CMDECHOLOG, LOGSEP + line1 + line2 + line3)
+
+# Register this function as a monitor for the CmdText block 
+Blocks[instr + '_CmdText'].Monitors.append(
+  TMonitor('Command Text Monitor', fLogCmdText))
+
+# ------------------------------------------------------------------------
+# Event log
+
+# Common logging function
+def fLogEvent(timetag, morelines):
+  line1 = asctime(localtime(time())) + ", at %d seconds\n" % \
+		timetag				# local and s/c time
+  Log(EVENTLOG, LOGSEP + line1 + morelines)
+
+# Define alarm logging function; called by Monitor
+def fLogAlarm(bAlarm):
+  try:
+    alarmtype = LookupStatusText("AlarmType", bAlarm.AlarmType)
+  except:
+    alarmtype = "Unknown"
+  line2 = alarmtype + " Alarm:\n"
+  try:
+    alarm = LookupStatusText("Alarm", bAlarm.AlarmId)
+  except:
+    alarm = "Unknown alarm (%d)" % bAlarm.AlarmId
+  line3 = alarm + " Value=%d Aux=%d" % (bAlarm.Value, bAlarm.Aux)
+  fLogEvent(bAlarm.TimeTag, line2 + line3)
+
+# Register this function as a monitor for the CmdEcho block 
+Blocks[instr + '_Alarm'].Monitors.append(
+  TMonitor('Alarm Monitor', fLogAlarm))
+
+# Define checksum logging function; called by Monitor
+def fLogChecksum(bChecksum):
+  line2 = "Checksum:\n"
+  line3 = "Address=0x%08x Length=%d Checksum=0x%04x" % (bChecksum.Address, bChecksum.MemLength, bChecksum.CRC_Value)
+  fLogEvent(bChecksum.TimeTag, line2 + line3)
+
+# Register this function as a monitor for the CmdEcho block 
+Blocks[instr + '_MemChecksum'].Monitors.append(
+  TMonitor('Checksum Monitor', fLogChecksum))
+
+# ------------------------------------------------------------------------
+# Macro dump log
+
+from HostConstants import OP_MAC_END
+
+blocknoexp = 0
+macroidexp = 0
+left = []
+
+# Parse macro dump blocks
+def fParseMacro(left):
+  endseen = False
+  while not endseen and len(left)>0 and left[0]<len(left):
+    opcode = left[2]
+    try:
+      desc = LookupStatusText("Cmds", opcode)# command description
+    except:
+      desc = "Unknown opcode"
+    Log(MACRODUMPLOG,'\t%s' % desc)
+    numargs = left[0] - 2
+    Log(MACRODUMPLOG, reduce((lambda x,y: x + "%02x " % y), \
+		left[3:3+numargs], "\t\t%02x: " % opcode))
+    endseen = opcode==OP_MAC_END
+    left = left[1+left[0]:]
+  return endseen, left
+
+# Define macro dump logging function; called by Monitor
+def fLogMacroDump(bMacro):
+  global blocknoexp, macroidexp, left
+  macroid = bMacro.MacroId
+  blockno = bMacro.BlockIndex
+  if blockno==blocknoexp and \
+     (blockno==0 or macroid==macroidexp):
+    if blockno==0:
+      tm = asctime(localtime(time())) + ", at %d seconds\n" % \
+		bMacro.TimeTag
+      Log(MACRODUMPLOG, LOGSEP + tm + 'Macro %d' % macroid)
+    endseen, left = fParseMacro(left + list(bMacro.MacroData[:]))
+    if endseen:
+      blocknoexp = 0
+      left = []
+    else:
+      blocknoexp = (blockno+1) % 256
+      macroidexp = macroid
+  else:
+      Log(MACRODUMPLOG, 'Out of sync ...')
+      blocknoexp = 0
+      left = []
+
+# Register this function as a monitor for the MacroDump block 
+Blocks[instr + '_MacroDump'].Monitors.append(
+  TMonitor('Macro Dump Monitor', fLogMacroDump))

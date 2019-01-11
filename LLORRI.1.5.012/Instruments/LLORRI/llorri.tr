@@ -1,0 +1,265 @@
+# Images
+
+Image: Name="LEDGray"  File="LLORRI_Common/LEDGray.bmp"
+Image: Name="LEDGreen" File="LLORRI_Common/LEDGreen.bmp"
+Image: Name="LEDRed"   File="LLORRI_Common/LEDRed.bmp"
+Image: Name="LEDOn"    File="LLORRI_Common/LEDGreen.bmp"
+Image: Name="LEDOff"   File="LLORRI_Common/LEDGray.bmp"
+
+ImageMap: PowerRequest {
+  0,  LEDGray;
+  1,  LEDRed;
+}
+
+# TBD: used?
+ImageMap: LEDOffOn
+{
+  0,  LEDOff;
+  1,  LEDOn;
+}
+
+ImageMap: GrayGreen {
+  0,  LEDGray;
+  1,  LEDGreen;
+}
+
+ImageMap: GrayRed {
+  0,  LEDGray;
+  1,  LEDRed;
+}
+
+ImageMap: RedGreen {
+  0,  LEDRed;
+  1,  LEDGreen;
+}
+
+# Core status
+
+AlarmType 	{
+	0, "Persistent", black on lightgray;
+	1, "Transient", black on lightgray;
+	2, "Information", green on lightgray
+}
+
+AlrmTyp { 0, "Pers", black on lightgray;
+          1, "Trans", black on lightgray;
+	  2, "Info", green on lightgray
+}
+
+DisabledEnabled	{
+	0 ,"Disabled", black on lightgray;
+	1 ,"Enabled ", black on lightgray }
+
+InvalidValid {
+	0 ,"Invalid", red on lightgray;
+	1 ,"Valid", black on lightgray }
+
+MacroCmd	{
+	0, "Real-time", black on lightgray;
+	1, "Macro", black on lightgray }
+
+MacroLearn 	{
+	0, "Not Learning", black on lightgray;
+	1, "  Learning  ", black on yellow }
+
+ResetCause 	{
+	0, "Normal", black on lightgray;
+	1, "Watchdog", red on lightgray }
+
+# Application status
+
+CamerID {
+	0, "Inner", black on lightgray;
+	1, "Outer", black on lightgray }
+
+CamOffOn {
+	0, "Off", black on lightgray;
+	1, "On", black on lightgray }
+
+CamRunRest {
+	0, "Run", black on lightgray;
+	1, "Reset", red on lightgray }
+
+EnabledSleep {
+	0 ,"Enabled", black on lightgray;
+	1 ,"Sleep/Reset", red on lightgray
+}
+
+ReadoutRegion {
+	0, "Invalid", red on lightgray;
+	1, "RO1", black on lightgray;
+	2, "RO2", black on lightgray;
+	3, "RO3", black on lightgray;
+	4, "RO4", black on lightgray;
+	5, "RO5", black on lightgray;
+	6, "RO6", black on lightgray;
+	7, "Invalid", red on lightgray }
+
+# Packets
+
+PacketType {
+  0, "Unknown", red on lightgray;
+  1, "Command Echo", black on lightgray;
+  2, "Alarm", black on lightgray;
+  3, "Memory Checksum", black on lightgray;
+  4, "Memory Dump", black on lightgray;
+  5, "Status", black on lightgray;
+  6, "Boot Status", black on lightgray;
+  7, "Macro Dump", black on lightgray;
+  8, "Macro Checksum", black on lightgray;
+  9, "Monitor Limits", black on lightgray;
+ 10, "Parameters", black on lightgray;
+ 11, "Text", black on lightgray;
+ 12, "Critical Hsk", black on lightgray;
+0x14, "Profiling", black on lightgray;
+}
+
+# Command echo
+
+Cmds {
+# Common
+0x01, "LOR_CMD_NULL     Do nothing", black on lightgray;
+0x02, "LOR_CMD_WRAP     Process the arguments as a command", black on lightgray;
+0x03, "LOR_MAC_CHECK    Check macros", black on lightgray;
+0x04, "LOR_MAC_DEF      Start defining the indicated macro", black on lightgray;
+0x05, "LOR_MAC_DELAY    Delay macro extension", black on lightgray;
+0x06, "LOR_MAC_END      Terminate macro execution", black on lightgray;
+0x07, "LOR_MAC_ENDDEF   Terminate macro definition", black on lightgray;
+0x08, "LOR_MAC_HALT     Stop the indicated macro", black on lightgray;
+0x09, "LOR_MAC_LOOP_BEG Start a Macro Loop", black on lightgray;
+0x0a, "LOR_MAC_LOOP_END End a Macro Loop", black on lightgray;
+0x0b, "LOR_MAC_NEST     Run the indicated macro, nested", black on lightgray;
+0x0c, "LOR_MAC_PAUSE    Pause macro execution", black on lightgray;
+0x0d, "LOR_MAC_READ     Read macros", black on lightgray;
+0x0e, "LOR_MAC_RESTORE  Restore Macros Saved in non-volatile memory", black on lightgray;
+0x0f, "LOR_MAC_RUN      Run the indicated macro", black on lightgray;
+0x10, "LOR_MAC_RUN_SIL  Run the indicated macro without command echos", black on lightgray;
+0x11, "LOR_MAC_SAVE     Save Macros in non-volatile memory", black on lightgray;
+0x12, "LOR_MEM_CHECK    Calculate memory checksum", black on lightgray;
+0x13, "LOR_MEM_COPY     Copy processor memory from source to destination", black on lightgray;
+0x14, "LOR_MEM_LOAD     Load processor memory", black on lightgray;
+0x15, "LOR_MEM_READ     Dump processor memory", black on lightgray;
+0x16, "LOR_MEM_READ_ABT Abort the current processor memory dump", black on lightgray;
+0x17, "LOR_MEM_RUN      Run a program at the indicated address", black on lightgray;
+0x18, "LOR_MEM_STR_LOAD Load data into the indicated structure at offset", black on lightgray;
+0x19, "LOR_MEM_STR_READ Dump the indicated data structure", black on lightgray;
+0x1a, "LOR_MEM_WR_EN    Enable/Disable write access to memory", black on lightgray;
+0x1b, "LOR_MON_CNTRL    Enable/Disable monitor response", black on lightgray;
+0x1c, "LOR_STAT_CLR     Clear counter", black on lightgray;
+0x1d, "LOR_STAT_INT     Set the status generation interval", black on lightgray;
+0x1e, "LOR_ROM_BOOT     Boot default program", black on lightgray;
+0x1f, "LOR_ROM_GO       Boot a selected program", black on lightgray;
+0x20, "LOR_STAT_MEM     Select memory address to include in status packet", black on lightgray
+0x21, "LOR_CMD_TEXT     Send text", black on lightgray;
+0x22, "LOR_SAF_OFF      Request power off", black on lightgray;
+0x23, "LOR_SAF_RESET    Initiate software reset", black on lightgray;
+0x24, "LOR_SAF_TIMEOUT  Set safing timeout", black on lightgray;
+0x25, "LOR_SAF_CYCLE    Request power cycle", black on lightgray;
+0x26, "LOR_MEM_NV_ENB     Enable/disable non-volatile memory", black on lightgray;
+
+0x27, "LOR_MEM_STR_CRC Calculate CRC for a specified data structure", blue on lightgray ;
+0x40, "LOR_CAL_LEVEL Set the calibration lamp level", blue on lightgray ;
+0x41, "LOR_CAL_PWR Control Calibration Lamp Power", blue on lightgray ;
+0x42, "LOR_HTR_HEATER Select Heater", blue on lightgray ;
+0x43, "LOR_HTR_MODE Set Heater Control Mode", blue on lightgray ;
+0x44, "LOR_HTR_SENSOR Select Heater Control Sensor", blue on lightgray ;
+0x45, "LOR_IMG_EXP_AUTO Start Automatic Exposure Mode", blue on lightgray ;
+0x46, "LOR_IMG_EXP_MAN Start Manual Exposure Mode", blue on lightgray ;
+0x47, "LOR_IMG_FORMAT Select Image Format", blue on lightgray ;
+0x48, "LOR_IMG_IMAGE Collect Images", blue on lightgray ;
+0x49, "LOR_IMG_PWR Control Imager Power", blue on lightgray ;
+0x4a, "LOR_IMG_TMP Enable/Disable Imager Temperature Monitoring", blue on lightgray ;
+0x4b, "LOR_IMG_SNAP Collect a Single Image", blue on lightgray ;
+0x4c, "LOR_IMG_SOURCE Select Image Source", blue on lightgray ;
+0x4d, "LOR_IMG_EXP_STEP Step exposure time", blue on lightgray ;
+0x4e, "LOR_IMG_DESC Enable/Disable Image Descriptors", blue on lightgray ;
+0x4f, "LOR_IMG_TRIG Start Trigger Mode", blue on lightgray ;
+0x50, "LOR_IMG_TRIG_ABT Abort Trigger Mode", blue on lightgray ;
+0x51, "LOR_CMD_PROFILING Thread profiling", blue on lightgray ;
+0x90, "LOR_PROFILING Thread profiling", blue on lightgray ;
+0xb0, "LOR_FLASH_ARM_WRITE Allow or disallow writing to flash memory", blue on lightgray ;
+0xb1, "LOR_FLASH_BLOCK_RANGE Set the starting block and count for access", blue on lightgray ;
+0xb2, "LOR_FLASH_BLOCK_CURRENT Set the current block and page", blue on lightgray ;
+0xb3, "LOR_FLASH_ERASE_ENABLE Enables or disables the ability to erase blocks", blue on lightgray ;
+0xb4, "LOR_FLASH_ERASE_BLOCKS Specify starting block and number of blocks to erase", blue on lightgray ;
+0xb5, "LOR_FLASH_BADBLOCK_ENABLE Enables or disables the ability to set bad blocks", blue on lightgray ;
+0xb6, "LOR_FLASH_BADBLOCK_SET Specify that a block should be designated as bad", blue on lightgray ;
+0xb7, "LOR_FLASH_POWER Power or unpower flash device", blue on lightgray ;
+0xb8, "LOR_FLASH_IMAGE_COUNT Set the number of images that have been written to flash", blue on lightgray ;
+0xb9, "LOR_FLASH_BLOCK_TABLE_CLEAR Clears block utilization", blue on lightgray ;
+0xba, "LOR_FLASH_READOUT_IMAGES Read images from flash and transmit to Spacewire", blue on lightgray ;
+0xbb, "LOR_FLASH_CATALOGUE_INIT Initialize the image catalogue", blue on lightgray ;
+0xbc, "LOR_FLASH_BLOCK_TABLE_INIT Initialize the block table", blue on lightgray ;
+0xbd, "LOR_FLASH_READOUT_BLOCKS Copy flash blocks to Spacewire", blue on lightgray ;
+0xbe, "LOR_FLASH_RESET Reset a flash target", blue on lightgray ;
+0xbf, "LOR_FLASH_FULL_SET Set or clear the status of the flash capacity", blue on lightgray ;
+0xc0, "LOR_FLASH_NOTWRITE_STOP Stop a Not Write operation that is in progress", blue on lightgray ;
+0xd0, "LOR_COPY_WORDS Copy words from any page to any page", blue on lightgray ;
+0xd1, "LOR_COPY_MRAM_TO_SRAM Copy from the designated areas in MRAM to SRAM", blue on lightgray ;
+0xd2, "LOR_COPY_SRAM_TO_MRAM Copy from the designated areas in SRAM to MRAM", blue on lightgray ;
+0xd3, "LOR_ZERO_SRAM Initializes the designated areas in SRAM", blue on lightgray ;
+0xd4, "LOR_NVRAM_RATE Set the rate for shipping the NVRAM variable block", blue on lightgray ;
+0xd8, "LOR_NV_SYNC This synchronizes the contents of the non-volatile variable area", blue on lightgray ;
+}
+
+Cmd_Results {
+# Common
+0x00, "OK, command executed", black on lightgray;
+0x01, "OK, command appended to macro", black on lightgray;
+0x02, "ERROR-Unknown opcode or bad length", black on lightred ;
+0x03, "ERROR-Bad argument", black on lightred ;
+0x04, "ERROR-Cannot run macro; no contexts", black on lightred ;
+0x05, "ERROR-Cannot be used outside of a macro", black on lightred ;
+0x06, "ERROR-Macro compilation error", black on lightred ;
+0x07, "ERROR-Macro not killed (not running?)", black on lightred ;
+0x08, "ERROR-Bad code space checksum", black on lightred ;
+0x09, "ERROR-Bad macro space checksum", black on lightred ;
+0x0a, "ERROR-Attempted write to protected memory", black on lightred ;
+# Application-specific
+#### BEGIN LOR_TR_COMMAND_RETURN
+#### END LOR_TR_COMMAND_RETURN
+}
+
+# Alarms
+
+Alarm {
+# Common
+  0, "No Alarm", black on lightgray;
+  1, "Bad packet", red on lightgray;
+  2, "Out of macro contexts", red on lightgray
+
+0x10, "INFO: ALM BAD SEQ IP", red on lightgray;
+0x11, "INFO: ALM FLASH POWERED OFF", red on lightgray;
+0x12, "INFO: ALM FLASH ERASE DISABLED", red on lightgray;
+0x13, "INFO: ALM FLASH BAD RANGE", red on lightgray;
+0x14, "INFO: ALM FLASH BAD RETURN", red on lightgray;
+0x15, "INFO: ALM FLASH CATALOGUE FULL", red on lightgray;
+0x16, "INFO: ALM FLASH BLOCK CYCLE", red on lightgray;
+0x17, "INFO: ALM IMAGE TIMEOUT", red on lightgray;
+0x18, "INFO: ALM FLASH OPERATION FAILED", red on lightgray;
+0x19, "INFO: ALM FLASH POWER CYCLED", red on lightgray;
+0x1a, "INFO: ALM FLASH OPERATION STOPPED", red on lightgray;
+0x1b, "INFO: ALM UCODE BAD CRC", red on lightgray;
+0x1c, "INFO: ALM TC BAD CRC", red on lightgray;
+0x1d, "INFO: ALM TC MODE BAD", red on lightgray;
+0x1e, "INFO: ALM MON STATE BAD", red on lightgray;
+0x1f, "INFO: ALM MON BAD CODE", red on lightgray;
+0x20, "INFO: ALM UCODE BAD ID", red on lightgray;
+0x21, "INFO: ALM TIMELINE PAUSED", red on lightgray;
+0x22, "INFO: ALM SDRAM OVERFLOW", red on lightgray;
+0x23, "INFO: ALM MONITOR TRIPPED", red on lightgray;
+0x24, "INFO: ALM SEQ OBS BAD PAGE", red on lightgray;
+0x25, "INFO: ALM MONITOR MAX RESTARTS", red on lightgray;
+0x26, "INFO: ALM WIM MAX RESTARTS", red on lightgray;
+0x27, "INFO: ALM WIM NOT READY", red on lightgray;
+0x28, "INFO: ALM SSR FULL", red on lightgray;
+0x29, "INFO: ALM FLASH FAILURE", red on lightgray;
+0x2b, "INFO: ALM MONITOR FULL", red on lightgray;
+0x40, "INFO: ALM FLASH OPERATION FINISHED", red on lightgray;
+0x41, "INFO: ALM SEQ OBS COMPLETE", red on lightgray;
+
+# Application-specific
+#### BEGIN LOR_TR_ALARM_CODE
+#### END LOR_TR_ALARM_CODE
+}
+

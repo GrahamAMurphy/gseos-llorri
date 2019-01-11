@@ -1,0 +1,15 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="-1, 813, 623, 925" Title="Mode" >
+    <PICTURE>
+      <BDMCAST Digits="10" Rows="1" TextMap="LOSMode" StaleControl="Local" FontStyle="1" Columns="1" Fontsize="4608" StaleEnabled="No" Rect="0, 0, 608, 74" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_LOS.Value" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

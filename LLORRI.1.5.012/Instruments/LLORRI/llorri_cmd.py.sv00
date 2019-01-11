@@ -1,0 +1,11 @@
+import GseosCmd
+import LLorriCmd
+
+def CMD( mnemonic, *args ):
+	a = args.__str__()
+	b = a.replace( ",)", ")" ) 
+	c = b.replace("((","(").replace( "))", ")" )
+	fullcmd = mnemonic + c
+	print "cmd: ", fullcmd
+	GseosCmd.ExecCmd( fullcmd )
+	pass

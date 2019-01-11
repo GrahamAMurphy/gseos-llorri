@@ -1,0 +1,237 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="883, 1, 1415, 1052" Title="Profiling" >
+    <PICTURE>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 26, 482, 43" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[32:64]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 42, 482, 59" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[64:96]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 58, 482, 75" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[96:128]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 74, 482, 91" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[128:160]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 90, 482, 107" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[160:192]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 106, 482, 123" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[192:224]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 122, 482, 139" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[224:256]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 138, 482, 155" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[256:288]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 154, 482, 171" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[288:320]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 170, 482, 187" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[320:352]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 186, 482, 203" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[352:384]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 202, 482, 219" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[384:416]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 218, 482, 235" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[416:448]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 234, 482, 251" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[448:480]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 250, 482, 267" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[480:512]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 266, 482, 283" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[512:544]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 282, 482, 299" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[544:576]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 298, 482, 315" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[576:608]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 314, 482, 331" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[608:640]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 330, 482, 347" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[640:672]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 346, 482, 363" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[672:704]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 362, 482, 379" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[704:736]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 378, 482, 395" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[736:768]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 11, 482, 28" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMFLOAT Digits="5" Rows="16" Columns="1" Format="%255.1f" Rect="263, 11, 303, 283" >
+        <BDMFORMULA Formula="PercentInt" >
+          <DATAITEM Item="LOR_Profile.Data2[0:48:3]" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="LOR_Profile.Count" >
+          </DATAITEM><TRIGGER Value="0"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <BDMNUMBER Rows="16" Columns="2" Rect="12, 11, 84, 283" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile.Data1[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="16" Columns="3" Rect="103, 10, 215, 282" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile.Data2[0:48]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="3" Rows="16" Columns="1" Radix="10" Rect="230, 11, 254, 283" >
+        <BDMFORMULA Formula="Stack" >
+          <DATAITEM Item="LOR_Profile.Data1[1:32:2]" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <DATAITEM Item="LOR_Profile.Data2[1:48:3]" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMNUMBER>
+      <BUTTON Command="LOR_PROFILING($'Rate')" Rect="12, 321, 120, 366" Label="Profiling%0AOn/Off" >
+      </BUTTON>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 394, 482, 411" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[768:800]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 410, 482, 427" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[800:832]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 426, 482, 443" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[832:864]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 442, 482, 459" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[864:896]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 458, 482, 475" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[896:928]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 474, 482, 491" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[928:960]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 490, 482, 507" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[960:992]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Columns="20" Rect="322, 506, 482, 523" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile_Name.Data[992:1024]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Columns="1" Radix="10" Rect="156, 336, 204, 353" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Profile.Count" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

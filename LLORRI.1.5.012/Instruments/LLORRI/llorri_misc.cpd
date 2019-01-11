@@ -1,0 +1,40 @@
+<GSEOS Version="366">
+
+<Cmd Mnemonic="LOR_PROFILING" Opcode="0x90" NumBits="8"
+    Description="Thread profiling">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Period(secs)"/>
+</Cmd>
+<Cmd Mnemonic="LOR_COPY_WORDS" Opcode="0xd0" NumBits="8"
+    Description="Copy words from any page to any page">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="24" Description="Source"/>
+    <Arg NumBits="24" Description="Destination"/>
+    <Arg NumBits="16" Description="Words"/>
+</Cmd>
+<Cmd Mnemonic="LOR_COPY_MRAM_TO_SRAM" Opcode="0xd1" NumBits="8"
+    Description="Copy from the designated areas in MRAM to SRAM">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+<Cmd Mnemonic="LOR_COPY_SRAM_TO_MRAM" Opcode="0xd2" NumBits="8"
+    Description="Copy from the designated areas in SRAM to MRAM">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+<Cmd Mnemonic="LOR_ZERO_SRAM" Opcode="0xd3" NumBits="8"
+    Description="Initializes the designated areas in SRAM">
+    <Const Value="0" NumBits="8"/>
+</Cmd>
+<Cmd Mnemonic="LOR_NVRAM_RATE" Opcode="0xd4" NumBits="8" Description="Set the rate for shipping the NVRAM variable block">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Rate(seconds)"/>
+</Cmd>
+<Cmd Mnemonic="LOR_NV_SYNC" Opcode="0xd8" NumBits="8" Description="This synchronizes the contents of the non-volatile variable area">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Direction 0/1"/>
+</Cmd>
+<Cmd Mnemonic="LOR_MEM_STR_CRC" Opcode="0x27" NumBits="8" Description="Calculate CRC for a specified data structure">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Structure"/>
+</Cmd>
+
+</GSEOS>

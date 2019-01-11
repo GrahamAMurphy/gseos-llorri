@@ -1,0 +1,157 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="1182, -9, 1555, 527" Title="TLM_LS_IP" >
+    <PICTURE>
+      <BDMNUMBER Digits="5" Rows="1" Columns="1" Radix="10" Rect="48, 7, 88, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Len:" Rect="6, 7, 38, 24" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="IP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="76, 27, 90, 41" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="163, 44, 179, 61" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_Version" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Version:%0AHeader Len:%0ATOS:%0ALength:%0AID:%0AFlags:%0AFrag Offset:%0ATTL:%0AProtocol:%0AChecksum:%0ASrc Addr:%0ADest Addr:" Rect="5, 44, 101, 248" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="163, 62, 179, 79" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_HeaderLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="155, 78, 179, 95" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_TOS" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="139, 95, 179, 112" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="139, 112, 179, 129" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_ID" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="171, 130, 179, 147" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_Flags" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="147, 146, 179, 163" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_FragOffset" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="155, 163, 179, 180" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_TTL" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="155, 181, 179, 198" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_Protocol" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="131, 199, 179, 216" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_Checksum" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="99, 215, 179, 232" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_SrcAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="99, 232, 179, 249" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.IP_DestAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="UDP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="265, 27, 291, 41" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="299, 44, 339, 61" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.UDP_SrcPort" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Src Port:%0ADest Port:%0ALength:%0AChecksum:" Rect="217, 44, 297, 112" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="299, 62, 339, 79" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.UDP_DestPort" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="299, 78, 339, 95" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.UDP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="291, 95, 339, 112" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.UDP_Checksum" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="CIP" Face="Verdana" Fontsize="768" Backcolor="16" Rect="266, 129, 288, 143" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="CIP Data" Face="Verdana" Fontsize="768" Backcolor="16" Rect="153, 259, 209, 273" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="13" HexPrefix="1" Columns="4" Rect="11, 280, 163, 501" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Data[0:473]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="253, 147, 333, 164" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Marker" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Marker:%0ALength:%0AType:" Rect="188, 146, 244, 197" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="271, 178, 295, 195" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Radix="10" Rect="255, 162, 295, 179" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMCAST Digits="13" Rows="1" TextMap="CIP_Type" Columns="1" Rect="198, 192, 318, 209" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

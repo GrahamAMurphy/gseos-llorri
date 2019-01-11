@@ -1,0 +1,32 @@
+# ************************************************************************** #
+# * This New Horizons formula file was automatically created with the      * #
+# * GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                    * #
+# *                                                                        * #
+# * To change the conversion formulas please modify the Excel source       * #
+# * file: i_LORRI\CMD_n_TLM\611_TLM_20050418_02.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Mon Apr 18 17:28:56 2005                                            * #
+# ************************************************************************** #
+
+
+EU(Raw='LOR_IMG_DES.EPU_P5_VOLT') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.00709290442836], Raw)
+EU(Raw='LOR_IMG_DES.EPU_P5_CURR') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.0010009999999999999], Raw)
+EU(Raw='LOR_IMG_DES.FPU_P15_VOLT') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.020863122614000001], Raw)
+EU(Raw='LOR_IMG_DES.FPU_P15_CURR') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.00050909999999999996], Raw)
+EU(Raw='LOR_IMG_DES.FPU_P6_VOLT') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.0084708542766499997], Raw)
+EU(Raw='LOR_IMG_DES.FPU_P6_CURR') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.0010009999999999999], Raw)
+EU(Raw='LOR_IMG_DES.FPU_HTR_CURR') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.00024909999999999998], Raw)
+EU(Raw='LOR_IMG_DES.EPU_P25_VOLT') := TC_TLM_Load.TCRuntime.fPolyConversion([0.0, 0.0035746931168599999], Raw)
+EU(Raw='LOR_IMG_DES.INTER_RING_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.MNT_FOOT_TOP_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.M2_MIR_MNT_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.RDTR_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.BAFF_AFT_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.BAFF_FORE_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.M1_MIRROR_SUPP_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.M1_MIRROR_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-249.97724557999999, 0.39867021102, -0.00010359653053000001, 9.8809626795999996e-008, -2.6002029532000002e-011], Raw)
+EU(Raw='LOR_IMG_DES.M1_VF_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-307.34800000000001, 0.0089347000000000003], Raw)
+EU(Raw='LOR_IMG_DES.M2_VF_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-332.91300000000001, 0.0093194999999999997], Raw)
+EU(Raw='LOR_IMG_DES.FPU_BRD_VF_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-237.538467, 0.0090480000000000005], Raw)
+EU(Raw='LOR_IMG_DES.CCD_1X1_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-610.14149999999995, 0.23169999999999999], Raw, 15)
+EU(Raw='LOR_IMG_DES.CCD_4X4_TEMP') := TC_TLM_Load.TCRuntime.fPolyConversion([-569.47490000000005, 0.2225], Raw, 15)

@@ -1,0 +1,177 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="302, 3, 1028, 344" >
+    <PICTURE>
+      <BDMTEXT Rows="1" Face="Arial" Columns="23" Fontsize="960" Rect="18, 93, 179, 110" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInName00[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" HexPrefix="1" Columns="1" Fontsize="960" Rect="177, 93, 209, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInEndPoint[0:4]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="216, 93, 286, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInFifoFree[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="408, 93, 478, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInSrcBlkCnt[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 111, 172, 128" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInName01[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Face="Arial" Columns="23" Fontsize="960" Rect="18, 129, 179, 146" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInName02[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 147, 172, 164" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInName03[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <FIXTEXT FontStyle="1" Text="Name" Face="Arial" Fontsize="960" Rect="18, 69, 57, 86" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Addr" Face="Arial" Fontsize="960" Rect="177, 69, 209, 86" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="FIFO Free" Face="Arial" Fontsize="960" Rect="228, 69, 293, 86" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Src Blk Cnt" Face="Arial" Fontsize="960" Rect="396, 69, 468, 86" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="FIFO Out (PipeIn)" Face="Verdana" Fontsize="1344" Rect="192, 39, 387, 63" >
+      </FIXTEXT>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 224, 172, 241" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutName00[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" HexPrefix="1" Columns="1" Fontsize="960" Rect="177, 224, 209, 292" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutEndPoint[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="216, 224, 286, 292" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutFifoUsed[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="408, 222, 478, 290" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutDestBlkCnt[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 241, 172, 258" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutName01[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 258, 172, 275" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutName02[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <BDMTEXT Rows="1" Face="Arial" Columns="22" Fontsize="960" Rect="18, 275, 172, 292" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutName03[0:40]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <FIXTEXT FontStyle="1" Text="Name" Face="Arial" Fontsize="960" Rect="18, 200, 57, 217" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Addr" Face="Arial" Fontsize="960" Rect="177, 200, 209, 217" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="FIFO Used" Face="Arial" Fontsize="960" Rect="228, 200, 295, 217" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Dest Blk Cnt" Face="Arial" Fontsize="960" Rect="396, 198, 474, 215" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="FIFO In (PipeOut)" Face="Verdana" Fontsize="1344" Rect="192, 170, 387, 194" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="306, 222, 376, 290" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutFifoOverrunErrCnt[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="FIFO Overrun" Face="Arial" Fontsize="960" Rect="300, 198, 387, 215" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="96, 8, 186, 25" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.BlkWireInsCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="386, 7, 476, 24" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.BlkWireOutsCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="WireIns Cnt:" Face="Arial" Fontsize="960" Rect="15, 8, 94, 25" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="WireOuts Cnt:" Face="Arial" Fontsize="960" Rect="292, 7, 381, 24" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="510, 93, 580, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInSrcByteCnt[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Src Byte Cnt" Face="Arial" Fontsize="960" Rect="498, 69, 578, 86" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="510, 222, 580, 290" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutDestByteCnt[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Dest Byte Cnt" Face="Arial" Fontsize="960" Rect="492, 198, 578, 215" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="318, 94, 388, 162" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInBuffer[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Buffer" Face="Arial" Fontsize="960" Rect="344, 70, 384, 87" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="618, 93, 688, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeInBytesPerSec[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Bytes/Sec" Face="Arial" Fontsize="960" Rect="626, 69, 690, 86" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="4" Face="Arial" Columns="1" Radix="10" Fontsize="960" Rect="617, 220, 687, 288" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_DecStatus.PipeOutBytesPerSec[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Bytes/Sec" Face="Arial" Fontsize="960" Rect="624, 196, 688, 213" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

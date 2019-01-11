@@ -1,0 +1,776 @@
+# *************************************************************************** #
+# * LLORRI Block definition file                                            * #
+# *                                                                         * #
+# * Copyright (C) 1997-2018, GSE Software, Inc.                             * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Jan-25-2018 th R001: Copied from OVIRS R005.                            * #
+# * Mar-13-2018 th R002: Merge OKBios drivers.                              * #
+# * Jun-21-2018 th R006: Move CIP_Data to CIP_Data32 and add new field      * #
+# *                      CIP_Data which is 8-bit.                           * #
+# *************************************************************************** #
+
+# --------------------------------------------------------------------------- #
+# -                         F I F O   B l o c k s                           - #
+# --------------------------------------------------------------------------- #
+FIFO_IN_TLM
+{
+    Len          ,,, 32;
+  ( Block[8192]  ,,,  8; )
+    Data8[8192]  ,,,  8;
+}
+
+FIFO_IN_TLM_HS
+{
+    Len            ,,, 32;
+  ( Block[400000]  ,,,  8; )
+    Data8[400000]  ,,,  8;
+}
+
+FIFO_IN_STATUS
+{
+    Len          ,,, 32;
+  ( Block[8192]  ,,,  8; )
+    Data8[8192]  ,,,  8;
+}
+
+FIFO_OUT_CMD
+{
+    Len          ,,, 32;
+  ( Block[1024]  ,,,  8; )
+    Data8[1024]  ,,,  8;
+}
+
+FIFO_OUT_CTRL
+{
+    Len          ,,, 32;
+  ( Block[236]   ,,,  8; )
+    Data8[236]   ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# -                         F T F   B l o c k s                             - #
+# --------------------------------------------------------------------------- #
+FTF_IN_TLM
+{
+  ( Block[70020]   ,,,  8; )
+  ( FTFHeader[20]  ,,,  8; )
+    Sync           ,,, 32;
+    Version        ,,,  8;
+    Type           ,,,  8;
+    Endpoint       ,,,  8;
+
+    SpWErrors      ,,,  8;
+
+    MajorFrame     ,,, 16;
+    MinorFrame     ,,, 16;
+    SeqNo          ,,, 32;
+    DataLen        ,,, 32;
+  ( Data[70000]    ,,,  8; )
+    Data32[17500] ,,, 32;
+}
+
+FTF_IN_TLM_HS
+{
+  ( Block[70020]   ,,,  8; )
+  ( FTFHeader[20]  ,,,  8; )
+    Sync           ,,, 32;
+    Version        ,,,  8;
+    Type           ,,,  8;
+    Endpoint       ,,,  8;
+
+    SpWErrors      ,,,  8;
+
+    MajorFrame     ,,, 16;
+    MinorFrame     ,,, 16;
+    SeqNo          ,,, 32;
+    DataLen        ,,, 32;
+  ( Data[70000]    ,,,  8; )
+    Data32[17500] ,,, 32;
+}
+
+FTF_IN_STATUS
+{
+  ( Block[8192]    ,,,  8; )
+  ( FTFHeader[20]  ,,,  8; )
+    Sync           ,,, 32;
+    Version        ,,,  8;
+    Type           ,,,  8;
+    Endpoint       ,,,  8;
+
+    SpWErrors      ,,,  8;
+
+    MajorFrame     ,,, 16;
+    MinorFrame     ,,, 16;
+    SeqNo          ,,, 32;
+    DataLen        ,,, 32;
+  ( Data[8172]     ,,,  8; )
+}
+
+
+# --------------------------------------------------------------------------- #
+# -                S C E   I n c o m i n g   D a t a                        - #
+# --------------------------------------------------------------------------- #
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_TLM_LS                                                           - #
+# -                                                                         - #
+# - Incoming SCE TLM low speed data.                                        - #
+# --------------------------------------------------------------------------- #
+SCE_IN_TLM_LS
+{
+    Len             ,,, 32;
+  ( Block[32768]    ,,,  8; )
+    Block32[8192]   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_TLM_HS                                                           - #
+# -                                                                         - #
+# - Incoming SCE HS TLM data. This contains the high speed data.            - #
+# --------------------------------------------------------------------------- #
+SCE_IN_TLM_HS
+{
+    Len              ,,, 32;
+  ( Block[65536]     ,,,  8; )
+  ( Block32[16384]   ,,, 32; )
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_ANALOG                                                           - #
+# -                                                                         - #
+# - Incoming SCE ANALOG data. This contains any analog lines from the SCE.  - #
+# --------------------------------------------------------------------------- #
+SCE_IN_ANALOG INTEL
+{
+  ( Block[42]         ,,,  8; )
+    BusVolts          ,,, 16;
+    InstrVolts        ,,, 16;
+    InstrCurr         ,,, 16;
+    AuxVolts          ,,, 16;
+    AuxCurr           ,,, 16;
+    PeakBusVolts      ,,, 16;
+    PeakInstrVolts    ,,, 16;
+    PeakInstrCurr     ,,, 16;
+    PeakAuxVolts      ,,, 16;
+    PeakAuxCurr       ,,, 16;
+  ( Temps[8]          ,,, 16; )
+    Temp0             ,,, 16;
+    Temp1             ,,, 16;
+    Temp2             ,,, 16;
+    Temp3             ,,, 16;
+    Temp4             ,,, 16;
+    Temp5             ,,, 16;
+    Temp6             ,,, 16;
+    Temp7             ,,, 16;
+    PotADTest         ,,, 16;
+    PotADTest1        ,,, 16;
+    PotADTest2        ,,, 16;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_STATUS                                                           - #
+# -                                                                         - #
+# - Incoming SCE STATUS data. The SCE periodically generates the STATUS     - #
+# - data to report SCE status.                                              - #
+# --------------------------------------------------------------------------- #
+SCE_IN_STATUS
+{
+  ( Block[60]                   ,,,  8; )
+    ReasonCode                  ,,,  8;
+    FifoCmdSync                 ,,,  1;
+    FifoCtrlSync                ,,,  1;
+    EmulatorType                ,,,  1;
+    LoopbackEnabled             ,,,  1;
+    TestDataGeneratorEnabled    ,,,  1;
+    HSTestDataGeneratorEnabled  ,,,  1;
+                                ,,, 18;
+
+    FifoCmdFrameCnt             ,,, 32;
+    FifoCtrlFrameCnt            ,,, 32;
+    FifoTlmFrameCnt             ,,, 32;
+    FifoTlmHSFrameCnt           ,,, 32;
+    FifoStatusFrameCnt          ,,, 32;
+
+    MajorFrameCurr              ,,, 32;
+                                ,,, 32;
+    MajorFrameDelay             ,,, 32;
+
+    ( PowerStatus               ,,, 32; )
+      FrontPanelAuxPwrEnable    ,,,  1;
+      AuxPwrEnable_7            ,,,  1;
+      AuxPwrEnable_6            ,,,  1;
+      AuxPwrEnable_5            ,,,  1;
+      AuxPwrEnable_4            ,,,  1;
+      AuxPwrEnable_3            ,,,  1;
+      AuxPwrEnable_2            ,,,  1;
+      AuxPwrEnable_1            ,,,  1;
+      AuxPwrEnable_0            ,,,  1;
+      FrontPanelPwrEnable       ,,,  1;
+      InstrPwrEnableB           ,,,  1;
+      InstrPwrEnableA           ,,,  1;
+                                ,,, 20;
+
+    ( FaultStatus               ,,, 32; )
+      CmdTimingErr              ,,,  1;
+      TlmTimingErr              ,,,  1;
+      TlmUartErr                ,,,  1;
+      VoltCurrErr               ,,,  1;
+      FtfTxErr                  ,,,  1;
+      ErrThisFrame              ,,,  1;
+                                ,,,  2;
+                                ,,,  7;
+      AlarmGlobal               ,,,  1;
+                                ,,, 16;
+
+    MaxPollTime                 ,,, 32;
+    TlmBufferFree               ,,, 32;
+    TlmHSBufferFree             ,,, 32;
+    ActiveSide                  ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_SETTINGS                                                         - #
+# -                                                                         - #
+# - Incoming SCE SETTINGS data. The SCE generates the SETTINGS data if the  - #
+# - settings have changed or the SETTINGS data is requested with the        - #
+# - REQUEST_SETTINGS command.                                               - #
+# --------------------------------------------------------------------------- #
+SCE_IN_SETTINGS
+{
+  ( Block[44]                    ,,,  8; )
+    MinorFrameTime               ,,, 32;
+    MinorFrameCnt                ,,, 32;
+
+    TlmUartBaudrate              ,,, 32;
+    CmdUartBaudrate              ,,, 32;
+    CmdUartInterWordGap          ,,, 32;
+
+    InstrVoltLimitHigh           ,,, 16;
+    InstrVoltLimitLow            ,,, 16;
+    InstrCurrLimitHigh           ,,, 16;
+    InstrCurrLimitLow            ,,, 16;
+    AuxVoltLimitHigh             ,,, 16;
+    AuxVoltLimitLow              ,,, 16;
+    AuxCurrLimitHigh             ,,, 16;
+    AuxCurrLimitLow              ,,, 16;
+
+    UartErrorInjectionMode       ,,,  8;
+    UartErrorInjectionBitPos     ,,,  8;
+    UartErrorInjectionBytePos    ,,, 16;
+
+    PPSNonGatedEnabled           ,,,  8;
+    Spare                        ,,, 24;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_ERRORS                                                           - #
+# -                                                                         - #
+# - Incoming SCE ERROR data. The SCE generates the ERROR message when any   - #
+# - of the error counters changes or the message is requested.              - #
+# --------------------------------------------------------------------------- #
+SCE_IN_ERRORS
+{
+  ( Block[136]                   ,,,  8; )
+    ReasonCode                   ,,, 32;
+
+    FifoCmdSyncErrCnt            ,,, 32;
+    FifoCmdVersionErrCnt         ,,, 32;
+    FifoCmdSeqErrCnt             ,,, 32;
+    FifoCmdLengthErrCnt          ,,, 32;
+    FifoCmdTypeErrCnt            ,,, 32;
+
+    FifoCtrlSyncErrCnt           ,,, 32;
+    FifoCtrlVersionErrCnt        ,,, 32;
+    FifoCtrlSeqErrCnt            ,,, 32;
+    FifoCtrlLengthErrCnt         ,,, 32;
+    FifoCtrlTypeErrCnt           ,,, 32;
+
+    FifoTlmOverrunErrCnt         ,,, 32;
+    FifoTlmHSOverrunErrCnt       ,,, 32;
+    FifoStatusOverrunErrCnt      ,,, 32;
+    FifoCmdUnderflowErrCnt       ,,, 32;
+    MajorFrameSkipErrCnt         ,,, 32;
+
+    TimePulseCmdOverrunErrCnt    ,,, 32;
+    TimePulseTlmOverrunErrCnt    ,,, 32;
+    TimePulseCmdUnderrunErrCnt   ,,, 32;
+    TimePulseTlmUnderrunErrCnt   ,,, 32;
+
+    TlmUartParityErrCnt          ,,, 32;
+    TlmUartFrameErrCnt           ,,, 32;
+    TlmUartOverrunErrCnt         ,,, 32;
+
+    InstrVoltLimitErrCnt         ,,, 32;
+    InstrCurrLimitErrCnt         ,,, 32;
+    AuxVoltLimitErrCnt           ,,, 32;
+    AuxCurrLimitErrCnt           ,,, 32;
+    DroppedCmdErrCnt             ,,, 32;
+
+    TlmTrafficOnPassiveSide      ,,, 32;
+
+    SpWLinkDisconnectErrCnt      ,,, 32;
+    SpWParityErrCnt              ,,, 32;
+    SpWEscapeErrCnt              ,,, 32;
+    SpWFCTUnderflowErrCnt        ,,, 32;
+    SpWFCTOverflowErrCnt         ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_MESSAGE                                                          - #
+# -                                                                         - #
+# - SCE incoming (SCE -> GSEOS) MESSAGE FTF.                                - #
+# - This frame contains ASCII error messages from the SCE.                  - #
+# --------------------------------------------------------------------------- #
+SCE_IN_MESSAGE
+{
+  ( Block[1028]      ,,,  8; )
+    Level            ,,, 32;
+    Message[1024]    ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# - SCE_IN_DEBUG                                                            - #
+# -                                                                         - #
+# - SCE incoming (SCE -> GSEOS) DEBUG FTF.                                  - #
+# - This frame contains miscellaneous SCE debugging information.            - #
+# --------------------------------------------------------------------------- #
+SCE_IN_DEBUG
+{
+  ( Block[2048]      ,,,  8; )
+    Data[2048]       ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# -                S C E   O u t g o i n g   D a t a                        - #
+# --------------------------------------------------------------------------- #
+
+# --------------------------------------------------------------------------- #
+# - FTF_OUT_CMD                                                             - #
+# -                                                                         - #
+# - SCE outgoing (GSEOS -> SCE) command traffic to RS-422 port.             - #
+# - One FTF frame contains exactly one MSG/CCSDS packet.                    - #
+# --------------------------------------------------------------------------- #
+FTF_OUT_CMD
+{
+  ( Block[32768]     ,,,  8; )
+  ( Block32[8192]    ,,, 32; )
+  ( FTFHeader[20]    ,,,  8; )
+    Sync             ,,, 32;
+    Version          ,,,  8;
+    Type             ,,,  8;
+    Endpoint         ,,,  8;
+
+    SpWErrors        ,,,  8;
+
+    MajorFrame       ,,, 16;
+    MinorFrame       ,,, 16;
+    SeqNo            ,,, 32;
+    DataLen          ,,, 32;
+
+  ( Data[32748]      ,,,  8; )
+  ( Data32[8187]     ,,, 32; )
+  ( IP_Header[10]    ,,, 16; )
+      IP_Version     ,,,  4;
+      IP_HeaderLen   ,,,  4;
+      IP_TOS         ,,,  8;
+      IP_Length      ,,, 16;
+      IP_ID          ,,, 16;
+      IP_Flags       ,,,  3;
+      IP_FragOffset  ,,, 13;
+      IP_TTL         ,,,  8;
+      IP_Protocol    ,,,  8;
+      IP_Checksum    ,,, 16;
+      IP_SrcAddr     ,,, 32;
+      IP_DestAddr    ,,, 32;
+
+  ( UDP_Header[4]     ,,, 16; )
+      UDP_SrcPort     ,,, 16;
+      UDP_DestPort    ,,, 16;
+      UDP_Length      ,,, 16;
+      UDP_Checksum    ,,, 16;
+
+  ( UDP_Data32[8180]  ,,, 32; )
+  ( UDP_Data16[16360] ,,, 16; )
+  ( CIP_Header[8]     ,,,  8; )
+      CIP_Marker      ,,, 32;
+      CIP_Length      ,,, 16;
+      CIP_Type        ,,,  8;
+      CIP_Reserved    ,,,  8;
+
+  ( CIP_Data32[8178]  ,,, 32; )
+    CIP_Data[32712]   ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# - FTF_OUT_CTRL                                                            - #
+# -                                                                         - #
+# - SCE outgoing (GSEOS -> SCE) FTF control data.                           - #
+# --------------------------------------------------------------------------- #
+FTF_OUT_CTRL
+{
+  ( Block[256]     ,,,  8; )
+  ( FTFHeader[20]  ,,,  8; )
+    Sync           ,,, 32;
+    Version        ,,,  8;
+    Type           ,,,  8;
+    Endpoint       ,,,  8;
+
+    SpWErrors      ,,,  8;
+
+    MajorFrame     ,,, 16;
+    MinorFrame     ,,, 16;
+    SeqNo          ,,, 32;
+    DataLen        ,,, 32;
+  ( Data[236]      ,,,  8; )
+      Opcode       ,,, 32;
+      Args[2]      ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - TLM_LS_IP                                                               - #
+# - Low speed synchronized TLM data. Contains synchronized IP/UDP/CIP       - #
+# - packets. Decoded by the IP decoder from SCE_IN_TLM.                     - #
+# --------------------------------------------------------------------------- #
+TLM_LS_IP
+{
+    Len               ,,, 32;
+  ( Block[32768]      ,,,  8; )
+  ( Block32[8192]     ,,, 32; )
+  ( IP_Header[10]     ,,, 16; )
+      IP_Version      ,,,  4;
+      IP_HeaderLen    ,,,  4;
+      IP_TOS          ,,,  8;
+      IP_Length       ,,, 16;
+      IP_ID           ,,, 16;
+      IP_Flags        ,,,  3;
+      IP_FragOffset   ,,, 13;
+      IP_TTL          ,,,  8;
+      IP_Protocol     ,,,  8;
+      IP_Checksum     ,,, 16;
+      IP_SrcAddr      ,,, 32;
+      IP_DestAddr     ,,, 32;
+
+  ( UDP_Header[4]     ,,, 16; )
+      UDP_SrcPort     ,,, 16;
+      UDP_DestPort    ,,, 16;
+      UDP_Length      ,,, 16;
+      UDP_Checksum    ,,, 16;
+
+  ( UDP_Data32[8185]  ,,, 32; )
+  ( UDP_Data16[16370] ,,, 16; )
+  ( CIP_Header[8]     ,,,  8; )
+      CIP_Marker      ,,, 32;
+      CIP_Length      ,,, 16;
+      CIP_Type        ,,,  8;
+      CIP_Reserved    ,,,  8;
+
+  ( CIP_Data32[8183]  ,,, 32; )
+    CIP_Data[32732]   ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# - TLM_LS_IDP                                                              - #
+# -                                                                         - #
+# - Data decoded from the TLM_LS_IP block. Contains CIP payload data.       - #
+# --------------------------------------------------------------------------- #
+TLM_LS_IDP
+{
+    Len              ,,, 32;
+  ( Block[4400]      ,,,  8; )
+  ( Block32[1100]    ,,, 32; )
+
+  ( CIP_Header[8]    ,,,  8; )
+      CIP_Marker     ,,, 32;
+      CIP_Length     ,,, 16;
+      CIP_Type       ,,,  8;
+      CIP_Reserved   ,,,  8;
+
+  ( CIP_Data32[1098] ,,, 32; )
+    CIP_Data[4392]   ,,,  8;
+}
+
+# --------------------------------------------------------------------------- #
+# - TLM_HS                                                                  - #
+# -                                                                         - #
+# - Data decoded from the SCE_IN_TLM_HS block. Instrument specific.         - #
+# --------------------------------------------------------------------------- #
+TLM_HS
+{
+   Len              ,,, 32;
+ ( Block[65536]     ,,,  8; )
+   Block32[16384]   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - BIN_CMD_IDP                                                             - #
+# -                                                                         - #
+# - Instrument binary command data.                                         - #
+# - The command data will be wrapped into the proper IP/UDP/CIP protocols.  - #
+# --------------------------------------------------------------------------- #
+BIN_CMD_IDP
+{
+    Len                ,,, 32;
+  ( Data[4096]         ,,,  8; )
+    Data32[1024]       ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# -                     D e c o d e r   S t a t u s                         - #
+# --------------------------------------------------------------------------- #
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FIFO_TLM                                                      - #
+# -                                                                         - #
+# - FIFO TLM decoder status.                                                - #
+# --------------------------------------------------------------------------- #
+DecStatus_FIFO_TLM
+{
+  SrcBlkCnt       ,,, 32;
+  SrcByteCnt      ,,, 32;
+  DestBlkCnt      ,,, 32;
+  SyncErrCnt      ,,, 32;
+  IsSynchronized  ,,, 32;
+  LenErrCnt       ,,, 32;
+  VersionErrCnt   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FIFO_TLM_HS                                                   - #
+# -                                                                         - #
+# - FIFO HS TLM decoder status.                                             - #
+# --------------------------------------------------------------------------- #
+DecStatus_FIFO_TLM_HS
+{
+  SrcBlkCnt       ,,, 32;
+  SrcByteCnt      ,,, 32;
+  DestBlkCnt      ,,, 32;
+  SyncErrCnt      ,,, 32;
+  IsSynchronized  ,,, 32;
+  LenErrCnt       ,,, 32;
+  VersionErrCnt   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FIFO_STATUS                                                   - #
+# -                                                                         - #
+# - FIFO STATUS decoder status.                                             - #
+# --------------------------------------------------------------------------- #
+DecStatus_FIFO_STATUS
+{
+  SrcBlkCnt       ,,, 32;
+  SrcByteCnt      ,,, 32;
+  DestBlkCnt      ,,, 32;
+  SyncErrCnt      ,,, 32;
+  IsSynchronized  ,,, 32;
+  LenErrCnt       ,,, 32;
+  VersionErrCnt   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FTF_TLM                                                       - #
+# -                                                                         - #
+# - FTF TLM decoder status.                                                 - #
+# --------------------------------------------------------------------------- #
+DecStatus_FTF_TLM
+{
+  SrcBlkCnt       ,,, 32;
+  SrcByteCnt      ,,, 32;
+  DestBlkCnt      ,,, 32;
+  SyncErrCnt      ,,, 32;
+  VersionErrCnt   ,,, 32;
+  TypeErrCnt      ,,, 32;
+  SeqNoErrCnt     ,,, 32;
+  LenErrCnt       ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FTF_TLM_HS                                                    - #
+# -                                                                         - #
+# - FTF TLM HS decoder status.                                              - #
+# --------------------------------------------------------------------------- #
+DecStatus_FTF_TLM_HS
+{
+  SrcBlkCnt       ,,, 32;
+  SrcByteCnt      ,,, 32;
+  DestBlkCnt      ,,, 32;
+  SyncErrCnt      ,,, 32;
+  VersionErrCnt   ,,, 32;
+  TypeErrCnt      ,,, 32;
+  SeqNoErrCnt     ,,, 32;
+  LenErrCnt       ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FTF_STATUS                                                    - #
+# -                                                                         - #
+# - FTF STATUS decoder status.                                              - #
+# --------------------------------------------------------------------------- #
+DecStatus_FTF_STATUS
+{
+  SrcBlkCnt          ,,, 32;
+  SrcByteCnt         ,,, 32;
+  DestStatusBlkCnt   ,,, 32;
+  DestAnalogBlkCnt   ,,, 32;
+  DestDebugBlkCnt    ,,, 32;
+  DestMessageBlkCnt  ,,, 32;
+  DestSettingsBlkCnt ,,, 32;
+  DestErrorsBlkCnt   ,,, 32;
+  SyncErrCnt         ,,, 32;
+  VersionErrCnt      ,,, 32;
+  TypeErrCnt         ,,, 32;
+  SeqNoErrCnt        ,,, 32;
+  StatusLenErrCnt    ,,, 32;
+  AnalogLenErrCnt    ,,, 32;
+  DebugLenErrCnt     ,,, 32;
+  MessageLenErrCnt   ,,, 32;
+  SettingsLenErrCnt  ,,, 32;
+  ErrorsLenErrCnt    ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FTF_CMD                                                       - #
+# -                                                                         - #
+# - FTF CMD decoder status.                                                 - #
+# --------------------------------------------------------------------------- #
+DecStatus_FTF_CMD
+{
+  SeqNo       ,,, 32;
+  SrcBlkCnt   ,,, 32;
+  DestBlkCnt  ,,, 32;
+  LenErrCnt   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_FTF_CTRL                                                      - #
+# -                                                                         - #
+# - FTF CTRL decoder status.                                                - #
+# --------------------------------------------------------------------------- #
+DecStatus_FTF_CTRL
+{
+  SeqNo       ,,, 32;
+  SrcBlkCnt   ,,, 32;
+  DestBlkCnt  ,,, 32;
+  LenErrCnt   ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_TLM_LS_IP                                                     - #
+# -                                                                         - #
+# - Decoder status of the SCE_IN_TLM_LS IP decoder.                         - #
+# --------------------------------------------------------------------------- #
+DecStatus_TLM_LS_IP
+{
+  MaxTxLen               ,,, 32;
+  SrcByteCnt             ,,, 32;
+  SrcBlkCnt              ,,, 32;
+  DestBlkCnt             ,,, 32;
+
+  IsSynchronized         ,,, 32;
+  SyncErrCnt             ,,, 32;
+  LenErrCnt              ,,, 32;
+  MaxTxLenExceededErrCnt ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_TLM_LS_IDP                                                    - #
+# -                                                                         - #
+# - Decoder status of the TLM_LS_IP CIP decoder.                            - #
+# --------------------------------------------------------------------------- #
+DecStatus_TLM_LS_IDP
+{
+  SrcByteCnt          ,,, 32;
+  SrcBlkCnt           ,,, 32;
+  DestBlkCnt          ,,, 32;
+
+  IP_VersionErrCnt    ,,, 32;
+  IP_HeaderLenErrCnt  ,,, 32;
+  IP_TOSErrCnt        ,,, 32;
+  IP_LenErrCnt        ,,, 32;
+  IP_IDErrCnt         ,,, 32;
+  IP_FlagsErrCnt      ,,, 32;
+  IP_FragOffsetErrCnt ,,, 32;
+  IP_TTLErrCnt        ,,, 32;
+  IP_ProtocolErrCnt   ,,, 32;
+  IP_ChecksumErrCnt   ,,, 32;
+  IP_SrcAddrErrCnt    ,,, 32;
+  IP_DestAddrErrCnt   ,,, 32;
+
+  IP_ChecksumRecv     ,,, 32;
+  IP_ChecksumCalc     ,,, 32;
+
+  UDP_SrcPortErrCnt   ,,, 32;
+  UDP_DestPortErrCnt  ,,, 32;
+  UDP_ChecksumErrCnt  ,,, 32;
+  UDP_LenErrCnt       ,,, 32;
+  UDP_OverrunErrCnt   ,,, 32;
+
+  UDP_ChecksumRecv    ,,, 32;
+  UDP_ChecksumCalc    ,,, 32;
+
+  CIP_MarkerErrCnt    ,,, 32;
+  CIP_LenErrCnt       ,,, 32;
+  CIP_TypeErrCnt      ,,, 32;
+  CIP_OverrunErrCnt   ,,, 32;
+
+  CIP_PacketCnt       ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_TLM_HS                                                        - #
+# -                                                                         - #
+# - Decoder status of the TLM_HS_Decoder.                                   - #
+# --------------------------------------------------------------------------- #
+DecStatus_TLM_HS
+{
+  SrcByteCnt          ,,, 32;
+  SrcBlkCnt           ,,, 32;
+  DestBlkCnt          ,,, 32;
+  LenErrCnt           ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# -                     C o m m a n d   S t a t u s                         - #
+# --------------------------------------------------------------------------- #
+
+# --------------------------------------------------------------------------- #
+# - DecStatus_LLORRI_CMD                                                    - #
+# -                                                                         - #
+# - LLORRI command status.                                                  - #
+# --------------------------------------------------------------------------- #
+DecStatus_LLORRI_CMD
+{
+  RawCmdMode                  ,,, 32;
+  TotalCmdCnt                 ,,, 32;
+  QueuedCmdCnt                ,,, 32;
+  BIN_CMD_IDP_LenErrCnt       ,,, 32;
+  MaxTxLenExceededErrCnt      ,,, 32;
+  MajorFrameCurr              ,,, 32;
+  MajorFrameLast              ,,, 32;
+  CmdTxCnt                    ,,, 32;
+  MajorSkipErrCnt             ,,, 32;
+  FTF_OUT_CMD_OverrunErrCnt   ,,, 32;
+  TimeToneActive              ,,,  1;
+  TimeToneCnt                 ,,, 32;
+  CurrentTimeSecs             ,,, 32;
+  CurrentTimeSubSecs          ,,, 16;
+  TimeIncrement               ,,, 32;
+
+  # ------------------------------------------------------------------------- #
+  # - Time Update enable status.                                            - #
+  # ------------------------------------------------------------------------- #
+  MsgTimeEnabled              ,,,  1;
+  MsgTimeReqPending           ,,,  2;
+}
+
+# --------------------------------------------------------------------------- #
+# - Log Entry, must be the same as the system Message block.                - #
+# --------------------------------------------------------------------------- #
+LLORRILogEntry
+{
+  Type               ,,, 32;
+  EventID            ,,, 32;
+  Source[32]       0 ,,,  8;
+  Text[1024]       0 ,,,  8;
+}

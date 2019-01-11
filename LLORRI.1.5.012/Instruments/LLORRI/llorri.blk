@@ -1,0 +1,325 @@
+# *************************************************************************** #
+# * LLORRI Block definition file                                            * #
+# *                                                                         * #
+# * Copyright (C) 1997-2018, GSE Software, Inc.                             * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Jan-25-2018 th R001: Copied from OVIRS R005.                            * #
+# * Mar-13-2018 th R002: Merge OKBios drivers.                              * #
+# *************************************************************************** #
+
+# --------------------------------------------------------------------------- #
+# -                S C E   O u t g o i n g   D a t a                        - #
+# --------------------------------------------------------------------------- #
+
+# --------------------------------------------------------------------------- #
+# - LM_OUT_CMD                                                             - #
+# -                                                                         - #
+# - SCE outgoing (GSEOS -> SCE) command traffic to RS-422 port.             - #
+# - One FTF frame contains exactly one MSG/CCSDS packet.                    - #
+# --------------------------------------------------------------------------- #
+LM_OUT_CMD
+{
+  ( Block[2048]     ,,,  8; )
+  ( Block32[512]    ,,, 32; )
+  ( IP_Header[10]    ,,, 16; )
+      IP_Version     ,,,  4;
+      IP_HeaderLen   ,,,  4;
+      IP_TOS         ,,,  8;
+      IP_Length      ,,, 16;
+      IP_ID          ,,, 16;
+      IP_Flags       ,,,  3;
+      IP_FragOffset  ,,, 13;
+      IP_TTL         ,,,  8;
+      IP_Protocol    ,,,  8;
+      IP_Checksum    ,,, 16;
+      IP_SrcAddr     ,,, 32;
+      IP_DestAddr    ,,, 32;
+
+  ( UDP_Header[4]     ,,, 16; )
+      UDP_SrcPort     ,,, 16;
+      UDP_DestPort    ,,, 16;
+      UDP_Length      ,,, 16;
+      UDP_Checksum    ,,, 16;
+
+  ( UDP_Data16[1024] ,,, 16; )
+  ( UDP_Data32[512]  ,,, 32; )
+  ( CIP_Header[8]     ,,,  8; )
+      CIP_Marker      ,,, 32;
+      CIP_Length      ,,, 16;
+      CIP_Type        ,,,  8;
+      CIP_Reserved    ,,,  8;
+
+    CIP_Data[2048]    ,,, 32;
+    CIP_DataB[8192]    ,,, 8;
+}
+# --------------------------------------------------------------------------- #
+# - LM_LS                                                                  - #
+# - Low speed synchronized TLM data. Contains synchronized IP/UDP/CIP       - #
+# - packets. Decoded by the IP decoder from SCE_IN_TLM.                     - #
+# --------------------------------------------------------------------------- #
+LM_LS
+{
+    Len               ,,, 32;
+  ( Block[32768]      ,,,  8; )
+  ( Block32[8192]     ,,, 32; )
+  ( IP_Header[10]     ,,, 16; )
+      IP_Version      ,,,  4;
+      IP_HeaderLen    ,,,  4;
+      IP_TOS          ,,,  8;
+      IP_Length       ,,, 16;
+      IP_ID           ,,, 16;
+      IP_Flags        ,,,  3;
+      IP_FragOffset   ,,, 13;
+      IP_TTL          ,,,  8;
+      IP_Protocol     ,,,  8;
+      IP_Checksum     ,,, 16;
+      IP_SrcAddr      ,,, 32;
+      IP_DestAddr     ,,, 32;
+
+  ( UDP_Header[4]     ,,, 16; )
+      UDP_SrcPort     ,,, 16;
+      UDP_DestPort    ,,, 16;
+      UDP_Length      ,,, 16;
+      UDP_Checksum    ,,, 16;
+
+  ( UDP_Data32[8185]  ,,, 32; )
+  ( UDP_Data16[16370] ,,, 16; )
+  ( CIP_Header[8]     ,,,  8; )
+      CIP_Marker      ,,, 32;
+      CIP_Length      ,,, 16;
+      CIP_Type        ,,,  8;
+      CIP_Reserved    ,,,  8;
+
+    CIP_Data[8183]    ,,, 32;
+    CIP_DataB[32000]   ,,, 8;
+}
+* ------------------------------------------------------------------------
+* LLORRI Packets
+
+LOR_CmdEcho {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[12]		, , ,  8; )
+	Macro			, , ,  1;
+	Result			, , ,  7;
+	Opcode			, , ,  8;
+	Args[10]		, , ,  8;
+}
+
+LOR_Alarm {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[4]			, , ,  8; )
+	AlarmId			, , ,  8;
+	AlarmType		, , ,  8;
+	Value			, , ,  8;
+	Aux			, , ,  8;
+}
+
+LOR_MemChecksum {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[8]			, , ,  8; )
+	Address			, , , 32;
+	MemLength		, , , 16;
+	CRC_Value		, , , 16;
+}
+
+LOR_MemDump {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[264]		, , ,  8; )
+	Address			, , , 32;
+	DumpLength		, , , 16;
+				, , , 16;
+      (	DumpData[256]		, , ,  8; )
+      (	DumpData8[256]		, , ,  8; )
+	DumpData16[128]		, , , 16;
+}
+
+LOR_Status {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      ( Data[16384]		, , ,  8; )
+       	Analogs[16]		, , , 16;  
+       	FPUTemps[8]		, , , 16;  
+
+      ( Digital[24]             , , ,  8 ; )
+
+	Heaters			, , , 16 ;
+      (
+                                , , ,  8;
+        NVMem_Enb               , , ,  1;
+        Flash_Power             , , ,  1;
+        OC_Enable               , , ,  1;
+        OV2_Enable              , , ,  1;
+        OV1_Enable              , , ,  1;
+        NVMem_RO                , , ,  1;
+        Flash_RO                , , ,  1;
+        FPU_Power               , , ,  1;
+      )
+        ControlReg              , , , 16 ;
+
+      ( Status                  , , , 16 ; )
+				, , , 15;
+	DPU_ID			, , ,  1;
+
+      ( SCCFG_Status		, , , 16; )
+        			, , , 12;
+      ( SCCFG			, , ,  4; )
+      	SCCFG_Uart_Enb		, , ,  1;
+      	SCCFG_RX_Side		, , ,  1;
+      	SCCFG_TX_B_Enb		, , ,  1;
+      	SCCFG_TX_A_Enb		, , ,  1;
+
+	FPU_Flush_Exp		, , , 16 ;
+	FPU_Exp_Stop		, , , 16 ;
+	FPU_FPU_CW1		, , , 16 ;
+	FPU_FPU_CW2		, , , 16 ;
+	FPU_DPU_CW		, , , 16 ;
+
+	FPU_Latchup		, , , 8 ;
+			        , , , 8 ;
+				, , , 16 ;
+				, , , 16 ;
+				, , , 16 ;
+
+      ( Software[64]		, , ,  8; )
+	StatusInt		, , , 16;
+	MacroBlocks		, , , 16;
+	TlmVolume		, , , 16;
+	WatchAddr		, , , 16;
+	WatchMemId		, , ,  8;
+	WatchData[2]		, , ,  8;
+	SWVersion		, , ,  8;
+	AlarmId			, , ,  8;
+	AlarmType		, , ,  1;
+	AlarmCount		, , ,  7;
+	CmdExec			, , ,  8;
+	CmdReject		, , ,  8;
+	MacCmdExec		, , ,  8;
+	MacCmdReject		, , ,  8;
+	MacId			, , ,  8;
+
+	MacLearn		, , ,  1;
+	MonitorResponse		, , ,  1;
+	MemWrite		, , ,  1;
+				, , ,  5;
+
+	SafingTime		, , , 16;
+	SW_Build		, , , 16;
+
+	FPU_Time_Remain		, , , 16 ;
+	FPU_Time_Inter		, , , 16 ;
+	FPU_Man_Exposure	, , , 16 ;
+	FPU_Auto_Bright		, , , 16 ;
+	FPU_Exposure		, , , 16 ;
+
+	Heater_Set		, , , 16 ;
+	Heater_Hysteresis	, , , 8 ;
+	Heater_Mode		, , , 2 ;
+	Heater_Sensor		, , , 2 ;
+	FPU_Exposure_Auto	, , , 1 ;
+	Heater1_Enable		, , , 1 ;
+	Heater2_Enable		, , , 1 ;
+	Image_Descriptor_Enable	, , , 1 ;
+
+	HTR_1_W1		, , , 16; 
+	HTR_1_W2		, , , 16; 
+	HTR_2_W1		, , , 16; 
+	HTR_2_W2		, , , 16; 
+	HTR_3_W1		, , , 16; 
+	HTR_3_W2		, , , 16; 
+	HTR_4_W1		, , , 16; 
+	HTR_4_W2		, , , 16; 
+
+	## Everything from here down is for debug purposes only.
+	X1			, , , 16; 
+	X2			, , , 16; 
+	X3			, , , 16; 
+	X4			, , , 16; 
+	X5			, , , 16; 
+}
+
+LOR_Boot_Status {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[256]		, , ,  8; )
+	StatusInt		, , , 16;
+	TlmVolume		, , , 16;
+	WatchAddr		, , , 16;
+	WatchMemId		, , ,  8;
+      (	WatchData[2]		, , ,  8; )
+	WatchData16		, , , 16;
+	SWVersion		, , ,  8;
+	AlarmId			, , ,  8;
+	AlarmType		, , ,  1;
+	AlarmCount		, , ,  7;
+	CmdExec			, , ,  8;
+	CmdReject		, , ,  8;
+	Cause			, , ,  1;
+	MemWrite		, , ,  1;
+				, , ,  3;
+	CodeRAM			, , ,  3;
+				, , ,  8;
+
+      ( Instrument_Control	, , , 16; )
+				, , ,  8;
+	NVMem_Enb		, , ,  1;
+				, , ,  7;
+
+      (	Instrument_Status	, , , 16; )
+				, , , 15;
+	DPU_ID			, , ,  1;
+
+      ( SCCFG_Status		, , , 16; )
+        			, , , 12;
+      ( SCCFG			, , ,  4; )
+      	SCCFG_Uart_Enb		, , ,  1;
+      	SCCFG_RX_Side		, , ,  1;
+      	SCCFG_TX_B_Enb		, , ,  1;
+      	SCCFG_TX_A_Enb		, , ,  1;
+}
+
+LOR_MacroDump {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[34]		, , ,  8; )
+	MacroId			, , ,  8;
+	BlockIndex		, , ,  8;
+	MacroData[32]		, , ,  8;
+}
+
+LOR_MacroChecksum {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[514]		, , ,  8; )
+	FirstMacro		, , ,  8;
+	LastMacro		, , ,  8;
+	Checksums[256]		, , , 16;
+}
+
+LOR_CmdText {
+	Id			, , , 16;
+	Length			, , , 16;
+	TimeTag			, , , 32;
+      (	Data[78]		, , ,  8; )
+	TextLength		, , ,  8;
+	Text[77]		, , ,  8;
+}
+
+INSTR_CMD {
+	Len		, , , 32 ;
+	ApId		, , , 16 ;
+        Data[8192]	, , ,  8 ;  
+}

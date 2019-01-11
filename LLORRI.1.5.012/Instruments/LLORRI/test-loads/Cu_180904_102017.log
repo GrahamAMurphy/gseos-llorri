@@ -1,0 +1,78 @@
+<<<Tue Sep  4 10:20:17 2018>>>
+  
+> l 
+>   
+> e 210 FRISC Forth, Version 3.0  (c) 1995 JHU/APL  07/02/13
+  ok
+test-all-ram 
+Executing from page 0 
+Page 0 skipped
+Page 1 passed
+Page 2 passed
+Page 3 passed
+Page 4 passed
+Page 5 passed
+Page 6 passed
+Page 7 passed
+Page 8 passed
+Page 9 passed
+Page a passed
+Page b passed
+Page c passed
+Page d passed
+Page e passed
+Page f passed
+Page 30 passed
+Page 31 <<<Tue Sep  4 10:25:17 2018>>>
+passed
+Page 32 passed
+Page 33 passed
+Page 34 passed
+Page 35 passed
+Page 36 passed
+Page 37 passed
+Page 38 passed
+Page 39 passed
+Page 3a passed
+Page 3b passed
+Page 3c passed
+Page 3d passed
+Page 3e passed
+Page 3f passed ok
+<<<Tue Sep  4 10:30:17 2018>>>
+  ok
+  ok
+test-all-mram 
+Page 40 passed
+Page 41 passed
+Page 42 passed
+Page 43 passed
+Page 44 passed
+Page 45 passed
+Page 46 passed
+Page 47 passed
+Page 48 passed
+Page 49 passed
+Page 4a passed
+Page 4b passed
+Page 4c passed
+Page 4d passed
+Page 4e passed
+Page 4f passed
+Page 50 passed
+Page 51 passed
+Page 52 passed
+Page 53 passed
+Page 54 passed
+Page 55 passed
+Page 56 passed
+Page 57 passed
+Page 58 passed
+Page 59 passed
+Page 5a passed
+Page 5b passed
+Page 5c passed
+Page 5d passed
+Page 5e passed
+Page 5f passed ok
+  ok

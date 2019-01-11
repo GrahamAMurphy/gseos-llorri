@@ -1,0 +1,32 @@
+# ************************************************************************** #
+# * This New Horizons alarm file was automatically created with the        * #
+# * GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                    * #
+# *                                                                        * #
+# * To change the alarm defintions please modify the Excel source          * #
+# * file: i_LORRI\CMD_n_TLM\611_TLM_20050418_02.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Mon Apr 18 17:28:56 2005                                            * #
+# ************************************************************************** #
+
+
+Alarm LOR_IMG_DES_EPU_P5_VOLT_Alarm,        4.5,       4.75,       5.25,        5.5
+Alarm LOR_IMG_DES_EPU_P5_CURR_Alarm,  0.0992992,   0.111712,   0.317117,   0.345946
+Alarm LOR_IMG_DES_FPU_P15_VOLT_Alarm,     -0.001,           ,      15.75,       16.5
+Alarm LOR_IMG_DES_FPU_P15_CURR_Alarm,   0.030546,  0.0343642,   0.109762,    0.11974
+Alarm LOR_IMG_DES_FPU_P6_VOLT_Alarm,        5.4,        5.7,        6.3,        6.6
+Alarm LOR_IMG_DES_FPU_P6_CURR_Alarm,    0.12012,   0.135135,      0.273,      0.298
+Alarm LOR_IMG_DES_FPU_HTR_CURR_Alarm,     -0.001,           ,   0.225784,    0.24631
+Alarm LOR_IMG_DES_EPU_P25_VOLT_Alarm,       2.25,      2.375,      2.625,       2.75
+Alarm LOR_IMG_DES_INTER_RING_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_MNT_FOOT_TOP_TEMP_Alarm,       -125,       -115,         30,         40
+Alarm LOR_IMG_DES_M2_MIR_MNT_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_RDTR_TEMP_Alarm,       -125,       -115,         30,         40
+Alarm LOR_IMG_DES_BAFF_AFT_TEMP_Alarm,       -125,       -115,         30,         40
+Alarm LOR_IMG_DES_BAFF_FORE_TEMP_Alarm,       -125,       -115,         30,         40
+Alarm LOR_IMG_DES_M1_MIRROR_SUPP_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_M1_MIRROR_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_M1_VF_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_M2_VF_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_FPU_BRD_VF_TEMP_Alarm,        -25,        -20,         50,         60
+Alarm LOR_IMG_DES_CCD_1X1_TEMP_Alarm,       -120,       -110,         30,         40
+Alarm LOR_IMG_DES_CCD_4X4_TEMP_Alarm,       -120,       -110,         30,         40

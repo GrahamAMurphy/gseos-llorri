@@ -1,0 +1,44 @@
+String:"LORRI Alarm";[PICTURE;
+  [RECTANGLE;Backcolor:8;Color:4;Width:3;Rect:0,0,300,124;]
+  [FIXTEXT;Dir:4;Rect:104,4,216,21;Backcolor:8;String:"LORRI Alarm";FontStyle:1;]
+  [BDMCAST;String:"LORRI_ALARM_ID_ST";File:"i_LORRI\CMD_n_TLM\ApId_604.tr";
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","ID_ST",0,1;]]Dir:4;Rect:88,56,296,73;Backcolor:8;Columns:1;]
+  [BDMCAST;String:"LORRI_ALARM_TYPE_ST";File:"i_LORRI\CMD_n_TLM\ApId_604.tr";
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","TYPE_ST",0,1;]]Dir:4;Rect:88,72,179,89;Backcolor:8;Columns:1;]
+  [BDMNUMBER;Style:10;
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","VALUE",0,1;]]Dir:4;Rect:88,88,116,105;Backcolor:8;Columns:1;]
+  [BDMNUMBER;Style:10;
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","AUX",0,1;]]Dir:4;Rect:88,104,116,121;Backcolor:8;Columns:1;]
+  [FIXTEXT;Rect:4,56,86,121;Backcolor:8;String:"Alarm ID:
+    Type:
+   Value:
+     Aux:";]
+  [BDMNUMBER;Limit:4;Style:10;
+    [BDMFORMULA;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]String:"TimeTag_year";]Dir:4;Rect:44,24,81,41;Backcolor:8;Columns:1;]
+  [FIXTEXT;Rect:132,24,142,41;Backcolor:8;String:":";]
+  [FIXTEXT;Rect:156,24,166,41;Backcolor:8;String:":";]
+  [BDMFLOAT;Limit:2;String:"%02.0f";
+    [BDMFORMULA;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]String:"TimeTag_hour";]Dir:4;Rect:116,24,135,41;Backcolor:8;Columns:1;]
+  [BDMFLOAT;Limit:2;String:"%02.0f";
+    [BDMFORMULA;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]String:"TimeTag_minute";]Dir:4;Rect:140,24,159,41;Backcolor:8;Columns:1;]
+  [BDMFLOAT;Limit:2;String:"%02.0f";
+    [BDMFORMULA;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]String:"TimeTag_sec";]Dir:4;Rect:164,24,183,41;Backcolor:8;Columns:1;]
+  [BDMFLOAT;Limit:3;String:"%03.0f";
+    [BDMFORMULA;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]String:"TimeTag_DOY";]Dir:4;Rect:84,24,112,41;Backcolor:8;Columns:1;]
+  [BDMNUMBER;Style:10;
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","SH_TIME_604",0,1;]]Dir:4;Rect:188,24,279,41;Backcolor:8;Columns:1;]
+  [FIXTEXT;Rect:4,40,77,57;Backcolor:8;String:"Seq Cnt:";]
+  [BDMNUMBER;Style:10;
+    [BDMDSINGLE;
+      [DATAITEM;Data:"LORRI_ALARM","PH_SEQ_CNT_604",0,1;]]Dir:4;Rect:76,40,122,57;Backcolor:8;Columns:1;]
+  [FIXTEXT;Rect:4,24,41,41;Backcolor:8;String:"MET:";]]Rect:109,447,457,671;Style:32;

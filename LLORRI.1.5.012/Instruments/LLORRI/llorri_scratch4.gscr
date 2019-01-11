@@ -1,0 +1,639 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="0" Rect="0, 0, 1006, 1327" >
+    <PICTURE>
+      <FIXTEXT Text="Id:" Rect="60, 20, 84, 37" >
+      </FIXTEXT>
+      <FIXTEXT Text="Length:" Rect="60, 39, 116, 56" >
+      </FIXTEXT>
+      <FIXTEXT Text="TimeTag:" Rect="60, 58, 124, 75" >
+      </FIXTEXT>
+      <FIXTEXT Text="Data:" Rect="60, 77, 100, 94" >
+      </FIXTEXT>
+      <FIXTEXT Text="Analogs:" Rect="60, 96, 124, 113" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPUTemps:" Rect="60, 115, 132, 132" >
+      </FIXTEXT>
+      <FIXTEXT Text="Digital:" Rect="60, 134, 124, 151" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heaters:" Rect="60, 153, 124, 170" >
+      </FIXTEXT>
+      <FIXTEXT Text="NVMem_Enb:" Rect="60, 172, 140, 189" >
+      </FIXTEXT>
+      <FIXTEXT Text="Flash_Power:" Rect="60, 191, 156, 208" >
+      </FIXTEXT>
+      <FIXTEXT Text="OC_Enable:" Rect="60, 210, 140, 227" >
+      </FIXTEXT>
+      <FIXTEXT Text="OV2_Enable:" Rect="60, 229, 148, 246" >
+      </FIXTEXT>
+      <FIXTEXT Text="OV1_Enable:" Rect="60, 248, 148, 265" >
+      </FIXTEXT>
+      <FIXTEXT Text="NVMem_RO:" Rect="60, 267, 132, 284" >
+      </FIXTEXT>
+      <FIXTEXT Text="Flash_RO:" Rect="60, 286, 132, 303" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Power:" Rect="60, 305, 140, 322" >
+      </FIXTEXT>
+      <FIXTEXT Text="ControlReg:" Rect="60, 324, 148, 341" >
+      </FIXTEXT>
+      <FIXTEXT Text="Status:" Rect="60, 343, 116, 360" >
+      </FIXTEXT>
+      <FIXTEXT Text="DPU_ID:" Rect="60, 362, 116, 379" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG_Status:" Rect="60, 381, 164, 398" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG:" Rect="60, 400, 108, 417" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG_Uart_Enb:" Rect="60, 419, 180, 436" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG_RX_Side:" Rect="60, 438, 172, 455" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG_TX_B_Enb:" Rect="60, 457, 180, 474" >
+      </FIXTEXT>
+      <FIXTEXT Text="SCCFG_TX_A_Enb:" Rect="60, 476, 180, 493" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Flush_Exp:" Rect="60, 495, 172, 512" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Exp_Stop:" Rect="60, 514, 164, 531" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_FPU_CW1:" Rect="60, 533, 156, 550" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_FPU_CW2:" Rect="60, 552, 156, 569" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_DPU_CW:" Rect="60, 571, 148, 588" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Latchup:" Rect="60, 590, 156, 607" >
+      </FIXTEXT>
+      <FIXTEXT Text="Software:" Rect="60, 609, 132, 626" >
+      </FIXTEXT>
+      <FIXTEXT Text="StatusInt:" Rect="60, 628, 140, 645" >
+      </FIXTEXT>
+      <FIXTEXT Text="MacroBlocks:" Rect="60, 647, 156, 664" >
+      </FIXTEXT>
+      <FIXTEXT Text="TlmVolume:" Rect="60, 666, 140, 683" >
+      </FIXTEXT>
+      <FIXTEXT Text="WatchAddr:" Rect="60, 685, 140, 702" >
+      </FIXTEXT>
+      <FIXTEXT Text="WatchMemId:" Rect="60, 704, 148, 721" >
+      </FIXTEXT>
+      <FIXTEXT Text="WatchData:" Rect="60, 723, 140, 740" >
+      </FIXTEXT>
+      <FIXTEXT Text="SWVersion:" Rect="60, 742, 140, 759" >
+      </FIXTEXT>
+      <FIXTEXT Text="AlarmId:" Rect="60, 761, 124, 778" >
+      </FIXTEXT>
+      <FIXTEXT Text="AlarmType:" Rect="60, 780, 140, 797" >
+      </FIXTEXT>
+      <FIXTEXT Text="AlarmCount:" Rect="60, 799, 148, 816" >
+      </FIXTEXT>
+      <FIXTEXT Text="CmdExec:" Rect="60, 818, 124, 835" >
+      </FIXTEXT>
+      <FIXTEXT Text="CmdReject:" Rect="60, 837, 140, 854" >
+      </FIXTEXT>
+      <FIXTEXT Text="MacCmdExec:" Rect="60, 856, 148, 873" >
+      </FIXTEXT>
+      <FIXTEXT Text="MacCmdReject:" Rect="60, 875, 164, 892" >
+      </FIXTEXT>
+      <FIXTEXT Text="MacId:" Rect="60, 894, 108, 911" >
+      </FIXTEXT>
+      <FIXTEXT Text="MacLearn:" Rect="60, 913, 132, 930" >
+      </FIXTEXT>
+      <FIXTEXT Text="MonitorResponse:" Rect="60, 932, 188, 949" >
+      </FIXTEXT>
+      <FIXTEXT Text="MemWrite:" Rect="60, 951, 132, 968" >
+      </FIXTEXT>
+      <FIXTEXT Text="SafingTime:" Rect="60, 970, 148, 987" >
+      </FIXTEXT>
+      <FIXTEXT Text="SW_Build:" Rect="60, 989, 132, 1006" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Time_Remain:" Rect="60, 1008, 188, 1025" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Time_Inter:" Rect="60, 1027, 180, 1044" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Man_Exposure:" Rect="60, 1046, 196, 1063" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Auto_Bright:" Rect="60, 1065, 188, 1082" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Exposure:" Rect="60, 1084, 164, 1101" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater_Set:" Rect="60, 1103, 148, 1120" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater_Hysteresis:" Rect="60, 1122, 204, 1139" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater_Mode:" Rect="60, 1141, 156, 1158" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater_Sensor:" Rect="60, 1160, 172, 1177" >
+      </FIXTEXT>
+      <FIXTEXT Text="FPU_Exposure_Auto:" Rect="60, 1179, 204, 1196" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater1_Enable:" Rect="60, 1198, 180, 1215" >
+      </FIXTEXT>
+      <FIXTEXT Text="Heater2_Enable:" Rect="60, 1217, 180, 1234" >
+      </FIXTEXT>
+      <FIXTEXT Text="Image_Descriptor_Enable:" Rect="60, 1236, 252, 1253" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_1_W1:" Rect="60, 1255, 132, 1272" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_1_W2:" Rect="60, 1274, 132, 1291" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_2_W1:" Rect="60, 1293, 132, 1310" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_2_W2:" Rect="60, 1312, 132, 1329" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_3_W1:" Rect="60, 1331, 132, 1348" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_3_W2:" Rect="60, 1350, 132, 1367" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_4_W1:" Rect="60, 1369, 132, 1386" >
+      </FIXTEXT>
+      <FIXTEXT Text="HTR_4_W2:" Rect="60, 1388, 132, 1405" >
+      </FIXTEXT>
+      <FIXTEXT Text="X1:" Rect="60, 1407, 84, 1424" >
+      </FIXTEXT>
+      <FIXTEXT Text="X2:" Rect="60, 1426, 84, 1443" >
+      </FIXTEXT>
+      <FIXTEXT Text="X3:" Rect="60, 1445, 84, 1462" >
+      </FIXTEXT>
+      <FIXTEXT Text="X4:" Rect="60, 1464, 84, 1481" >
+      </FIXTEXT>
+      <FIXTEXT Text="X5:" Rect="60, 1483, 84, 1500" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 20, 288, 37" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Id" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 39, 288, 56" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 58, 320, 75" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 77, 272, 94" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Data[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 96, 288, 113" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Analogs[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 115, 288, 132" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPUTemps[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 134, 272, 151" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Digital[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 153, 288, 170" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heaters" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 172, 264, 189" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.NVMem_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 191, 264, 208" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Flash_Power" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 210, 264, 227" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.OC_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 229, 264, 246" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.OV2_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 248, 264, 265" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.OV1_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 267, 264, 284" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.NVMem_RO" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 286, 264, 303" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Flash_RO" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 305, 264, 322" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Power" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 324, 288, 341" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.ControlReg" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 343, 288, 360" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Status" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 362, 264, 379" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.DPU_ID" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 381, 288, 398" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG_Status" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 400, 264, 417" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 419, 264, 436" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG_Uart_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 438, 264, 455" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG_RX_Side" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 457, 264, 474" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG_TX_B_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 476, 264, 493" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SCCFG_TX_A_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 495, 288, 512" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Flush_Exp" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 514, 288, 531" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Exp_Stop" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 533, 288, 550" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_FPU_CW1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 552, 288, 569" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_FPU_CW2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 571, 288, 588" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_DPU_CW" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 590, 272, 607" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Latchup" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 609, 272, 626" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Software[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 628, 288, 645" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.StatusInt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 647, 288, 664" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MacroBlocks" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 666, 288, 683" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.TlmVolume" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 685, 288, 702" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.WatchAddr" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 704, 272, 721" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.WatchMemId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 723, 272, 740" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.WatchData[0]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 742, 272, 759" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SWVersion" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 761, 272, 778" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.AlarmId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 780, 264, 797" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.AlarmType" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 799, 272, 816" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.AlarmCount" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 818, 272, 835" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.CmdExec" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 837, 272, 854" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.CmdReject" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 856, 272, 873" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MacCmdExec" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 875, 272, 892" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MacCmdReject" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 894, 272, 911" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MacId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 913, 264, 930" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MacLearn" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 932, 264, 949" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MonitorResponse" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 951, 264, 968" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.MemWrite" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 970, 288, 987" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SafingTime" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 989, 288, 1006" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.SW_Build" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1008, 288, 1025" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Time_Remain" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1027, 288, 1044" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Time_Inter" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1046, 288, 1063" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Man_Exposure" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1065, 288, 1082" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Auto_Bright" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1084, 288, 1101" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Exposure" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1103, 288, 1120" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater_Set" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1122, 272, 1139" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater_Hysteresis" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1141, 264, 1158" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater_Mode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1160, 264, 1177" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater_Sensor" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1179, 264, 1196" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.FPU_Exposure_Auto" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1198, 264, 1215" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater1_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1217, 264, 1234" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Heater2_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1236, 264, 1253" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Image_Descriptor_Enable" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1255, 288, 1272" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_1_W1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1274, 288, 1291" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_1_W2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1293, 288, 1310" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_2_W1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1312, 288, 1329" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_2_W2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1331, 288, 1348" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_3_W1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1350, 288, 1367" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_3_W2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1369, 288, 1386" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_4_W1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1388, 288, 1405" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.HTR_4_W2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1407, 288, 1424" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.X1" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1426, 288, 1443" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.X2" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1445, 288, 1462" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.X3" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1464, 288, 1481" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.X4" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="256, 1483, 288, 1500" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.X5" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="16" Columns="16" Rect="595, 830, 971, 1102" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Data[0:320]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

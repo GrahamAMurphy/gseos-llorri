@@ -1,0 +1,45 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="1282, 4, 1507, 137" Title="TLM HS Decoder Status" >
+    <PICTURE>
+      <RECTANGLE Rect="1, 1, 216, 98" Backcolor="15" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 40, 201, 54" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_HS.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_TLM_HS Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 40, 132, 54" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="TLM HS Decoder" Face="Verdana" Fontsize="768" Backcolor="15" Rect="44, 7, 148, 21" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 58, 201, 72" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_HS.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="TLM_HS Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 58, 80, 72" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 23, 201, 37" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_HS.SrcByteCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Source Byte Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 23, 105, 37" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 75, 106, 89" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="131, 76, 201, 90" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_HS.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

@@ -1,0 +1,163 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="8, 199, 300, 590" Title="SCE_IN_ANALOG" >
+    <PICTURE>
+      <RECTANGLE Backcolor="8" Rect="5, 5, 276, 351" >
+      </RECTANGLE>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 24, 240, 41" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.InstrVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 24, 260, 41" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 41, 240, 58" >
+        <BDMFORMULA Formula="InstrCurr" >
+          <DATAITEM Item="SCE_IN_ANALOG.InstrCurr" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="A" Face="Courier New" Fontsize="960" Rect="252, 41, 260, 58" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 208, 143, 225" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp0)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <FIXTEXT Text="C%0AC%0AC%0AC%0AC%0AC%0AC%0AC" Face="Courier New" Fontsize="960" Rect="154, 209, 162, 345" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 62, 240, 79" >
+        <BDMFORMULA Formula="AuxVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.AuxVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 62, 260, 79" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 79, 240, 96" >
+        <BDMFORMULA Formula="AuxCurr" >
+          <DATAITEM Item="SCE_IN_ANALOG.AuxCurr" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="A" Face="Courier New" Fontsize="960" Rect="252, 79, 260, 96" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 119, 240, 136" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.PeakInstrVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 119, 260, 136" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 135, 240, 152" >
+        <BDMFORMULA Formula="InstrCurr" >
+          <DATAITEM Item="SCE_IN_ANALOG.PeakInstrCurr" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="A" Face="Courier New" Fontsize="960" Rect="252, 135, 260, 152" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 154, 240, 171" >
+        <BDMFORMULA Formula="AuxVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.PeakAuxVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 154, 260, 171" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 171, 240, 188" >
+        <BDMFORMULA Formula="AuxCurr" >
+          <DATAITEM Item="SCE_IN_ANALOG.PeakAuxCurr" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="A" Face="Courier New" Fontsize="960" Rect="252, 171, 260, 188" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="8" Signed="1" Face="Courier New" Backcolor="8" Columns="1" Radix="10" Fontsize="960" Rect="163, 209, 211, 345" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_ANALOG.Temps[0:8]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Raw" Face="Courier New" Fontsize="960" Rect="190, 193, 214, 210" >
+      </FIXTEXT>
+      <FIXTEXT Text="Instr. Volts:%0AInstr. Curr.:" Face="Courier New" Fontsize="960" Rect="13, 25, 117, 59" >
+      </FIXTEXT>
+      <FIXTEXT Text="Aux. Volts:%0AAux. Curr.:" Face="Courier New" Fontsize="960" Rect="13, 60, 101, 94" >
+      </FIXTEXT>
+      <FIXTEXT Text="Peak Instr. Volts:%0APeak Instr. Curr.:" Face="Courier New" Fontsize="960" Rect="13, 118, 157, 152" >
+      </FIXTEXT>
+      <FIXTEXT Text="Peak Aux. Volts:%0APeak Aux. Curr.:" Face="Courier New" Fontsize="960" Rect="13, 156, 141, 190" >
+      </FIXTEXT>
+      <FIXTEXT Text="Temp. 0:%0ATemp. 1:%0ATemp. 2:%0ATemp. 3:%0ATemp. 4:%0ATemp. 5:%0ATemp. 6:%0ATemp. 7:" Face="Courier New" Fontsize="960" Rect="14, 207, 78, 343" >
+      </FIXTEXT>
+      <FIXTEXT Text="Peak Bus Volts:" Face="Courier New" Fontsize="960" Rect="14, 101, 134, 118" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 101, 240, 118" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.PeakBusVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 101, 260, 118" >
+      </FIXTEXT>
+      <FIXTEXT Text="Bus Volts:" Face="Courier New" Fontsize="960" Rect="14, 8, 94, 25" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="9" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%254.3f" Fontsize="960" Rect="168, 8, 240, 25" >
+        <BDMFORMULA Formula="InstrVolts" >
+          <DATAITEM Item="SCE_IN_ANALOG.BusVolts" >
+          </DATAITEM><TRIGGER Value="1"/>
+        </BDMFORMULA>
+      </BDMFLOAT>
+      <FIXTEXT Text="V" Face="Courier New" Fontsize="960" Rect="252, 8, 260, 25" >
+      </FIXTEXT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 226, 143, 243" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp1)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 241, 143, 258" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp2)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 259, 143, 276" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp3)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 275, 143, 292" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp4)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 293, 143, 310" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp5)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 308, 143, 325" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp6)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+      <BDMFLOAT Digits="7" Rows="1" Face="Courier New" Backcolor="8" Columns="1" Format="%253.2f" Fontsize="960" Rect="87, 326, 143, 343" >
+        <BDMDSINGLE >
+          <DATAITEM Item="EU(SCE_IN_ANALOG.Temp7)" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMFLOAT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

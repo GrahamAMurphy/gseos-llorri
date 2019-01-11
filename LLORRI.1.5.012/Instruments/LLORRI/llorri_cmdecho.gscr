@@ -1,0 +1,35 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="491, 278, 1067, 387" Title="Command Echo" >
+    <PICTURE>
+      <RECTANGLE Color="8" Backcolor="8" Rect="0, 0, 561, 71" >
+      </RECTANGLE>
+      <BDMCAST Rows="1" TextMap="Cmds" StaleControl="Local" StaleTimeout="10" Columns="1" Rect="6, 6, 558, 23" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_CmdEcho.Opcode" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="MacroCmd" Columns="1" Rect="19, 29, 91, 46" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_CmdEcho.Macro" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="Cmd_Results" StaleControl="Local" StaleTimeout="10" Columns="1" Rect="118, 29, 446, 46" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_CmdEcho.Result" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Rows="1" HexPrefix="1" Backcolor="8" Columns="1" Radix="10" Rect="20, 50, 100, 67" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_CmdEcho.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

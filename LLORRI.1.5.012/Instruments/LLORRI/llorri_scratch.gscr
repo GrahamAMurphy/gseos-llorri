@@ -1,0 +1,89 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="0" Rect="-4, 430, 1441, 980" >
+    <PICTURE>
+      <BDMNUMBER Rows="12" Columns="16" Rect="31, 39, 407, 243" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Data[0:256]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="32, 264, 64, 281" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.Length" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="106, 263, 170, 280" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Status.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="16" Rect="33, 289, 409, 306" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.Data[0:16]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="2" Columns="9" Rect="25, 332, 233, 366" >
+        <BDMDSINGLE >
+          <DATAITEM Item="BinCmd.CmdData[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="2" Columns="9" Rect="23, 386, 231, 420" >
+        <BDMDSINGLE >
+          <DATAITEM Item="BIN_CMD_IDP.Data[0:32]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Signed="1" Columns="1" Radix="10" Rect="590, 130, 678, 147" >
+        <BDMFORMULA Formula="Diff" >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CurrentTimeSecs" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <CONST Value="582256500"/>
+        </BDMFORMULA>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="585, 110, 665, 127" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CurrentTimeSecs" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <YT Range="30, 0, 30, 0" Color="1, 1, 1, 1, 1" Dir="R1" Rect="785, 50, 1296, 451" >
+        <BDMFORMULA Formula="Mod" >
+          <DATAITEM Item="DecStatus_LLORRI_CMD.CurrentTimeSecs" >
+          </DATAITEM><TRIGGER Value="1"/>
+          <CONST Value="30"/>
+        </BDMFORMULA>
+      </YT>
+      <FIXTEXT Text="NVMem_Enb:" Rect="430, 375, 510, 392" >
+      </FIXTEXT>
+      <FIXTEXT Text="Instrument_Status:" Rect="430, 394, 574, 411" >
+      </FIXTEXT>
+      <FIXTEXT Text="DPU_ID:" Rect="430, 413, 486, 430" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Columns="1" Rect="586, 375, 594, 392" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.NVMem_Enb" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="586, 394, 618, 411" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.Instrument_Status" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Columns="1" Rect="586, 413, 594, 430" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Boot_Status.DPU_ID" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

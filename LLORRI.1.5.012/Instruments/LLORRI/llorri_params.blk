@@ -1,0 +1,33 @@
+# ************************************************************************** #
+# * This New Horizons block definition file was automatically created with * #
+# * the GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                * #
+# *                                                                        * #
+# * To change the block definition please modify the Excel source          * #
+# * file: i_LORRI\CMD_n_TLM\610_TLM_20040225_01.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Thu Feb 10 12:49:53 2005                                            * #
+# ************************************************************************** #
+
+
+#
+# LOR_PARAMS
+#
+LOR_PARAMS
+{
+
+    Id                      , , , 16;
+    Length                  , , , 16;
+    TimeTag                 , , , 32;
+  ( Data[1024]               , , ,  8; ) 
+
+    CAL_ON_TIME,                     ,    7,   16;
+    CAL_OFF_TIME,                    ,    7,   16;
+    MAX_CAL_LAMPS,                   ,    7,   16;
+    MAX_HTR,                         ,    7,   16;
+    SAT_BRIGHTNESS,                  ,    7,   16;
+    SAT_THRESH,                      ,    7,   16;
+    FALLBACK,                        ,    7,   16;
+    BACK_BRIGHT,                     ,    7,   16;
+    MAX_EXP,                         ,    7,   16;
+    MIN_EXP,                         ,    7,   16;
+}

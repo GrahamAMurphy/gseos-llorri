@@ -1,0 +1,27 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="0" Rect="-5, 2, 509, 846" >
+    <PICTURE>
+      <BDMNUMBER Rows="1" Columns="1" Radix="10" Rect="15, 10, 95, 27" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="21" Columns="16" Rect="25, 30, 401, 387" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.Block[0:32768]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="22" Columns="8" Rect="25, 395, 209, 769" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_LS_IP.CIP_Data[0:8183]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

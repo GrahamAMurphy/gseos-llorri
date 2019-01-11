@@ -1,0 +1,181 @@
+<GSEOS Version="366">
+
+<!--
+# Application-specific commands
+-->
+
+<Cmd Mnemonic="LOR_CAL_LEVEL" Opcode="0x40" NumBits="8" Description="Set the calibration lamp level">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Level"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Lamp Select">
+	<Enum Name="Lamp 1" Value="0" Description="Enable Lamp 1"/>
+	<Enum Name="Lamp 2" Value="1" Description="Enable Lamp 2"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_CAL_PWR" Opcode="0x41" NumBits="8" Description="Control Calibration Lamp Power">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Lamp Power">
+	<Enum Name="Off" Value="0" Description="Power Lamp Off"/>
+	<Enum Name="On"  Value="1" Description="Power Lamp On"/>
+    </Arg>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Lamp Select">
+	<Enum Name="Lamp 1" Value="0" Description="Enable Lamp 1"/>
+	<Enum Name="Lamp 2" Value="1" Description="Enable Lamp 2"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_HTR_HEATER" Opcode="0x42" NumBits="8" Description="Select Heater">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Heater Mode">
+	<Enum Name="Disable" Value="0" Description="Disable heater"/>
+	<Enum Name="Enable"  Value="1" Description="Enable heater"/>
+    </Arg>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="6" Description="Heater Select">
+	<Enum Name="HEATER1" Value="0" Description="Enable Heater 1"/>
+	<Enum Name="HEATER2" Value="1" Description="Enable Heater 2"/>
+	<Enum Name="HEATER3" Value="2" Description="Enable Heater 3"/>
+	<Enum Name="HEATER4" Value="3" Description="Enable Heater 4"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_HTR_MODE" Opcode="0x43" NumBits="8" Description="Set Heater Control Mode">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="2" Description="Heater Mode">
+	<Enum Name="Heater_Off" Value="0" Description="Off"/>
+	<Enum Name="Heater_On" Value="1" Description="On"/>
+	<Enum Name="Heater_SW" Value="2" Description="Software"/>
+    </Arg>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="6" Description="Heater Select">
+	<Enum Name="HEATER1" Value="0" Description="Enable Heater 1"/>
+	<Enum Name="HEATER2" Value="1" Description="Enable Heater 2"/>
+	<Enum Name="HEATER3" Value="2" Description="Enable Heater 3"/>
+	<Enum Name="HEATER4" Value="3" Description="Enable Heater 4"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_HTR_SENSOR" Opcode="0x44" NumBits="8" Description="Select Heater Control Sensor">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Temperature set point (ADU)"/>
+    <Arg NumBits="8" Description="Hysteresis (ADU)"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="3" Description="Sensor">
+	<Enum Name="Sensor_0" Value="0" Description="Sensor 0"/>
+	<Enum Name="Sensor_1" Value="1" Description="Sensor 1"/>
+	<Enum Name="Sensor_2" Value="2" Description="Sensor 2"/>
+	<Enum Name="Sensor_3" Value="3" Description="Sensor 3"/>
+    </Arg>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="6" Description="Heater Select">
+	<Enum Name="HEATER1" Value="0" Description="Enable Heater 1"/>
+	<Enum Name="HEATER2" Value="1" Description="Enable Heater 2"/>
+	<Enum Name="HEATER3" Value="2" Description="Enable Heater 3"/>
+	<Enum Name="HEATER4" Value="3" Description="Enable Heater 4"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_EXP_AUTO" Opcode="0x45" NumBits="8" Description="Start Automatic Exposure Mode">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Keyword="Brightness" 
+	DataRangeLow="0" DataRangeHigh="4095" Description="Target Brightness"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_EXP_MAN" Opcode="0x46" NumBits="8" Description="Start Manual Exposure Mode">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Keyword="Brightness" 
+	DataRangeLow="0" DataRangeHigh="29967" Description="Manuel Exposure Time (ms)"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_FORMAT" Opcode="0x47" NumBits="8" Description="Select Image Format">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Image Format">
+	<Enum Name="1x1" Value="0" Description="1x1"/>
+	<Enum Name="4x4 On" Value="1" Description="4x4"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_IMAGE" Opcode="0x48" NumBits="8" Description="Collect Images">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Duration(s)"/>
+    <Arg NumBits="16" Description="Image interval(s)"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_PWR" Opcode="0x49" NumBits="8" Description="Control Imager Power">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="FPU Power">
+	<Enum Name="Enable" Value="1" Description="Enable FPU Power"/>
+	<Enum Name="Disable" Value="0" Description="Disable FPU Power"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_TMP" Opcode="0x4a" NumBits="8" Description="Enable/Disable Imager Temperature Monitoring">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" Description="Deprecated"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_SNAP" Opcode="0x4b" NumBits="8" Description="Collect a Single Image">
+    <Const Value="0" NumBits="8"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_SOURCE" Opcode="0x4c" NumBits="8" Description="Select Image Source">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="4" Description="Select Soruce">
+	<Enum Name="CCD" Value="0" Description="Enable Heater 1"/>
+	<Enum Name="FPU TP 1" Value="1" Description="FPU TP 1"/>
+	<Enum Name="FPU TP 2" Value="2" Description="FPU TP 2"/>
+	<Enum Name="DPU TP 1" Value="3" Description="DPU TP 1"/>
+	<Enum Name="DPU TP 2" Value="4" Description="DPU TP 2"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_EXP_STEP" Opcode="0x4d" NumBits="8" Description="Step exposure time">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Type="SIGNED" Description="Signed Exposure Time Step (ms)"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_DESC" Opcode="0x4e" NumBits="8" Description="Enable/Disable Image Descriptors">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Descriptor creation">
+	<Enum Name="Enable" Value="1" Description="Enable"/>
+	<Enum Name="Disable" Value="0" Description="Disable"/>
+    </Arg>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_TRIG" Opcode="0x4f" NumBits="8" Description="Start Trigger Mode">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" DataRangeLow="0" DataRangeHigh="4095" Description="Low Limit"/>
+    <Arg NumBits="16" DataRangeLow="0" DataRangeHigh="4095" Description="High Limit"/>
+    <Arg NumBits="16" Description="Threshold (pixels)"/>
+    <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Consecutive detection">
+	<Enum Name="Single" Value="1" Description="Enable"/>
+	<Enum Name="Double" Value="0" Description="Disable"/>
+    </Arg>
+    <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_IMG_TRIG_ABT" Opcode="0x50" NumBits="8" Description="Abort Trigger Mode">
+    <Const Value="0" NumBits="8"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_CMD_PROFILING" Opcode="0x51" NumBits="8" Description="Thread profiling">
+    <Const Value="0" NumBits="8"/>
+    <Arg NumBits="16" Description="Arg1_2B"/>
+    <ZeroPad NumBits="32"/>
+</Cmd>
+
+</GSEOS>

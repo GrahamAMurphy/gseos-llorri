@@ -1,0 +1,41 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="622, 8, 1079, 298" Title="BinCmd" >
+    <PICTURE>
+      <BDMTEXT Rows="1" Face="Courier New" Rect="55, 8, 447, 25" Fontsize="960" Columns="50" >
+        <BDMDSINGLE >
+          <DATAITEM Item="CmdString.Command[0:50]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMTEXT>
+      <FIXTEXT Text="Cmd:" Face="Courier New" Fontsize="960" Rect="11, 8, 43, 25" >
+      </FIXTEXT>
+      <FIXTEXT Text="Channel:" Face="Courier New" Fontsize="960" Rect="12, 26, 76, 43" >
+      </FIXTEXT>
+      <FIXTEXT Text="Len:" Face="Courier New" Fontsize="960" Rect="13, 47, 45, 64" >
+      </FIXTEXT>
+      <FIXTEXT Text="Data:" Face="Courier New" Fontsize="960" Rect="14, 69, 54, 86" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Radix="10" Fontsize="960" Columns="1" Rect="95, 26, 175, 43" >
+        <BDMDSINGLE >
+          <DATAITEM Item="BinCmd.Channel" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Radix="10" Fontsize="960" Columns="1" Rect="95, 45, 175, 62" >
+        <BDMDSINGLE >
+          <DATAITEM Item="BinCmd.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="9" Face="Courier New" Fontsize="960" Columns="18" Rect="16, 90, 440, 243" >
+        <BDMDSINGLE >
+          <DATAITEM Item="BinCmd.CmdData[0:1024]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

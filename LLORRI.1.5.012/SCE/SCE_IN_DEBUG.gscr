@@ -1,0 +1,15 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="975, 4, 1309, 407" Title="SCE_IN_DEBUG" >
+    <PICTURE>
+      <BDMNUMBER Rows="21" Face="Courier New" HexPrefix="1" Fontsize="960" Columns="8" Rect="5, 5, 317, 362" >
+        <BDMDSINGLE >
+          <DATAITEM Item="SCE_IN_DEBUG.Data[0:2048]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

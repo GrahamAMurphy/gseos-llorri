@@ -1,0 +1,48 @@
+# *************************************************************************** #
+# * LLORRI.qlf                                                              * #
+# *                                                                         * #
+# * Formula file for L'LORRI.                                               * #
+# *                                                                         * #
+# * Copyright (C) 1998-2018, GSE Software Inc.                              * #
+# *                                                                         * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Mar-18-2018 R002 th Initial release.                                    * #
+# *************************************************************************** #
+Analog(Value)           := ltof(Value)
+TimeToneRate(Value)     := ltof(Value)
+InstrVolts(Raw)         := Raw/100.0
+AuxVolts(Raw)           := Raw/100.0
+InstrCurr(Raw)          := Raw/1000.0
+AuxCurr(Raw)            := Raw/1000.0
+Temp(Raw)               := (0.05177*Raw)-109.11
+CmdChannel(Channel)     := Channel & 0xFFFF
+CmdChannelApID(Channel) := Channel >> 16
+BoolOr(a, b)            := a or b\
+Mod(a, b)               := a % b
+Lin(x, p1, p0)          := p1 * x + p0
+
+ShiftRight(a, b)        := a >> b
+ShiftLeft(a, b)         := a << b
+
+MET_Year(MET)              := year(MET + 1640995200)
+MET_Month(MET)             := month(MET + 1640995200)
+MET_Day(MET)               := day(MET + 1640995200)
+MET_YearDay(MET)           := yday(MET + 1640995200)
+MET_Hour(MET)              := hour(MET + 1640995200)
+MET_Minute(MET)            := minute(MET + 1640995200)
+MET_Second(MET)            := sec(MET + 1640995200)
+MET_FracSecs(MET_FracSecs) := MET_FracSecs*1000/256
+
+# Associated conversions to be able to use EUs rather than DNs
+EU(Raw='SCE_IN_ANALOG.BusVolts')        := Raw/100.0
+EU(Raw='SCE_IN_ANALOG.InstrVolts')      := Raw/100.0
+EU(Raw='SCE_IN_ANALOG.InstrCurr')       := Raw/1000.0
+EU(Raw='SCE_IN_ANALOG.PeakInstrVolts')  := Raw/100.0
+EU(Raw='SCE_IN_ANALOG.PeakInstrCurr')   := Raw/1000.0
+
+EU(Raw='SCE_IN_ANALOG.AuxVolts')        := Raw/100.0
+EU(Raw='SCE_IN_ANALOG.AuxCurr')         := Raw/1000.0
+EU(Raw='SCE_IN_ANALOG.PeakAuxVolts')    := Raw/100.0
+EU(Raw='SCE_IN_ANALOG.PeakAuxCurr')     := Raw/1000.0

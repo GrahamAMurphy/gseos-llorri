@@ -1,0 +1,198 @@
+# *************************************************************************** #
+# * System.blk                                                              * #
+# *                                                                         * #
+# * GSEOS system block definitions.                                         * #
+# *                                                                         * #
+# * Copyright (C) 1997-2016, GSE Software, Inc.                             * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * May-11-1997 th first implementation                                     * #
+# * Jun-15-1997 th Package block definitions added                          * #
+# * Sep-04-1997 th Add PeriodicMsg block                                    * #
+# * Sep-12-1997 th Update BiosStatus block                                  * #
+# * Mar-18-1998 th Split up block definitions                               * #
+# * Aug-04-2003 th Add RecBlockStatus block.                                * #
+# * May-26-2004 th Add VersionInfo and RecordedVersionInfo blocks.          * #
+# * Nov-11-2005 th Add CmdString and BinCmd blocks.                         * #
+# * Feb-27-2006 th Add Channel to BinCmd block.                             * #
+# * Feb-18-2007 th Add block AlarmEvent.                                    * #
+# * Jul-17-2007 th Enlarge BinCmd.CmdData to 4096 bytes.                    * #
+# * Mar-21-2015 th Add block RecFile.                                       * #
+# * Mar-22-2016 th Enlarge CmdString.Command to 4096 bytes.                 * #
+# *************************************************************************** #
+AlarmEvent   {
+               Level               ,,,  8;
+               Name[64]            ,,,  8;
+               Description[256]    ,,,  8;
+               ID                  ,,, 32;
+             }
+
+AlarmAck     {
+               Name[64]            ,,,  8;
+               ID                  ,,, 32;
+               AckAll              ,,,  8;
+             }
+
+BinCmd       {
+               Len                 ,,, 32;
+               Channel             ,,, 32;
+               CmdData[4096]       ,,,  8;
+             }
+
+CmdString    {
+               Len                ,,, 32;
+               Command[4096]      ,,,  8;
+             }
+
+ConsoleOut  INTEL
+             {
+               Len                ,,, 32;
+               Truncated          ,,,  8;
+               WindowState        ,,,  8;
+               Text[1024]        0,,,  8;
+             }
+
+Message      {
+                Type               ,,, 32;
+                EventID            ,,, 32;
+                Source[32]       0 ,,,  8;
+                Text[1024]       0 ,,,  8;
+             }
+
+PRNComment   {Title1       [60] 0 ,,,  8;
+              Title2       [60] 0 ,,,  8;
+              Title3       [60] 0 ,,,  8;
+              Title4       [60] 0 ,,,  8;
+              Caption      [60] 0 ,,,  8}
+
+RecComment   {Title1       [60] 0 ,,,  8;
+              Title2       [60] 0 ,,,  8;
+              Comment     [180] 0 ,,,  8}
+
+RecFile   {
+              RecordFlag          ,,,  8;
+              FileName    [256]   ,,,  8;
+          }
+
+RecBlockStatus INTEL
+              {
+                Handle            ,,, 16;
+                Name       [32]   ,,,  8;
+                Stamp             ,,, 32;
+                Time              ,,, 32;
+                Size              ,,, 32;
+              }
+
+VersionInfo
+              {
+               (Block[3000]        ,,,  8;)
+                Name1[40]          ,,,  8;
+                Version1[40]       ,,,  8;
+                Name2[40]          ,,,  8;
+                Version2[40]       ,,,  8;
+                Name3[40]          ,,,  8;
+                Version3[40]       ,,,  8;
+                Name4[40]          ,,,  8;
+                Version4[40]       ,,,  8;
+                Name5[40]          ,,,  8;
+                Version5[40]       ,,,  8;
+                Name6[40]          ,,,  8;
+                Version6[40]       ,,,  8;
+                Name7[40]          ,,,  8;
+                Version7[40]       ,,,  8;
+                Name8[40]          ,,,  8;
+                Version8[40]       ,,,  8;
+                Name9[40]          ,,,  8;
+                Version9[40]       ,,,  8;
+                Name10[40]         ,,,  8;
+                Version10[40]      ,,,  8;
+                Name11[40]         ,,,  8;
+                Version11[40]      ,,,  8;
+                Name12[40]         ,,,  8;
+                Version12[40]      ,,,  8;
+                Name13[40]         ,,,  8;
+                Version13[40]      ,,,  8;
+                Name14[40]         ,,,  8;
+                Version14[40]      ,,,  8;
+                Name15[40]         ,,,  8;
+                Version15[40]      ,,,  8;
+                Name16[40]         ,,,  8;
+                Version16[40]      ,,,  8;
+                Name17[40]         ,,,  8;
+                Version17[40]      ,,,  8;
+                Name18[40]         ,,,  8;
+                Version18[40]      ,,,  8;
+                Name19[40]         ,,,  8;
+                Version19[40]      ,,,  8;
+                Name20[40]         ,,,  8;
+                Version20[40]      ,,,  8;
+              }
+
+RecVersionInfo
+              {
+               (Block[3000]        ,,,  8;)
+                Name1[40]          ,,,  8;
+                Version1[40]       ,,,  8;
+                Name2[40]          ,,,  8;
+                Version2[40]       ,,,  8;
+                Name3[40]          ,,,  8;
+                Version3[40]       ,,,  8;
+                Name4[40]          ,,,  8;
+                Version4[40]       ,,,  8;
+                Name5[40]          ,,,  8;
+                Version5[40]       ,,,  8;
+                Name6[40]          ,,,  8;
+                Version6[40]       ,,,  8;
+                Name7[40]          ,,,  8;
+                Version7[40]       ,,,  8;
+                Name8[40]          ,,,  8;
+                Version8[40]       ,,,  8;
+                Name9[40]          ,,,  8;
+                Version9[40]       ,,,  8;
+                Name10[40]         ,,,  8;
+                Version10[40]      ,,,  8;
+                Name11[40]         ,,,  8;
+                Version11[40]      ,,,  8;
+                Name12[40]         ,,,  8;
+                Version12[40]      ,,,  8;
+                Name13[40]         ,,,  8;
+                Version13[40]      ,,,  8;
+                Name14[40]         ,,,  8;
+                Version14[40]      ,,,  8;
+                Name15[40]         ,,,  8;
+                Version15[40]      ,,,  8;
+                Name16[40]         ,,,  8;
+                Version16[40]      ,,,  8;
+                Name17[40]         ,,,  8;
+                Version17[40]      ,,,  8;
+                Name18[40]         ,,,  8;
+                Version18[40]      ,,,  8;
+                Name19[40]         ,,,  8;
+                Version19[40]      ,,,  8;
+                Name20[40]         ,,,  8;
+                Version20[40]      ,,,  8;
+              }
+
+SyncCommand  {SyncCmd      [20] 0 ,,,  8}
+
+
+
+*       =======================================================================
+*       System data blocks (needed for QLook display)
+*       These declarations are optional
+*       =======================================================================
+DSACtrl      INTEL
+             {dwTotal             ,,, 32;
+              dwTotalFree         ,,, 32;
+              wFreeCnt            ,,, 16;
+              wIterations         ,,, 16;
+              dwAllocCalls        ,,, 32;
+              dwFreeCalls         ,,, 32;
+              dwFailCnt           ,,, 32;
+              wGarbageCnt         ,,, 16;
+              wBlkCnt             ,,, 16;
+              wSystemLoad         ,,, 16;
+              dwWalkTotalFree     ,,, 32;
+              wWalkFreeCnt        ,,, 16;
+             }

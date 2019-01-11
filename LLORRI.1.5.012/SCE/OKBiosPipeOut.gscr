@@ -1,0 +1,21 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="233, 342, 754, 677" >
+    <PICTURE>
+      <BDMNUMBER Rows="15" Columns="18" Rect="10, 34, 487, 289" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_PipeOut1.Block[0:20000]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Radix="10" Columns="1" Rect="12, 17, 102, 34" >
+        <BDMDSINGLE >
+          <DATAITEM Item="OK_XEM1_PipeOut1.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

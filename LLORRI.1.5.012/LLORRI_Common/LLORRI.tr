@@ -1,0 +1,277 @@
+# *************************************************************************** #
+# * LLORRI.tr                                                               * #
+# *                                                                         * #
+# * Text reference file for L'LORRI.                                        * #
+# *                                                                         * #
+# * Copyright (C) 1998-2018 GSE Software, Inc.                              * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Mar-18-2018 th R002: Add FTF_Type EOM.                                  * #
+# *************************************************************************** #
+Image: Name="On"  File="LLORRI_Common/LEDOn.bmp"
+Image: Name="Off" File="LLORRI_Common/LEDOff.bmp"
+
+ImageMap: PowerStatus
+{
+  0,            Off;
+  1-0xFFFFFFFF,  On;
+}
+
+Image: Name="ToggleSwitchOn"  File="LLORRI_Common/Toggle Switch On.png"
+Image: Name="ToggleSwitchOff" File="LLORRI_Common/Toggle Switch Off.png"
+
+ImageMap: ToggleSwitch
+{
+  0,            ToggleSwitchOff;
+  1-0xFFFFFFFF, ToggleSwitchOn;
+}
+
+Image: Name="LEDSmallGreenOn"  File="LLORRI_Common/LED Small Green On.jpg"
+Image: Name="LEDSmallGreenOff" File="LLORRI_Common/LED Small Green Off.jpg"
+
+ImageMap: LEDSmallGreen
+{
+  0,            LEDSmallGreenOff;
+  1-0xFFFFFFFF, LEDSmallGreenOn;
+}
+
+Image: Name="LEDSmallRedOn"  File="LLORRI_Common/LED Small Red On.jpg"
+Image: Name="LEDSmallRedOff" File="LLORRI_Common/LED Small Red Off.jpg"
+
+ImageMap: LEDSmallRed
+{
+  0,            LEDSmallRedOff;
+  1-0xFFFFFFFF, LEDSmallRedOn;
+}
+
+
+Synchronized
+{
+  1, "Synchronized",     Black on LightGreen;
+  0, "Not Synchronized", Black on LightRed;
+}
+
+FTF_Type
+{
+  0x00,      "TLM",      Black on White;
+  0x01,      "CMD",      Black on White;
+  0x02,      "ANALOG",   Black on White;
+  0x03,      "STATUS",   Black on White;
+  0x04,      "MESSAGE",  Black on White;
+  0x05,      "CTRL",     Black on White;
+  0x06,      "DEBUG",    Black on White;
+  0x07,      "SETTINGS", Black on White;
+  0x08,      "ERRORS",   Black on White;
+  0x09,      "EOM",      Black on White;
+  0x0A-0xFF, "Invalid",  LightRed on White;
+}
+
+FTF_Endpoint
+{
+  0x00,      "UART",     Black on White;
+  0x01,      "SPW",      Black on White;
+  0x02-0xFF, "Invalid",  LightRed on White;
+}
+
+STATUS_ReasonCode
+{
+  0x00,            "TIME_PULSE",  Black    on White;
+  0x01,            "SPIN_PULSE",  Black    on White;
+  0x02,            "FAULT",       LightRed on White;
+  0x03,            "OTHER",       Black    on White;
+  0x04,            "STARTUP",     Black    on White;
+  0x05-0xFFFFFFFF, "Invalid",     LightRed on White;
+}
+
+ERRORS_ReasonCode
+{
+  0x00,            "FAULT",    LightRed on White;
+  0x01,            "REQUEST",  Black    on White;
+  0x02,            "RESET",    Black    on White;
+  0x03,            "OTHER",    Black    on White;
+  0x04-0xFFFFFFFF, "Invalid",  LightRed on White;
+}
+
+SCE_Opcode
+{
+  0x00,            "CONFIG_TLM_UART",              Black on White;
+  0x01,            "CONFIG_CMD_UART",              Black on White;
+  0x02,            "CONFIG_MINOR_FRAME_CNT",       Black on White;
+  0x03,            "CONFIG_MINOR_FRAME_TIME",      Black on White;
+  0x04,            "CONFIG_SPW_REQUEST_1",         Black on White;
+  0x05,            "CONFIG_SPW_REQUEST_2",         Black on White;
+  0x06,            "START_ACQUISITION",            Black on White;
+  0x07-0x0F,       "Invalid",                      LightRed on White;
+  0x10,            "SET_POWER_SWITCHES",           Black on White;
+  0x11,            "SET_ANALOG_UPDATE_TIME",       Black on White;
+  0x12,            "SELF_TEST",                    Black on White;
+  0x13,            "Invalid",                      LightRed on White;
+  0x14,            "SWITCH_SIDE",                  Black on White;
+  0x15,            "SET_CMD_UART_BAUDRATE",        Black on White;
+  0x16,            "SET_CMD_UART_INTER_WORD_GAP",  Black on White;
+  0x17,            "INJECT_CMD_UART_ERROR",        Black on White;
+  0x18,            "ENABLE_LOOPBACK",              Black on White;
+  0x19,            "SET_CMD_1PPS_DEAD_TIME",       Black on White;
+  0x1A,            "SET_TLM_1PPS_DEAD_TIME",       Black on White;
+  0x1B,            "RESET_FRONTPANEL_ERROR",       Black on White;
+  0x1C,            "RESET_ERROR_COUNTERS",         Black on White;
+  0x1D,            "RESET_PEAK_VALUES",            Black on White;
+  0x1E,            "REQUEST_SETTINGS",             Black on White;
+  0x1F,            "REQUEST_ERRORS",               Black on White;
+  0x20,            "SET_VOLTAGE_LIMIT",            Black on White;
+  0x21,            "SET_CURRENT_LIMIT",            Black on White;
+  0x22,            "INJECT_OUT_OF_ORDER_TIMECODE", Black on White;
+  0x23-0x2F,       "Invalid",                      LightRed on White;
+  0x30,            "ENABLE_1PPS_NON_GATED",        Black on White;
+  0x31,            "ARM_1PPS_GATED1",              Black on White;
+  0x32,            "ARM_1PPS_GATED2",              Black on White;
+  0x33,            "INJECT_SPW_ERROR",             Black on White;
+  0x34-0xFFFFFFFF, "Invalid",                      LightRed on White;
+}
+
+RateIndicator
+{
+  0x00, "Low",   Black on White;
+  0x01, "High",  Black on White;
+}
+
+ThrusterStatus
+{
+  0x00, "Not Firing", Black on White;
+  0x01, "Firing",     LightRed on White;
+}
+
+InstrPwrDown
+{
+  0x00, "None",          Black on White;
+  0x01, "Powering Down", LightRed on White;
+}
+
+YesNo
+{
+  0x00, "No",   Black on White;
+  0x01, "Yes",  Black on White;
+}
+
+OffOn
+{
+  0x00,            "Off", Black on White;
+  0x01-0xFFFFFFFF, "On",  LightGreen on White;
+}
+
+FrontPanelOffOn
+{
+  0x00,            "Off", LightGray on Black;
+  0x01-0xFFFFFFFF, "On",  LightGray on Black;
+}
+
+Side
+{
+  0x00,  "A",     Black on White;
+  0x01,  "B",     Black on White;
+  0x02,  "None",  Black on White;
+}
+
+MESSAGE_Level
+{
+  0x00,      "Info",    Black on White;
+  0x01,      "Warn",    LightBlue on White;
+  0x02,      "Error",   LightRed on White;
+}
+
+Heartbeat
+{
+  0, "Y", Black on White;
+  1, "Y", LightRed on White;
+}
+
+FaultStatus
+{
+  0, "Ok",    Green on White;
+  1, "Fault", Black on LightRed;
+}
+
+UartErrorInjectionMode
+{
+  0x00,      "None",              Black on White;
+  0x01,      "Parity",            Black on White;
+  0x02,      "Frame",             Black on White;
+  0x03,      "Parity/Frame",      Black on White;
+  0x04,      "Data",              Black on White;
+  0x05,      "Parity/Data",       Black on White;
+  0x06,      "Frame/Data",        Black on White;
+  0x07,      "Parity/Frame/Data", Black on White;
+  0x08-0xFF, "Invalid",           LightRed on White;
+}
+
+UartErrorInjectionDuration
+{
+  0x00,      "Cont.",         Black on White;
+  0x01,      "Once at Pos.",  Black on White;
+  0x02,      "Cont. at Pos.", Black on White;
+}
+
+EmulatorType
+{
+  0x00,  "None", Black on White;
+  0x01,  "Mini", Black on White;
+  0x02,  "Full", Black on White;
+}
+
+ActiveSide
+{
+  0, "A",     Black on Yellow;
+  1, "B",     Black on Yellow;
+}
+
+Enabled
+{
+  0x00,  "Disabled", Black on Yellow;
+  0x01,  "Enabled",  Black on Yellow;
+}
+
+MsgReqPending
+{
+  0x00,  "",                Black on Yellow;
+  0x01,  "Enable Pending",  Black on Yellow;
+  0x02,  "Disable Pending", Black on Yellow;
+}
+
+CIP_Type
+{
+  0x00,      "INVALID",        LightRed on White;
+  0x01,      "TIME MESG",    Black on White;
+  0x02,      "INSTR. CMD",     Black on White;
+  0x03,      "NOOP",           Black on White;
+  0x04,      "DOWNLINK",  	Black on White;
+  0x05,      "SPECIAL PROCESS", Black on White;
+  0x06,      "SCIENCE",   	Black on White;
+  0x07,      "SAFE ME REQUEST",    Black on White;
+  0x08-0xFF, "INVALID",        LightRed on White;
+}
+
+CmdMode
+{
+  0x00,      "Normal", Black on Yellow;
+  0x01,      "   Raw", Black on Yellow;
+}
+
+HeaterSenor
+{
+  0x01,       "1", Black on LightGray;
+  0x02,       "2", Black on LightGray;
+  0x03,       "3", Black on LightGray;
+  0x04,       "4", Black on LightGray;
+  0x05,       "5", Black on LightGray;
+  0x06,       "6", Black on LightGray;
+  0x07,       "7", Black on LightGray;
+  0x08,       "8", Black on LightGray;
+  0xFFFFFFFF, "-", Black on LightGray;
+}
+
+HeaterCtrlEnabled
+{
+  0x00, "Disabled", LightRed on LightGray;
+  0x01, "Enabled",  Green on LightGray;
+}

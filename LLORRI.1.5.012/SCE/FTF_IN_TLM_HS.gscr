@@ -1,0 +1,79 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="298, 616, 753, 994" >
+    <PICTURE>
+      <FIXTEXT Text="Endpoint:" Face="Courier New" Fontsize="960" Rect="172, 44, 244, 61" >
+      </FIXTEXT>
+      <BDMCAST Digits="10" Rows="1" TextMap="FTF_Endpoint" Face="Courier New" Columns="1" Fontsize="960" Rect="284, 44, 340, 61" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.Endpoint" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT Text="Sync:" Face="Courier New" Fontsize="960" Rect="4, 4, 44, 21" >
+      </FIXTEXT>
+      <FIXTEXT Text="Version:" Face="Courier New" Fontsize="960" Rect="169, 4, 233, 21" >
+      </FIXTEXT>
+      <FIXTEXT Text="Type:" Face="Courier New" Fontsize="960" Rect="293, 3, 333, 20" >
+      </FIXTEXT>
+      <FIXTEXT Text="MajorFrame:" Face="Courier New" Fontsize="960" Rect="4, 43, 92, 60" >
+      </FIXTEXT>
+      <FIXTEXT Text="MinorFrame:" Face="Courier New" Fontsize="960" Rect="4, 62, 92, 79" >
+      </FIXTEXT>
+      <FIXTEXT Text="SeqNo:" Face="Courier New" Fontsize="960" Rect="3, 23, 51, 40" >
+      </FIXTEXT>
+      <FIXTEXT Text="DataLen:" Face="Courier New" Fontsize="960" Rect="170, 23, 234, 40" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Fontsize="960" Rect="248, 4, 264, 21" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.Version" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="15" Face="Courier New" Columns="18" Fontsize="960" Rect="4, 82, 428, 337" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.Data[0:65520]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="63, 23, 143, 40" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.SeqNo" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="107, 43, 147, 60" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.MajorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="107, 62, 147, 79" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.MinorFrame" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMCAST Rows="1" TextMap="FTF_Type" Face="Courier New" Columns="1" Fontsize="960" Rect="348, 3, 412, 20" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.Type" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Rows="1" Face="Courier New" HexPrefix="1" Columns="1" Fontsize="960" Rect="57, 4, 137, 21" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.Sync" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Digits="5" Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="249, 23, 289, 40" >
+        <BDMDSINGLE >
+          <DATAITEM Item="FTF_IN_TLM_HS.DataLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

@@ -1,0 +1,140 @@
+# *************************************************************************** #
+# * OKBios Block Definition File                                            * #
+# *                                                                         * #
+# * This file defines the OKBios blocks. It must be adjusted according to   * #
+# * your device names.                                                      * #
+# *                                                                         * #
+# * Copyright (C) 1998-2018 GSE Software, Inc.                              * #
+# * Author: Thomas Hauck                                                    * #
+# *                                                                         * #
+# * History:                                                                * #
+# * Nov-05-2017 th R023: Port to FP 4.5.6.                                  * #
+# *                      Track data rates.                                  * #
+# *************************************************************************** #
+
+# --------------------------------------------------------------------------- #
+# - Decoder Status for device: XEM1                                         - #
+# --------------------------------------------------------------------------- #
+OK_XEM1_DecStatus
+{
+  BlkWireInsCnt                 ,,, 32;
+  BlkWireOutsCnt                ,,, 32;
+
+  # ------------------------------------------------------------------------- #
+  # - PipeIn Status.                                                        - #
+  # ------------------------------------------------------------------------- #
+  PipeInName00[40]              ,,,  8;
+  PipeInName01[40]              ,,,  8;
+  PipeInName02[40]              ,,,  8;
+  PipeInName03[40]              ,,,  8;
+  PipeInName04[40]              ,,,  8;
+  PipeInName05[40]              ,,,  8;
+  PipeInName06[40]              ,,,  8;
+  PipeInName07[40]              ,,,  8;
+  PipeInName08[40]              ,,,  8;
+  PipeInName09[40]              ,,,  8;
+  PipeInName10[40]              ,,,  8;
+  PipeInName11[40]              ,,,  8;
+  PipeInName12[40]              ,,,  8;
+  PipeInName13[40]              ,,,  8;
+  PipeInName14[40]              ,,,  8;
+  PipeInName15[40]              ,,,  8;
+  PipeInName16[40]              ,,,  8;
+  PipeInName17[40]              ,,,  8;
+  PipeInName18[40]              ,,,  8;
+  PipeInName19[40]              ,,,  8;
+  PipeInName20[40]              ,,,  8;
+  PipeInName21[40]              ,,,  8;
+  PipeInName22[40]              ,,,  8;
+  PipeInName23[40]              ,,,  8;
+  PipeInName24[40]              ,,,  8;
+  PipeInName25[40]              ,,,  8;
+  PipeInName26[40]              ,,,  8;
+  PipeInName27[40]              ,,,  8;
+  PipeInName28[40]              ,,,  8;
+  PipeInName29[40]              ,,,  8;
+  PipeInName30[40]              ,,,  8;
+  PipeInName31[40]              ,,,  8;
+  PipeInEndPoint[32]            ,,,  8;
+  PipeInSrcBlkCnt[32]           ,,, 32;
+  PipeInSrcByteCnt[32]          ,,, 32;
+  PipeInBytesPerSec[32]         ,,, 32;
+  PipeInFifoFree[32]            ,,, 32;
+  PipeInBuffer[32]              ,,, 32;
+
+  # ------------------------------------------------------------------------- #
+  # - PipeOut Status.                                                       - #
+  # ------------------------------------------------------------------------- #
+  PipeOutName00[40]             ,,,  8;
+  PipeOutName01[40]             ,,,  8;
+  PipeOutName02[40]             ,,,  8;
+  PipeOutName03[40]             ,,,  8;
+  PipeOutName04[40]             ,,,  8;
+  PipeOutName05[40]             ,,,  8;
+  PipeOutName06[40]             ,,,  8;
+  PipeOutName07[40]             ,,,  8;
+  PipeOutName08[40]             ,,,  8;
+  PipeOutName09[40]             ,,,  8;
+  PipeOutName10[40]             ,,,  8;
+  PipeOutName11[40]             ,,,  8;
+  PipeOutName12[40]             ,,,  8;
+  PipeOutName13[40]             ,,,  8;
+  PipeOutName14[40]             ,,,  8;
+  PipeOutName15[40]             ,,,  8;
+  PipeOutName16[40]             ,,,  8;
+  PipeOutName17[40]             ,,,  8;
+  PipeOutName18[40]             ,,,  8;
+  PipeOutName19[40]             ,,,  8;
+  PipeOutName20[40]             ,,,  8;
+  PipeOutName21[40]             ,,,  8;
+  PipeOutName22[40]             ,,,  8;
+  PipeOutName23[40]             ,,,  8;
+  PipeOutName24[40]             ,,,  8;
+  PipeOutName25[40]             ,,,  8;
+  PipeOutName26[40]             ,,,  8;
+  PipeOutName27[40]             ,,,  8;
+  PipeOutName28[40]             ,,,  8;
+  PipeOutName29[40]             ,,,  8;
+  PipeOutName30[40]             ,,,  8;
+  PipeOutName31[40]             ,,,  8;
+  PipeOutEndPoint[32]           ,,,  8;
+  PipeOutDestBlkCnt[32]         ,,, 32;
+  PipeOutDestByteCnt[32]        ,,, 32;
+  PipeOutBytesPerSec[32]        ,,, 32;
+  PipeOutFifoUsed[32]           ,,, 32;
+  PipeOutFifoOverrunErrCnt[32]  ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - WireIns for device: XEM1                                                - #
+# --------------------------------------------------------------------------- #
+OK_XEM1_WireIns
+{
+  WireIn[32]        ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - WireOuts for device: XEM1                                               - #
+# --------------------------------------------------------------------------- #
+OK_XEM1_WireOuts
+{
+  WireOut[32]       ,,, 32;
+}
+
+# --------------------------------------------------------------------------- #
+# - Incoming pipe (GSEOS -> FPGA) for device: XEM1                          - #
+# --------------------------------------------------------------------------- #
+OK_XEM1_PipeIn1
+{
+    Len           ,,, 32;
+  ( Block[200000] ,,,  8; )
+}
+
+# --------------------------------------------------------------------------- #
+# - Outgoing pipe (FPGA -> GSEOS) for device: XEM1                          - #
+# --------------------------------------------------------------------------- #
+OK_XEM1_PipeOut1
+{
+    Len           ,,, 32;
+  ( Block[200000] ,,,  8; )
+}

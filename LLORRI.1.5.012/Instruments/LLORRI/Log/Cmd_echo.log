@@ -1,0 +1,50 @@
+================================================================
+Mon Dec 03 12:30:15 2018, at 597130258 seconds
+Uplink: LOR_MEM_CHECK    Calculate memory checksum
+Echo: 12: 00 12 34 56 00 10 
+Result: OK, command executed
+================================================================
+Mon Dec 03 12:37:29 2018, at 597130692 seconds
+Uplink: LOR_MAC_READ     Read macros
+Echo: 0d: 01 01 
+Result: OK, command executed
+================================================================
+Mon Dec 03 12:40:23 2018, at 597130866 seconds
+Uplink: LOR_MAC_CHECK    Check macros
+Echo: 03: 01 01 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:00:58 2018, at 597132107 seconds
+Uplink: LOR_CMD_NULL     Do nothing
+Echo: 01: 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:02:02 2018, at 597132171 seconds
+Uplink: LOR_CMD_NULL     Do nothing
+Echo: 01: 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:11:16 2018, at 597132725 seconds
+Uplink: LOR_STAT_INT     Set the status generation interval
+Echo: 1d: 00 64 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:12:44 2018, at 597132813 seconds
+Uplink: LOR_MON_CNTRL    Enable/Disable monitor response
+Echo: 1b: 01 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:13:45 2018, at 597132874 seconds
+Uplink: LOR_MEM_STR_READ Dump the indicated data structure
+Echo: 19: 00 
+Result: OK, command executed
+================================================================
+Mon Dec 03 13:50:19 2018, at 597135068 seconds
+Uplink: LOR_MEM_STR_READ Dump the indicated data structure
+Echo: 19: 01 
+Result: OK, command executed
+================================================================
+Mon Jan 07 07:15:51 2019, at 600135348 seconds
+Uplink: LOR_ROM_BOOT     Boot default program
+Echo: 1e: 
+Result: ERROR-Bad code space checksum

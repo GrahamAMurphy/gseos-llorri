@@ -1,0 +1,23 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="942, 13, 1500, 579" Title="TLM_HS" >
+    <PICTURE>
+      <BDMNUMBER Rows="1" Face="Courier New" Columns="1" Radix="10" Fontsize="960" Rect="54, 9, 134, 26" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_HS.Len" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Len:" Face="Courier New" Fontsize="960" Rect="10, 9, 42, 26" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="28" Face="Courier New" Columns="22" Fontsize="960" Rect="10, 34, 530, 510" >
+        <BDMDSINGLE >
+          <DATAITEM Item="TLM_HS.Block[0:65536]" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

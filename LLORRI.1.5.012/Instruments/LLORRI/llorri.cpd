@@ -1,0 +1,333 @@
+<GSEOS Version="366">
+
+<!--
+# Core Commands
+-->
+
+<Cmd Mnemonic="LOR_CMD_NULL" Opcode="0x01" NumBits="8" Description="Do Nothing">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_CMD_TEXT" Opcode="0x21" NumBits="8" Description="Text Command">
+  <Const Value="0" NumBits="8" Description="Macro"/>
+  <Const Value="77" NumBits="8" Description="Length"/>
+  <Arg NumBits="616" Type = "FILENAME" Description="Text"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_CMD_WRAP" Opcode="0x02" NumBits="8" Description="Wrap Command">
+  <Const Value="0" NumBits="8" Description="Macro"/>
+  <Arg NumBits="8" Description="OpCode"/>
+  <Arg NumBits="8" Keyword="B000" Description="Argument" Default="0"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_CHECK" Opcode="0x03" NumBits="8" Description="Check Macros">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="First Macro" NumBits="8" Description="0-255"/>
+  <Arg Keyword="Last Macro" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_DEF" Opcode="0x04" NumBits="8" Description="Begin Macro Definition">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_DELAY" Opcode="0x05" NumBits="8" Description="Delay Macro">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Delay" NumBits="16" Description="Seconds"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_END" Opcode="0x06" NumBits="8" Description="End Macro Definition">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_ENDDEF" Opcode="0x07" NumBits="8" Description="End Macro">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_HALT" Opcode="0x08" NumBits="8" Description="Halt Macro">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_LOOP_BEGIN" Opcode="0x09" NumBits="8" Description="Start a Macro Loop">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Iterations" NumBits="16" Description="Iterations"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_LOOP_END" Opcode="0x0a" NumBits="8" Description="End a Macro Loop">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_NEST" Opcode="0x0b" NumBits="8" Description="Nest Macro">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_PAUSE" Opcode="0x0c" NumBits="8" Description="Pause Macro">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Time" NumBits="32" Description="seconds"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_READ" Opcode="0x0d" NumBits="8" Description="Read Macros">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="First Macro" NumBits="8" Description="0-255"/>
+  <Arg Keyword="Second Macro" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RESTORE" Opcode="0x0e" NumBits="8" Description="Restore macros from NVRAM">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RUN" Opcode="0x0f" NumBits="8" Description="Run Macro">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RUN_SHUT" Opcode="0x0f" NumBits="8" Description="Run Shutdown Macro(1)">
+  <Const Value="0" NumBits="8"/>
+  <Const Value="1" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RUN_SAFE" Opcode="0x0f" NumBits="8" Description="Run Safing Macro(2)">
+  <Const Value="0" NumBits="8"/>
+  <Const Value="2" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RUN_STRT" Opcode="0x0f" NumBits="8" Description="Run Startup Macro(3)">
+  <Const Value="0" NumBits="8"/>
+  <Const Value="3" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_RUN_SILENT" Opcode="0x10" NumBits="8" Description="Run Macro Silently">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Macro ID" NumBits="8" Description="0-255"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MAC_SAVE" Opcode="0x11" NumBits="8" Description="Save Macros to NVRAM">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_CHECK" Opcode="0x12" NumBits="8" Description="Check Memory">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Source" NumBits="32" Description="Source address"/>
+  <Arg Keyword="Count" NumBits="16" Description="Number of 16-bit words to check"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_COPY" Opcode="0x13" NumBits="8" Description="Copy Memory">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Source" NumBits="32" Description="Source address"/>
+  <Arg Keyword="Destination" NumBits="32" Description="Destination address"/>
+  <Arg Keyword="Byte Count" NumBits="16" Description="Number of bytes to copy"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_LOAD_1BYTE" Opcode="0x14" NumBits="8" Description="Load Memory with 1 Byte">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="32" Description="Destination"/>
+  <Const NumBits="16" Value="1"/>
+  <Const NumBits="16" Value="0"/>
+  <Arg NumBits="8" Description="Byte"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_LOAD_2BYTE" Opcode="0x14" NumBits="8" Description="Load Memory with 2 Bytes">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="32" Description="Destination"/>
+  <Const NumBits="16" Value="2"/>
+  <Const NumBits="16" Value="0"/>
+  <Arg NumBits="8" Description="Byte 1"/>
+  <Arg NumBits="8" Description="Byte 2"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_LOAD_1WORD" Opcode="0x14" NumBits="8" Description="Load Memory with 1 Word">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="32" Description="Destination"/>
+  <Const NumBits="16" Value="2"/>
+  <Const NumBits="16" Value="0"/>
+  <Arg NumBits="16" Description="Word"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_READ" Opcode="0x15" NumBits="8" Description="Read Memory">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Source" NumBits="32" Description="Source address"/>
+  <Const NumBits="16" Value="0"/>
+  <Arg Keyword="Byte Count" NumBits="16" Description="Number of bytes to dump"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_READ_ABRT" Opcode="0x16" NumBits="8" Description="Abort Memory Read">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_RUN" Opcode="0x17" NumBits="8" Description="Run a Program">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="32" Description="Address"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_STR_LOAD_1BYTE" Opcode="0x18" NumBits="8" Description="Load Data Structure with 1 Byte">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" Description="Id"/>
+  <Const NumBits="8" Value="1"/>
+  <Arg NumBits="16" Description="Offset"/>
+  <Arg NumBits="8" Description="Byte"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_STR_LOAD_2BYTE" Opcode="0x18" NumBits="8" Description="Load Data Structure with 2 Bytes">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" Description="Id"/>
+  <Const NumBits="8" Value="2"/>
+  <Arg NumBits="16" Description="Offset"/>
+  <Arg NumBits="8" Description="Byte 1"/>
+  <Arg NumBits="8" Description="Byte 2"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_STR_LOAD_1WORD" Opcode="0x18" NumBits="8" Description="Load Data Structure with 1 Word">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" Description="Id"/>
+  <Const NumBits="8" Value="2"/>
+  <Arg NumBits="16" Description="Offset"/>
+  <Arg NumBits="16" Description="Word"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_STR_LOAD_1LONG" Opcode="0x18" NumBits="8" Description="Load Data Structure with 1 Long Word">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" Description="Id"/>
+  <Const NumBits="8" Value="4"/>
+  <Arg NumBits="16" Description="Offset"/>
+  <Arg NumBits="32" Description="Quad"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_STR_READ" Opcode="0x19" NumBits="8" Description="Read a Data Structure">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Structure">
+    <Enum Name="LIMITS" Value="0" Description="Read structure Limits"/>
+    <Enum Name="PARAMS" Value="1" Description="Read structure Params"/>
+  </Arg>
+
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_WR_EN" Opcode="0x1a" NumBits="8" Description="Enable/disable Memory Write">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Mode">
+    <Enum Name="Enable" Value="1" Description="Enable Write"/>
+    <Enum Name="Disable" Value="0" Description="Disable Write"/>
+  </Arg>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MON_CNTRL" Opcode="0x1b" NumBits="8" Description="Enable / Disable Monitor Response">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Mode">
+    <Enum Name="Enable" Value="1" Description="Enable Response"/>
+    <Enum Name="Disable" Value="0" Description="Disable Response"/>
+  </Arg>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_STAT_CLR" Opcode="0x1c" NumBits="8" Description="Clear Counter">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Counter" NumBits="8" DataRangeLow="0" DataRangeHigh="255" Description="Counter">
+    <Enum Name="CmdExec" Value="0" Description="Commands Executed"/>
+    <Enum Name="CmdRej" Value="1" Description="Commands Rejected"/>
+    <Enum Name="MacCmdExec" Value="2" Description="Macro Commands Executed"/>
+    <Enum Name="MacCmdRej" Value="3" Description="Macro Commands Rejected"/>
+    <Enum Name="TelVol" Value="4" Description="Telemetry Volume"/>
+    <Enum Name="Alarms" Value="5" Description="Alarm Count"/>
+    <Enum Name="All" Value="255" Description="All"/>
+  </Arg>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_STAT_CLR_BYTE" Opcode="0x1c" NumBits="8" Description="Clear Counters by byte">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="8" Keyword="Selection" Description="Selector"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_STAT_INT" Opcode="0x1d" NumBits="8" Description="Set Status Generation Interval">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Interval" NumBits="16" Description="seconds"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_STAT_MEM" Opcode="0x20" NumBits="8" Description="Select Status Memory Monitor">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Address" NumBits="32" Description="Source Address"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_SAF_OFF" Opcode="0x22" NumBits="8" Description="Request Power Off">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_SAF_RESET" Opcode="0x23" NumBits="8" Description="Initiate Software Reset">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_SAF_TIMEOUT" Opcode="0x24" NumBits="8" Description="Set Safing Timeout">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="16" Description="Timeout Interval"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_MEM_NV_ENB" Opcode="0x26" NumBits="8" Description="Reset/Enable NVRAM">
+  <Const Value="0" NumBits="8"/>
+  <Arg Keyword="Mode" NumBits="8" DataRangeLow="0" DataRangeHigh="1" Description="Mode">
+    <Enum Name="Sleep/Reset" Value="1" Description="Sleep/Reset"/>
+    <Enum Name="Enable" Value="0" Description="Enable"/>
+  </Arg>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<!--
+# Boot-specific Commands
+-->
+
+<Cmd Mnemonic="LOR_ROM_BOOT" Opcode="0x1e" NumBits="8" Description="Boot Default Program">
+  <Const Value="0" NumBits="8"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<Cmd Mnemonic="LOR_ROM_GO" Opcode="0x1f" NumBits="8" Description="Boot a Selected Program">
+  <Const Value="0" NumBits="8"/>
+  <Arg NumBits="32" Description="Address"/>
+  <ZeroPad NumBits="32"/>
+</Cmd>
+
+<!--
+# Application Commands
+-->
+</GSEOS>

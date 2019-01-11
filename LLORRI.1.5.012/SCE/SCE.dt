@@ -1,0 +1,77 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Desktop File.                                                = -->
+<!-- ====================================================================== -->
+<GSEOSDesktop Version = "9">
+  <MainWindow Position="52, 52" Size="1425, 721" Maximized="1">
+    <MessageHost Position="560, 141" Size="944, 577" Visible="0" PinPosition="290, 224" PinSize="951, 359" TypePos = "0" CountWidth = "40" TimePos = "2" DateWidth = "70" SourcePos = "3" CountPos = "5" EventPos = "4" TypeWidth = "75" EventWidth = "50" MessagePos = "6" TimeWidth = "70" DatePos = "1" SourceWidth = "125" MessageWidth = "1980" />
+    <ConsoleHost Position="110, 196" Size="687, 445" Visible="1" PinPosition="89, 340" PinSize="754, 387" FontPointSize = "10" />
+    <AlarmWindow Position="148, 0" Size="1028, 689" Visible="0" PinPosition="0, 0" PinSize="700, 200" CountWidth = "40" TimePos = "2" DateWidth = "70" IDWidth = "20" DescrWidth = "2053" CountPos = "3" NameWidth = "120" IDPos = "4" NamePos = "0" DescrPos = "5" TimeWidth = "70" DatePos = "1" />
+    <AutoLogHost_LLORRILog Position="1, 1" Size="1902, 999" Visible="0" PinPosition="0, 0" PinSize="700, 200" LogName = "LLORRILog" />
+    <ExplorerHost Position="865, 114" Size="811, 339" Visible="1" PinPosition="23, 208" PinSize="998, 424"/>
+    <ActivePage Name="SCE -%3E"/>
+
+    <Page Name="FPGA" ToolTip="FPGA Status" Maximized="0">
+      <Window Type="QLook" Position="329, 337" Size="515, 304" Minimized="0" FileName = "SCE\FIFO_OUT_CMD.gscr" />
+      <Window Type="QLook" Position="823, 676" Size="490, 295" Minimized="0" FileName = "SCE\FIFO_IN_TLM_HS.gscr" />
+      <Window Type="QLook" Position="0, 0" Size="314, 613" Minimized="0" FileName = "SCE\OKBios.gscr" />
+      <Window Type="QLook" Position="329, 1" Size="712, 304" Minimized="0" FileName = "SCE\OKBiosDecStatus.gscr" />
+      <Window Type="QLook" Position="2, 645" Size="245, 490" Minimized="0" FileName = "SCE\FIFO Decoder Status.gscr" />
+      <Window Type="QLook" Position="259, 679" Size="515, 254" Minimized="0" FileName = "SCE\FIFO_OUT_CTRL.gscr" />
+      <Window Type="QLook" Position="1053, 1" Size="515, 303" Minimized="0" FileName = "SCE\FIFO_IN_STATUS.gscr" />
+      <Window Type="QLook" Position="858, 338" Size="498, 300" Minimized="0" FileName = "SCE\FIFO_IN_TLM.gscr" />
+    </Page>
+
+    <Page Name="SCE -%3E" ToolTip="Data from the SCE to GSEOS" Maximized="0">
+      <Window Type="QLook" Position="704, -129" Size="472, 238" Minimized="0" FileName = "SCE\SCE_IN_SETTINGS.gscr" />
+      <Window Type="QLook" Position="977, -165" Size="436, 664" Minimized="0" FileName = "SCE\SCE_IN_STATUS.gscr" />
+      <Window Type="QLook" Position="0, -167" Size="245, 492" Minimized="0" FileName = "SCE\FIFO Decoder Status.gscr" />
+      <Window Type="QLook" Position="284, -136" Size="404, 486" Minimized="0" FileName = "SCE\SCE_IN_TLM_HS.gscr" />
+      <Window Type="QLook" Position="9, 43" Size="435, 392" Minimized="0" FileName = "SCE\SCE_IN_ERRORS.gscr" />
+      <Window Type="QLook" Position="511, -165" Size="454, 315" Minimized="0" FileName = "SCE\SCE_IN_TLM.gscr" />
+      <Window Type="QLook" Position="287, 216" Size="676, 69" Minimized="0" FileName = "SCE\SCE_IN_MESSAGE.gscr" />
+      <Window Type="QLook" Position="475, 314" Size="490, 295" Minimized="0" FileName = "SCE\FIFO_IN_TLM.gscr" />
+      <Window Type="QLook" Position="987, 536" Size="439, 345" Minimized="0" FileName = "SCE\FTF_IN_STATUS.gscr" />
+      <Window Type="QLook" Position="147, 77" Size="441, 341" Minimized="0" FileName = "SCE\FTF_IN_TLM.gscr" />
+      <Window Type="Message" Position="791, 424" Size="951, 359" Minimized="0" />
+    </Page>
+
+    <Page Name="-%3E SCE" ToolTip="Data from GSEOS to the SCE" Maximized="0">
+      <Window Type="QLook" Position="1251, 281" Size="439, 341" Minimized="0" FileName = "SCE\FTF_IN_STATUS.gscr" />
+      <Window Type="QLook" Position="0, 0" Size="288, 237" Minimized="0" FileName = "SCE\FTF Out Decoder Status.gscr" />
+      <Window Type="QLook" Position="0, 272" Size="361, 163" Minimized="0" FileName = "SCE\FTF_OUT_CTRL.gscr" />
+      <Window Type="QLook" Position="1237, 6" Size="474, 191" Minimized="0" FileName = "SCE\SCE_IN_SETTINGS.gscr" />
+      <Window Type="QLook" Position="785, 5" Size="436, 664" Minimized="0" FileName = "SCE\SCE_IN_STATUS.gscr" />
+      <Window Type="QLook" Position="3, 465" Size="436, 389" Minimized="0" FileName = "SCE\SCE_IN_ERRORS.gscr" />
+      <Window Type="QLook" Position="301, 8" Size="490, 262" Minimized="0" FileName = "LLORRI_Common\CMD Decoder Status.gscr" />
+      <Window Type="QLook" Position="322, 304" Size="445, 630" Minimized="0" FileName = "SCE\FTF_OUT_CMD.gscr" />
+    </Page>
+
+    <Page Name="TLM" ToolTip="TLM" Maximized="0">
+      <Window Type="QLook" Position="2, 331" Size="441, 341" Minimized="0" FileName = "SCE\FTF_IN_TLM.gscr" />
+      <Window Type="QLook" Position="931, 1" Size="487, 347" Minimized="0" FileName = "SCE\FTF Decoder Status.gscr" />
+      <Window Type="QLook" Position="3, 0" Size="490, 295" Minimized="0" FileName = "SCE\FIFO_IN_TLM.gscr" />
+      <Window Type="QLook" Position="478, 538" Size="487, 347" Minimized="0" FileName = "SCE\FTF Decoder Status.gscr" />
+      <Window Type="QLook" Position="509, 1" Size="404, 486" Minimized="0" FileName = "SCE\SCE_IN_TLM.gscr" />
+      <Window Type="QLook" Position="1173, 385" Size="355, 499" Minimized="0" FileName = "LLORRI_Common\TLM_LS_IDP.gscr" />
+      <Window Type="QLook" Position="1182, -9" Size="359, 499" Minimized="0" FileName = "LLORRI_Common\TLM_LS_IP.gscr" />
+      <Window Type="QLook" Position="800, 383" Size="359, 504" Minimized="0" FileName = "LLORRI_Common\TLM_LS_IP.gscr" />
+      <Window Type="QLook" Position="1554, 5" Size="219, 183" Minimized="0" FileName = "LLORRI_Common\TLM LS IP Decoder Status.gscr" />
+      <Window Type="QLook" Position="1557, 217" Size="220, 546" Minimized="0" FileName = "LLORRI_Common\TLM LS IDP Decoder Status.gscr" />
+    </Page>
+
+    <Page Name="TLM HS"  Maximized="0">
+      <Window Type="QLook" Position="9, 11" Size="490, 295" Minimized="0" FileName = "SCE\FIFO_IN_TLM_HS.gscr" />
+      <Window Type="QLook" Position="6, 341" Size="441, 341" Minimized="0" FileName = "SCE\FTF_IN_TLM_HS.gscr" />
+      <Window Type="QLook" Position="467, 530" Size="211, 96" Minimized="0" FileName = "LLORRI_Common\TLM HS Decoder Status.gscr" />
+      <Window Type="QLook" Position="518, 11" Size="404, 486" Minimized="0" FileName = "SCE\SCE_IN_TLM_HS.gscr" />
+      <Window Type="QLook" Position="942, 13" Size="544, 529" Minimized="0" FileName = "LLORRI_Common\TLM_HS.gscr" />
+    </Page>
+
+    <Page Name="CMD"  Maximized="0">
+      <Window Type="QLook" Position="-1, 11" Size="490, 262" Minimized="0" FileName = "LLORRI_Common\CMD Decoder Status.gscr" />
+      <Window Type="QLook" Position="505, 13" Size="443, 253" Minimized="0" FileName = "LLORRI_Common\BinCmd.gscr" />
+      <Window Type="QLook" Position="967, 11" Size="447, 575" Minimized="0" FileName = "SCE\FTF_OUT_CMD.gscr" />
+    </Page>
+
+  </MainWindow>
+</GSEOSDesktop>

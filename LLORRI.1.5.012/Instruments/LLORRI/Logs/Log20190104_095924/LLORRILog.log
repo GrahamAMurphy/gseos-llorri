@@ -1,0 +1,95 @@
+2019/01/04 09:59:24.555	Info	LLORRI_Bios         Starting up session for LUCY L'LORRI, Version: 1.5.012
+2019/01/04 09:59:24.571	Info	LLORRI_Bios         ******************************************************
+2019/01/04 09:59:24.571	Info	LLORRI_Bios         Loading L'LORRI SCE interface.
+2019/01/04 09:59:24.571	Info	LLORRI_Bios         Configuring for SCE mode.
+2019/01/04 09:59:24.571	Info	Message             Setting Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2019/01/04 09:59:24.571	Info	OKBios              Initializing device: XEM1
+2019/01/04 09:59:24.571	Info	OKBios              Entering device service thread for device: XEM1.
+2019/01/04 09:59:26.118	Info	OKBios              Device board model: XEM7310-A200.
+2019/01/04 09:59:26.118	Info	OKBios              Setting transfer size to: 16 bytes.
+2019/01/04 09:59:26.118	Info	OKBios              Device: XEM1 (Opal Kelly XEM7310) configured. No bit file loaded.
+2019/01/04 09:59:26.118	Error	LLORRI Command      Major Frame skip detected. Expected major frame: 0. Current major frame: 24031. Resetting expected major frame to 24031.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.118	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.132	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.132	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.132	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.132	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.132	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.148	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:26.164	Error	LLORRI Command      Major Frame skip detected. Expected major frame: 24083. Current major frame: 33751040. Resetting expected major frame to 33751040.
+2019/01/04 09:59:29.164	Info	LLORRI_Bios         SCE detected to be running...
+2019/01/04 09:59:29.164	Info	LLORRI_Bios         Instrument power switch detected to be off.
+2019/01/04 09:59:29.164	Info	LLORRI_Bios         Resetting FPGA with bitfile: Instruments/LLORRI/top_level_mini.bit...
+2019/01/04 09:59:29.164	Info	LLORRI_Bios         Resetting SCE FPGA.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring UART: (115200, o, 1).
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring minor frame count: 50.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring minor frame time: 20 ms.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring analog update time: 1000 ms.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring instrument voltage limits: 0.00 .. 33.00 V.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring instrument current limits: 0.000 .. 2.000 A.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring aux voltage limits: 0.00 .. 33.00 V.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios             Configuring aux current limits: 0.000 .. 2.000 A.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios         SCE configuration completed.
+2019/01/04 09:59:29.242	Info	LLORRI_Bios         Starting TLM data acquisition.
+2019/01/04 09:59:29.242	Info	Message             Removing Message Filter: "OKBios", Gseos.MSG_ERROR, "Error reading from pipeOut:*".
+2019/01/04 09:59:29.242	Info	Version             
+2019/01/04 09:59:29.242	Info	Version             Version Control Information
+2019/01/04 09:59:29.242	Info	Version             ----------------------------------------------------------------------
+2019/01/04 09:59:29.242	Info	Version             GSEOS:         7.1.1150
+2019/01/04 09:59:29.242	Info	Version             Python:        2.7.12 (default, Sep  8 2016, 19:20:19) [MSC v.1500 32 bit (Intel)]
+2019/01/04 09:59:29.242	Info	Version             ExcelLoad:     3.0.086
+2019/01/04 09:59:29.242	Info	Version             LUCY L'LORRI:  1.5.012
+2019/01/04 09:59:29.242	Info	Version             
+2019/01/04 09:59:29.256	Info	Version             Spreadsheet Version Information
+2019/01/04 09:59:29.256	Info	Version             ----------------------------------------------------------------------
+2019/01/04 09:59:29.256	Info	Version             ----------------------------------------------------------------------
+2019/01/04 09:59:29.256	Info	Version             
+2019/01/04 09:59:29.256	Info	OKBios              Device: XEM1 (Opal Kelly XEM7310) configured using bit file: Instruments/LLORRI/top_level_mini.bit.
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CONFIG_UART(115200, o, 1)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CONFIG_MINOR_FRAME_CNT(50)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CONFIG_MINOR_FRAME_TIME(20)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CTRL_SET_ANALOG_UPDATE_TIME(1000)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, HIGH, 33.000000)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(INSTR, LOW, 0.000000)
+2019/01/04 09:59:29.256	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(INSTR, HIGH, 2.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(INSTR, LOW, 0.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, HIGH, 33.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CTRL_SET_VOLTAGE_LIMIT(AUX, LOW, 0.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(AUX, HIGH, 2.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CTRL_SET_CURRENT_LIMIT(AUX, LOW, 0.000000)
+2019/01/04 09:59:29.303	Info	LLORRI Command      Command issued: SCE_CONFIG_START_ACQUISITION()
+2019/01/04 09:59:29.303	Info	SCE                 Bitfile version number 004
+2019/01/04 09:59:29.460	Info	SCE                 cmd baud=115200 par=O stop=1
+2019/01/04 09:59:30.256	Info	SCE                 Minor Frame Time set to 20 ms
+2019/01/04 09:59:30.381	Info	SCE                 Acquisition started
+2019/01/04 09:59:32.349	Error	CIP Decoder         UDP checksum error. Expected: 0x986B, received: 0x07A9.
+2019/01/04 09:59:32.349	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:34.319	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.
+2019/01/04 09:59:46.831	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:46.846	Info	IP Decoder          Received IP packet. Data Length: 200 bytes.
+2019/01/04 09:59:47.846	Error	IP Decoder          IP sync error at position: 0. Expected: 0x45, received: 0x00.

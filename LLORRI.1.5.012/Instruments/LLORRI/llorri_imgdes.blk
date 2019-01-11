@@ -1,0 +1,93 @@
+# ************************************************************************** #
+# * This New Horizons block definition file was automatically created with * #
+# * the GSEOS New Horizons Telemetry Loader. DO NOT MODIFY!                * #
+# *                                                                        * #
+# * To change the block definition please modify the Excel source          * #
+# * file: i_LORRI\CMD_n_TLM\611_TLM_20050418_02.XLS                        * #
+# * This file was generated with TC_TLM_Load Version: 5.1.254.059          * #
+# * on Mon Apr 18 17:28:56 2005                                            * #
+# ************************************************************************** #
+
+
+#
+# LOR_IMG_DES
+#
+LOR_IMG_DES
+{
+
+    Id                      , , , 16;
+    Length                  , , , 16;
+    TimeTag                 , , , 32;
+  ( Data[1024]               , , ,  8; )
+
+    EPU_P5_VOLT,                     ,    7,   16;
+    EPU_P5_CURR,                     ,    7,   16;
+    FPU_P15_VOLT,                    ,    7,   16;
+    FPU_P15_CURR,                    ,    7,   16;
+    FPU_P6_VOLT,                     ,    7,   16;
+    FPU_P6_CURR,                     ,    7,   16;
+    FPU_HTR_CURR,                    ,    7,   16;
+    EPU_P25_VOLT,                    ,    7,   16;
+    INTER_RING_TEMP,                 ,    7,   16;
+    MNT_FOOT_TOP_TEMP,               ,    7,   16;
+    M2_MIR_MNT_TEMP,                 ,    7,   16;
+    RDTR_TEMP,                       ,    7,   16;
+    BAFF_AFT_TEMP,                   ,    7,   16;
+    BAFF_FORE_TEMP,                  ,    7,   16;
+    M1_MIRROR_SUPP_TEMP,             ,    7,   16;
+    M1_MIRROR_TEMP,                  ,    7,   16;
+    FPU_0_TEMP,                      ,    7,   16;
+    FPU_1_TEMP,                      ,    7,   16;
+    FPU_2_TEMP,                      ,    7,   16;
+    FPU_3_TEMP,                      ,    7,   16;
+    FPU_4_TEMP,                      ,    7,   16;
+    FPU_5_TEMP,                      ,    7,   16;
+    FPU_6_TEMP,                      ,    7,   16;
+    FPU_7_TEMP,                      ,    7,   16;
+    EXPOSE,                          ,    7,   16;
+    CAL_LAMP_2_LEV,                  ,    7,    8;
+    CAL_LAMP_1_LEV,                  ,    7,    8;
+    SPARE,                           ,    7,    8;
+    TEMP_CONV_ENA_ST,                ,    7,    1;
+    CAL_LAMP_2_ENA_ST,               ,    6,    1;
+    CAL_LAMP_1_ENA_ST,               ,    5,    1;
+    SOURCE_ST,                       ,    4,    3;
+    BIN_MODE_ST,                     ,    1,    1;
+    EXP_MODE_ST,                     ,    0,    1;
+
+  ( HISTO[32],                       ,    7,   32; )
+    HISTO_0,                         ,    7,   32;
+    HISTO_1,                         ,    7,   32;
+    HISTO_2,                         ,    7,   32;
+    HISTO_3,                         ,    7,   32;
+    HISTO_4,                         ,    7,   32;
+    HISTO_5,                         ,    7,   32;
+    HISTO_6,                         ,    7,   32;
+    HISTO_7,                         ,    7,   32;
+    HISTO_8,                         ,    7,   32;
+    HISTO_9,                         ,    7,   32;
+    HISTO_10,                        ,    7,   32;
+    HISTO_11,                       ,    7,   32;
+    HISTO_12,                       ,    7,   32;
+    HISTO_13,                       ,    7,   32;
+    HISTO_14,                       ,    7,   32;
+    HISTO_15,                       ,    7,   32;
+    HISTO_16,                       ,    7,   32;
+    HISTO_17,                       ,    7,   32;
+    HISTO_18,                       ,    7,   32;
+    HISTO_19,                       ,    7,   32;
+    HISTO_20,                       ,    7,   32;
+    HISTO_21,                       ,    7,   32;
+    HISTO_22,                       ,    7,   32;
+    HISTO_23,                       ,    7,   32;
+    HISTO_24,                       ,    7,   32;
+    HISTO_25,                       ,    7,   32;
+    HISTO_26,                       ,    7,   32;
+    HISTO_27,                       ,    7,   32;
+    HISTO_28,                       ,    7,   32;
+    HISTO_29,                       ,    7,   32;
+    HISTO_30,                       ,    7,   32;
+    HISTO_31,                       ,    7,   32;
+    CCD_1X1_TEMP,                   ,    7,   16;
+    CCD_4X4_TEMP,                   ,    7,   16;
+}

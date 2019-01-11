@@ -1,0 +1,57 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="1888, 18, 2395, 116" Title="Alarm" >
+    <PICTURE>
+      <RECTANGLE Color="8" Backcolor="8" Rect="0, 0, 507, 100" >
+      </RECTANGLE>
+      <BDMCAST Rows="1" TextMap="Alarm" Columns="1" Rect="62, 31, 342, 47" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.AlarmId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMCAST Rows="1" TextMap="AlarmType" Columns="1" Rect="155, 74, 235, 90" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.AlarmType" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <FIXTEXT FontStyle="1" Text="Alarm" Backcolor="8" Rect="7, 12, 57, 29" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="424, 31, 448, 47" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.Value" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="466, 31, 490, 47" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.Aux" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Backcolor="8" Columns="1" Radix="10" Rect="26, 74, 106, 90" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.TimeTag" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT FontStyle="1" Text="Values" Backcolor="8" Rect="435, 12, 495, 29" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Time" Backcolor="8" Rect="8, 54, 48, 71" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="Type" Backcolor="8" Rect="139, 54, 179, 71" >
+      </FIXTEXT>
+      <RECTANGLE Rect="78, 221, 79, 223" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" HexPrefix="1" Columns="1" Rect="18, 30, 50, 46" >
+        <BDMDSINGLE >
+          <DATAITEM Item="LOR_Alarm.AlarmId" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>

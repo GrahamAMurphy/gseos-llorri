@@ -1,0 +1,75 @@
+<!-- ====================================================================== -->
+<!-- = GSEOS Screen File.                                                 = -->
+<!-- ====================================================================== -->
+<GSEOSScreen Version = "535">
+  <SCREEN Style="32" Rect="880, 4, 1105, 220" Title="TLM LS IP Decoder Status" >
+    <PICTURE>
+      <RECTANGLE Rect="1, 1, 216, 181" Backcolor="15" >
+      </RECTANGLE>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 92, 201, 106" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.SrcBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="SCE_IN_TLM_LS Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 92, 130, 106" >
+      </FIXTEXT>
+      <FIXTEXT FontStyle="1" Text="TLM LS IP Decoder" Face="Verdana" Fontsize="768" Backcolor="15" Rect="44, 7, 164, 21" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 110, 201, 124" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.DestBlkCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="TLM_LS_IP Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 110, 97, 124" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 75, 201, 89" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.SrcByteCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Source Byte Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 75, 105, 89" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Length Error Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 146, 106, 160" >
+      </FIXTEXT>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="132, 147, 202, 161" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.LenErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMCAST Rows="1" TextMap="Synchronized" Face="Arial" StaleTimeout="5" Fontsize="768" Columns="1" Rect="6, 26, 92, 41" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.IsSynchronized" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMCAST>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="132, 133, 202, 147" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.SyncErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Color="13" Text="Sync Err Cnt:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 132, 84, 146" >
+      </FIXTEXT>
+      <FIXTEXT Color="13" Text="Max Tx Len Exceeded:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 163, 135, 177" >
+      </FIXTEXT>
+      <BDMNUMBER Digits="6" Rows="1" Face="Verdana" Backcolor="15" Radix="10" Color="13" Fontsize="768" Columns="1" Rect="160, 164, 202, 178" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.MaxTxLenExceededErrCnt" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <BDMNUMBER Rows="1" Face="Verdana" Backcolor="15" Radix="10" Fontsize="768" Columns="1" Rect="131, 58, 201, 72" >
+        <BDMDSINGLE >
+          <DATAITEM Item="DecStatus_TLM_LS_IP.MaxTxLen" >
+          </DATAITEM>
+        </BDMDSINGLE>
+      </BDMNUMBER>
+      <FIXTEXT Text="Max Tx Bytes:" Face="Verdana" Fontsize="768" Backcolor="15" Rect="6, 58, 88, 72" >
+      </FIXTEXT>
+    </PICTURE>
+  </SCREEN>
+</GSEOSScreen>
